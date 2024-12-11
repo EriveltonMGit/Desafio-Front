@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
+
 import Link from "next/link";
 import "./Nav.css";
-
+import Image from "next/image";
 function Nav() {
   // AQUI FICA O ARRAY DE BUTTONS DO NAV LATERAL
   const itemsButtons = [
@@ -26,10 +26,10 @@ function Nav() {
             <button key={item.id}>
               <Link href={item.rota || "/"}> {/* Fallback para '/' se a rota for undefined */}
                 <div className="nav-item">
-                  <img src={item.image} alt={`Ícone ${item.id}`} />
+                  <Image src={item.image} alt={`Ícone ${item.id}`} />
                   {/* Verifica se existe uma imagem de notificação e exibe */}
                   {item.imageNotification && (
-                    <img
+                    <Image
                       src={item.imageNotification}
                       alt="Notificação"
                       className="notification-icon"
