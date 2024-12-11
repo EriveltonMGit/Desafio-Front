@@ -418,5 +418,7 @@
   align-items: flex-end;
   img {
     width: 40vw;
+    object-fit: cover;
+  background-size: cover;
   }
 }

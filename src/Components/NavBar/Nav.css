@@ -45,12 +45,29 @@
   align-items: center;
   justify-content:center;
   position: relative;
+
+
+ }
+
+ /* nav-item */
+ .nav-item{
+
+  width: 22px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  
   img{
-    width: 19.33px;
-    height: 22.42px;
-    top: 5px;
+    width: 19px;
+    object-fit: cover;
+    background-size: cover;
+    background-size: cover;
+    top: 9px;
     left: 6px;
+  }
+  img:nth-child(){
+    background-color: red;
   }
  }
  button:hover{

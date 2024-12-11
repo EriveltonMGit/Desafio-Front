@@ -83,7 +83,7 @@ function Home() {
                 eu vulputate tempus
               </p>
 
-              <img  src="/perfil-user.png"
+              <img  src="/perfil-user.webp"
                 alt="Imagem de perfil" />
             </div>
             {/* AQUI FICA A DIV DO FORMULÁRIO DE CLÍENTES */}
@@ -133,7 +133,7 @@ function Home() {
                         mostrarDivCrud(item.id, e);
                       }}
                     >
-                      <img src="/imagens/icons/button.svg" alt="Imagem buttom editar e excluir" />
+                      <img src="/butom_edit.webp" alt="Imagem buttom editar e excluir" />
 
                       {crudVisible === item.id && (
                         <div className="btn_crud">

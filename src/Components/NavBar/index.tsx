@@ -1,16 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import "./Nav.css";
-import Image from "next/image";
+
 
 function Nav() {
   // AQUI FICA O ARRAY DE BUTTONS DO NAV LATERAL
   const itemsButtons = [
-    { id: 1, image: "/imagens/icons/enterprise-icon.svg", rota: "/Pages/Enterprise", width: 40, height: 40 },
-    { id: 2, image: "/imagens/icons/edit-icon.svg", width: 40, height: 40 },
-    { id: 3, image: "/imagens/icons/sitemap-icon.svg", rota: "/Pages/Sitemap", width: 40, height: 40 },
-    { id: 4, image: "/imagens/icons/bell-icon.svg", imageNotification: "/imagens/icons/Group 88.svg", rota: "/Pages/Notifications", width: 40, height: 40 },
-    { id: 5, image: "/imagens/icons/time-loop-icon.svg", rota: "/Pages/History", width: 40, height: 40 },
-    { id: 6, image: "/imagens/icons/user-icon.svg", rota: "/Pages/Perfil", width: 40, height: 40 },
+    { id: 1, image: "/enterprise-icon.webp", rota: "/Pages/Enterprise",  },
+    { id: 2, image: "/edit-icon.webp",},
+    { id: 3, image: "/sitemap-icon.webp", rota: "/Pages/Sitemap", },
+    { id: 4, image: "/bell-icon.webp",  rota: "/Pages/Notifications", },
+    { id: 5, image: "/time-loop-icon.webp", rota: "/Pages/History",  },
+    { id: 6, image: "/user-icon.webp", rota: "/Pages/Perfil", },
   ];
 
   return (
@@ -26,22 +27,13 @@ function Nav() {
             <button key={item.id}>
               <Link href={item.rota || "/"}> {/* Fallback para '/' se a rota for undefined */}
                 <div className="nav-item">
-                  <Image
+                  <img
                     src={item.image}
                     alt={`Ícone ${item.id}`}
-                    width={item.width}
-                    height={item.height}
+                   
                   />
                   {/* Verifica se existe uma imagem de notificação e exibe */}
-                  {item.imageNotification && (
-                    <Image
-                      src={item.imageNotification}
-                      alt="Notificação"
-                      width={20} 
-                      height={20} 
-                      className="notification-icon"
-                    />
-                  )}
+                  
                 </div>
               </Link>
             </button>
