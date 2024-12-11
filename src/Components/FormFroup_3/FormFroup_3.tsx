@@ -24,7 +24,7 @@ function FormGroup_3() {
       <div id="fileDisplay" className="file-display">
         <p>{fileInfo}</p>
         <label htmlFor="fileInput">
-         <img src="/imagens/icons/text-icone.svg" alt="Ícone de arquivo" />
+         <img src="/text-icone.webp" alt="Ícone de adicionar arquivo" />
         </label>
       </div>
 
