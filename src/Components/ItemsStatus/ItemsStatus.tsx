@@ -16,55 +16,55 @@ function ItemsStatus() {
 
           <div className="cards_status">
             <div className="div_bk_item  items_time_line first-item" >
-              <img src="/imagens/icons/Vector.svg" alt="Image status" />
+              <img src="/Vector.webp" alt="Image status" />
             </div>
             <p>Item 1</p>
           </div>
           <div className="cards_status">
             <div className="div_bk_item  items_time_line" >
-              <img src="/imagens/icons/Vector.svg" alt="Image status"  />
+              <img src="/Vector.webp" alt="Image status"  />
             </div>
             <p>Item 2</p>
           </div>
           <div className="cards_status">
             <div className="div_bk_item  items_time_line">
-              <img src="/imagens/icons/Vector.svg" alt="Image status" />
+              <img src="/Vector.webp" alt="Image status" />
             </div>
             <p>Item 3</p>
           </div>
           <div className="cards_status">
             <div className="div_bk_item  items_time_line">
-              <img src="/imagens/icons/Vector.svg" alt="Image status" />
+              <img src="/Vector.webp" alt="Image status" />
             </div>
             <p>Item 4</p>
           </div>
           <div className="cards_status">
             <div className="div_bk_item  items_time_line">
-              <img src="/imagens/icons/Vector.svg" alt="Image status" />
+              <img src="/Vector.webp" alt="Image status" />
             </div>
             <p>Item 5</p>
           </div>
           <div className="cards_status">
             <div className="div_bk_item  items_time_line">
-              <img src="/imagens/icons/Vector.svg" alt="Image status" />
+              <img src="/Vector.webp" alt="Image status" />
             </div>
             <p>Item 6</p>
           </div>
           <div className="cards_status">
             <div className="div_bk_item  items_time_line">
-              <img src="/imagens/icons/Vector.svg" alt="Image status" />
+              <img src="/Vector.webp" alt="Image status" />
             </div>
             <p>Item 7</p>
           </div>
           <div className="cards_status">
             <div className="div_bk_item  items_time_line">
-              <img src="/imagens/icons/Vector.svg" alt="Image status" />
+              <img src="/Vector.webp" alt="Image status" />
             </div>
             <p>Item 8</p>
           </div>
           <div className="cards_status">
             <div className="div_bk_item  items_time_line">
-              <img src="/imagens/icons/Vector.svg" alt="Image status" />
+              <img src="/Vector.webp" alt="Image status" />
             </div>
             <p>Item 9</p>
           </div>
