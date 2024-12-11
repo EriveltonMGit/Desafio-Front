@@ -133,7 +133,7 @@ function Home() {
                         mostrarDivCrud(item.id, e);
                       }}
                     >
-                      <img src="/imagens/icons/button.svg" alt="" />
+                      <img src="/imagens/icons/button.svg" alt="Imagem buttom editar e excluir" />
 
                       {crudVisible === item.id && (
                         <div className="btn_crud">
