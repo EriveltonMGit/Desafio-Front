@@ -7,8 +7,8 @@ import { useState } from "react";
 //AQUI FICA O CSS
 import "./Home.css";
 import Link from "next/link";
+import Image from "next/image";
 import Swhitch from "@/Components/Switch/Swhitch";
-
 
 function Home() {
   // AQUI FICA O ARRAY DE FUNCIONÁRIOS
@@ -51,18 +51,18 @@ function Home() {
     setCrudVisible(crudVisible === id ? null : id);
   };
 
- 
-  
-  
-
-
   return (
     <>
       {/* AQUI FICA O CONTAINER PRINCIPAL */}
       <main className="container_home">
         {/* AQUI FICA A IMAGEM BK NO RODAPE */}
         <div className="content_img_footer">
-          <img src="/imagens/imagem_bk/Elementos de fundo.svg" alt="" />
+          <Image
+            src="/imagens/imagem_bk/Elementos de fundo.svg"
+            alt="Elemento de fundo"
+            width={50}
+            height={30}
+          />
         </div>
         {/* NAV BAR */}
         <Nav />
@@ -85,7 +85,13 @@ function Home() {
                 Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus
                 eu vulputate tempus
               </p>
-              <img src="/imagens/icons/perfil-user.png" alt="" />
+
+              <Image
+                src="/imagens/icons/perfil-user.png"
+                alt="Elemento de fundo"
+                width={80}
+                height={80}
+              />
             </div>
             {/* AQUI FICA A DIV DO FORMULÁRIO DE CLÍENTES */}
             <form className="form_container">
@@ -95,10 +101,10 @@ function Home() {
               </div>
               {/* AQUI FICA O BUTTON DE ADICIONAR FUNCIONÁRIOS */}
               <section className="container_funcionarios">
-                <button className="add_funcionario"  >
-                <Link href="/Pages/Funcionarios">+ Adicionar Funcionário</Link>
-          
-
+                <button className="add_funcionario">
+                  <Link href="/Pages/Funcionarios">
+                    + Adicionar Funcionário
+                  </Link>
                 </button>
                 {/* AQUI FICA OS FILTROS DE PESQUISA DE FUNCIONARIOS */}
                 <main className="filtos">
