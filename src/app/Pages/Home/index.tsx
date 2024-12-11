@@ -83,7 +83,7 @@ function Home() {
                 eu vulputate tempus
               </p>
 
-              <img  src="/imagens/icons/perfil-user.png"
+              <img  src="/public/user-profile-icon.svg"
                 alt="Imagem de perfil" />
             </div>
             {/* AQUI FICA A DIV DO FORMULÁRIO DE CLÍENTES */}
