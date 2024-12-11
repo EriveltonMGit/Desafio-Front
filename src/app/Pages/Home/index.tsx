@@ -88,7 +88,7 @@ function Home() {
 
               <Image
                 src="/imagens/icons/perfil-user.png"
-                alt="Elemento de fundo"
+                alt="Imagem de perfil"
                 width={80}
                 height={80}
               />
@@ -140,7 +140,7 @@ function Home() {
                         mostrarDivCrud(item.id, e);
                       }}
                     >
-                      <img src="/imagens/icons/button....svg" alt="" />
+                      <img src="/imagens/icons/button.svg" alt="" />
 
                       {crudVisible === item.id && (
                         <div className="btn_crud">
