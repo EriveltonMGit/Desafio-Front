@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+
 "use client";
 // IMPORT DOS COMPONENTS
 import ItemsStatus from "@/Components/ItemsStatus/ItemsStatus";
@@ -7,7 +8,7 @@ import { useState } from "react";
 //AQUI FICA O CSS
 import "./Home.css";
 import Link from "next/link";
-import Image from "next/image";
+
 import Swhitch from "@/Components/Switch/Swhitch";
 
 function Home() {
@@ -57,12 +58,8 @@ function Home() {
       <main className="container_home">
         {/* AQUI FICA A IMAGEM BK NO RODAPE */}
         <div className="content_img_footer">
-          <Image
-            src="/imagens/imagem_bk/Elementos de fundo.svg"
-            alt="Elemento de fundo"
-            width={50}
-            height={30}
-          />
+        <img  src="/imagens/imagem_bk/Elementos de fundo.svg"
+            alt="Elemento de fundo" />
         </div>
         {/* NAV BAR */}
         <Nav />
@@ -86,12 +83,8 @@ function Home() {
                 eu vulputate tempus
               </p>
 
-              <Image
-                src="/imagens/icons/perfil-user.png"
-                alt="Imagem de perfil"
-                width={80}
-                height={80}
-              />
+              <img  src="/imagens/icons/perfil-user.png"
+                alt="Imagem de perfil" />
             </div>
             {/* AQUI FICA A DIV DO FORMULÁRIO DE CLÍENTES */}
             <form className="form_container">
