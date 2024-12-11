@@ -1,10 +1,9 @@
-
+/* eslint-disable @next/next/no-img-element */
 "use client";
 // IMPORT DOS COMPONENTS
 import ItemsStatus from "@/Components/ItemsStatus/ItemsStatus";
 import Nav from "../../../Components/NavBar";
 import { useState } from "react";
-import Image from "next/image";
 //AQUI FICA O CSS
 import "./Home.css";
 import Link from "next/link";
@@ -63,8 +62,7 @@ function Home() {
       <main className="container_home">
         {/* AQUI FICA A IMAGEM BK NO RODAPE */}
         <div className="content_img_footer">
-        width={30} 
-        height={30} 
+          <img src="/imagens/imagem_bk/Elementos de fundo.svg" alt="" />
         </div>
         {/* NAV BAR */}
         <Nav />
@@ -87,8 +85,7 @@ function Home() {
                 Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus
                 eu vulputate tempus
               </p>
-              <Image src="/imagens/icons/user-profile-icon.svg"   alt="Ícone de perfil de usuário"  width={30} 
-        height={30}  />
+              <img src="/imagens/icons/perfil-user.png" alt="" />
             </div>
             {/* AQUI FICA A DIV DO FORMULÁRIO DE CLÍENTES */}
             <form className="form_container">
@@ -137,8 +134,7 @@ function Home() {
                         mostrarDivCrud(item.id, e);
                       }}
                     >
-                      <Image src="/imagens/icons/button....svg" alt=""  width={20} 
-        height={20} />
+                      <img src="/imagens/icons/button....svg" alt="" />
 
                       {crudVisible === item.id && (
                         <div className="btn_crud">
