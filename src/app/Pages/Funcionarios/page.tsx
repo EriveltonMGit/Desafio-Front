@@ -20,7 +20,10 @@ function Funcionarios() {
       <main className="container_cadastro">
         {/* AQUI FICA A IMAGEM BK NO RODAPE */}
         <div className="content_img_footer">
-          <img src="/imagens/imagem_bk/Elementos de fundo.svg" alt="" />
+          <img
+            src="/imagens/imagem_bk/Elementos de fundo.svg"
+            alt="Elemento de fundo"
+          />
         </div>
         {/* NAV BAR */}
         <Nav />
@@ -44,7 +47,8 @@ function Funcionarios() {
                   neque tincidunt vel. Proin ac lacinia erat, et commodo felis.
                   Phasellus tempor tellus eu vulputate tempus
                 </p>
-                <img src="/imagens/icons/user-profile-icon.svg" alt="" />
+
+                <img src="/perfil-user.webp" alt="Imagem de perfil" />
               </div>
               {/* AQUI FICA A DIV DO FORMULÁRIO DE CLÍENTES */}
               <section className="form_container">
@@ -52,7 +56,7 @@ function Funcionarios() {
                 <div className="title_form">
                   <Link href="/">
                     <p>
-                      <img src="/imagens/icons/Arrow 1.svg" alt="" />{" "}
+                      <img src="/Arrow.webp" alt="" />{" "}
                       Funcionário(s)
                     </p>
                   </Link>
@@ -63,8 +67,8 @@ function Funcionarios() {
                     {/* AQUI FICA O FORM DE NOME */}
                     <form className="form_cadastro">
                       <FormGroup_1 />
-                      <FormGroup_2/>
-                      <FormGroup_3/>
+                      <FormGroup_2 />
+                      <FormGroup_3 />
                     </form>
                     {/* AQUI FICA O BUTTON SALVAR  */}
                     <button className="salvarFomr">

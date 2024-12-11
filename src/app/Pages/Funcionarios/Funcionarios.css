@@ -117,11 +117,19 @@
     color: #ffffff;
     display: flex;
     gap: 25px;
-
+    
+    display: flex;
+    align-items: center;
+    
     img {
-      width: 18px;
+      width: 24px;
+      height: 16px;
       top: 24px;
       left: 45px;
+      
+      object-fit: cover;
+      background-size: cover;
+     
     }
   }
 }
