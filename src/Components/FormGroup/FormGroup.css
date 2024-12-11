@@ -18,15 +18,22 @@
     align-items:flex-start;
     justify-content:center;
     flex-direction: column;
-    
-   
+    p{
+      width: 178.25px;
+      height: 19px;
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+     color:#272F33 ;
+     
+    }
     gap: 8px;
-    div{
+    .div-inputs{
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       flex-direction: column;
-  
       label{
         width: 43px;
         height: 19px;
@@ -36,7 +43,7 @@
         line-height: 18.75px;
   
       }
-      input{
+     #nome, #cpf, #rg{
    width: 333px;
    height: 36px;
    border-radius: 10px;
@@ -44,23 +51,69 @@
    padding-right: 12px;
    padding-left: 12px;
    outline: none;
+   
       }
     }
   }
 
-  /* radio-group */
-  .radio-group{
-
+  .card_group_form:nth-child(2){
+   
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+  }
+  /* container-radio-group */
+  .container-radio-group{  
+    display: flex;
+    align-items:flex-start;
     justify-content: space-around;
+    flex-direction: column;
+    width: 333px;
+    height: 54px;
    
-    width: 216.43px;
-    height: 36px;
-    gap: 16px;
-   
+    p{
+      width: 178.25px;
+      height: 19px;
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+     color:#272F33 ;
+    }
+
+/* radio-group */
+.radio-group{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ 
+ 
+  gap: 16px;
+
+
+
+
+
+
+}
+
+
+
+
+  }
+
+  
+  
+  .radio-group input[type="radio"] {
+    width: 15px; 
+    height: 15px; 
   }
   
+  .radio-group label {
+    font-size: 14px; /* Tamanho da fonte do texto */
+    cursor: pointer; /* Torna o texto clicável */
+  }
 
   /* data_nasc */
   .nascimento{
@@ -130,4 +183,4 @@
 
 
 
-  
+  /* =================== MEDIA SCREEN ==================== */

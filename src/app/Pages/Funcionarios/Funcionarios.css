@@ -93,6 +93,8 @@
   justify-content: space-around;
   flex-direction: column;
  overflow-y: auto;
+ /* border: 1px solid red; */
+ position: relative;
 }
 
 /* AQUI FICA O FORM -INPUTS */
@@ -103,7 +105,8 @@
   border-top-right-radius: 20px;
   background-color: #649fbf;
   position: relative;
-  
+  position: absolute;
+  top: 0;
   p {
     font-family: Ubuntu;
     width: 179px;
@@ -236,26 +239,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
 .px_passos {
   width: 1254px;
@@ -325,3 +308,4 @@
 }
 
 
+/* =================== MEDIA SCREEN ==================== */

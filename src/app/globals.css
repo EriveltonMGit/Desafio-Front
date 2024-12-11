@@ -33,7 +33,7 @@ body {
 /* FONTS */
 @font-face {
   font-family: Roboto;
-  src: url('/Fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  src: url('/Fonts/Roboto/Roboto-Medium.ttf') format('truetype');
 }
 @font-face {
   font-family: Ubuntu;

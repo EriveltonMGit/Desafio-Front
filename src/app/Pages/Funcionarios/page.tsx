@@ -51,7 +51,7 @@ function Funcionarios() {
                 <img src="/perfil-user.webp" alt="Imagem de perfil" />
               </div>
               {/* AQUI FICA A DIV DO FORMULÁRIO DE CLÍENTES */}
-              <section className="form_container">
+              <section className="form_container" id="form-container">
                 {/* AQUI FICA O TITULO DO FORM */}
                 <div className="title_form">
                   <Link href="/">
@@ -86,7 +86,7 @@ function Funcionarios() {
                 </Link>
               </button>
               <button className="btn_proximo">
-                <Link href="/" legacyBehavior>
+                <Link href="/Pages/Static" legacyBehavior>
                   <a>Próximo passo</a>
                 </Link>
               </button>

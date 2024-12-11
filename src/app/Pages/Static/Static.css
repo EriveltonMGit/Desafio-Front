@@ -1,0 +1,276 @@
+/* AQUI FICA O CSS DO HOME - PAGINA INICIAL DO PROJETO */
+
+/* HOME */
+.container_home_static {
+  width: 1366px;
+  height: 768px;
+  top: 100px;
+  left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+ .container_statics{
+
+  width: 1254px;
+  height: 744px;
+  top: 24px;
+  left: 88px;
+  gap: 32px;
+  position: relative;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  .div-menu{
+    margin-top: 24px;
+  }
+}
+
+/* CONTAINER SECTION FORM */
+.container_home_static .container_sections {
+  width: 1254px;
+  height: 942px;
+  position: absolute;
+  top: 24px;
+  left: 88px;
+  gap: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+
+
+
+/* content_img */
+.container_home_static .content_img_footer {
+  width: 457px;
+  height: 557px;
+  position: absolute;
+  top: 224px;
+  left: 897px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  img {
+    width: 40vw;
+  }
+}
+/* container-mensasem-static */
+.container-mensasem-static{
+  width: 1254px;
+  height: 556px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* aviso */
+.aviso-static{
+  width: 1254px;
+  height: 55px;
+  top: 24px;
+  left: 0px;
+  border-radius: 20px;
+  background-color:#4FA1C1 ;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1{
+
+   font-size: Ubuntu;
+   font-weight: 400;
+   font-size: 28px;
+   line-height: 32.17px;
+   width: 125px;
+   height: 32px;
+   left: 654.88px;  
+   color: #FFFFFF;
+  }
+}
+
+/* -----------aqrui fica o item status  */
+
+/* AQUI FICA O CSS DO HEADER STATUS */
+/* status_container */
+.status_container-static {
+
+  width: 1254px;
+  height: 156px;
+  gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 24px;
+  gap: 48px;
+  background-color: #FFFFFF;
+
+ 
+}
+
+/* AQUI FICA O CARDS DE STATUS */
+/* container_items */
+.status_container-static .container_items {
+
+  width: 960px;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.status_container-static .cards_status {
+  width: 80px;
+  height: 108px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 20;
+
+  div {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -1px 2px 0.5rem #707070b6;
+    border-radius: 20px;
+    left: 8px;
+
+   background-color: #649fbf;
+
+  
+    img {
+      width: 27.2px;
+      height: 32px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+  }
+ 
+  p {
+    width: 80px;
+    height: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.09px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:Ubuntu;
+    color: #649fbf;
+  }
+  #span-status{
+    width: 80px;
+      height: 14px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16.09px;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family:Ubuntu;
+      color: #272F33;
+    
+  }
+  #span-status-prox{
+    width: 80px;
+    height: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.09px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:Ubuntu;
+    color: #272F33;
+   
+  }
+  .active-border {
+    border: 2px solid black; 
+    border-radius: 20px;
+  }
+}
+
+
+/* LINHA ENTRE OS ITENS */
+.status_container-static .line {
+
+  min-width:900px;
+  height: 4px;
+  border-top: 4px dashed #649fbf;
+  position: absolute;
+  left: 35px;
+ top: 28px;
+
+}
+/* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
+.px_passos {
+  width: 1254px;
+  height: 32px;
+  top: 998px;
+
+  left: 88px;
+  gap: 854px;
+  display: flex;
+  align-items: center;
+}
+/* AQUI FICA O BUTTON VOLTAR */
+.bt_anterior-static{
+  width: 194px;
+  height: 32px;
+  border-radius: 10px;
+  left: 1060px;
+  background-color: var(--bk-button);
+
+  transition: opacity 0.3s, visibility 0.3s;
+  p {
+    font-size: 16px;
+    top: 8px;
+    left: 51px;
+    font-weight: 700;
+    line-height: 16.41px;
+    color: var(--ligth);
+    font-family: Roboto;
+  }
+}
+
+
+/* AQUI FICA O BUTTON PRÓXIMO*/
+.btn_proximo {
+  width: 194px;
+  height: 32px;
+  border-radius: 10px;
+  left: 1060px;
+  background-color: var(--bk-button);
+  p {
+    font-size: 16px;
+    top: 8px;
+    left: 51px;
+    font-weight: 700;
+    line-height: 16.41px;
+    color: var(--ligth);
+    font-family: Roboto;
+  }
+}

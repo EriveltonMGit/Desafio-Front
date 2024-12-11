@@ -22,6 +22,7 @@ function Nav() {
         <div className="rectangle_"></div>
         {/* AQUI FICA A NAV LATERAL */}
         <nav className="nav_bar_lateral">
+          <div className="div_bar">
           {/* AQUI FICA O ARRAY DE BUTTONS DO NAV LATERAL */}
           {itemsButtons.map((item) => (
             <button key={item.id}>
@@ -37,7 +38,9 @@ function Nav() {
                 </div>
               </Link>
             </button>
-          ))}
+          ))}  
+          </div>
+          
         </nav>
       </header>
     </>

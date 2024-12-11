@@ -1,7 +1,6 @@
 /* AQUI FICA O CSS DO HEADER STATUS */
 /* status_container */
 .status_container {
-
   width: 1254px;
   height: 156px;
   gap: 32px;
@@ -11,15 +10,12 @@
   border-radius: 20px;
   padding: 24px;
   gap: 48px;
-  background-color: #FFFFFF;
-
- 
+  background-color: #ffffff;
 }
 
 /* AQUI FICA O CARDS DE STATUS */
 /* container_items */
 .container_items {
-
   width: 960px;
   display: flex;
   align-items: center;
@@ -29,7 +25,7 @@
 
 .cards_status {
   width: 80px;
-  height: 88px;
+  height: 108px;
   gap: 8px;
   display: flex;
   align-items: center;
@@ -46,9 +42,8 @@
     box-shadow: -1px 2px 0.5rem #707070b6;
     border-radius: 20px;
     left: 8px;
-   background-color: #DBDBDB;
-    
-   
+    background-color: #dbdbdb;
+
     img {
       width: 27.2px;
       height: 32px;
@@ -56,10 +51,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      
     }
   }
- 
+
   p {
     width: 80px;
     height: 16px;
@@ -70,11 +64,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family:Ubuntu;
+    font-family: Ubuntu;
     color: #649fbf;
   }
-
-  
+  #span-status {
+    width: 80px;
+    height: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.09px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Ubuntu;
+    color: #272f33;
+    display: none;
+  }
 }
 .cards_status .first-item {
   background-color: #649fbf;
@@ -82,12 +88,122 @@
 
 /* LINHA ENTRE OS ITENS */
 .line {
-
-  min-width:900px;
+  min-width: 900px;
   height: 4px;
   border-top: 4px dashed #649fbf;
   position: absolute;
   left: 35px;
- top: 28px;
+  top: 28px;
+}
 
+/* =================== MEDIA SCREEN ==================== */
+@media (max-width: 480px) {
+  /* AQUI FICA O CSS DO HEADER STATUS */
+  /* status_container */
+  .status_container {
+    width: 100%;
+    height: 13vh;
+    gap: 32px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: #ffffff;
+    z-index: 99;
+    position: absolute;
+    border-radius: 1px;
+    padding: 0;
+    top: 0;
+    left: 0;
+    margin-top: 20vh;
+    position: relative;
+   /* overflow-x: scroll; */
+   /* overflow-y: hidden; */
+  }
+
+  /* AQUI FICA O CARDS DE STATUS */
+  /* container_items */
+  .container_items {
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .cards_status {
+    width: 80px;
+    height: 100%;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    z-index: 20;
+
+
+    div {
+      width: 40px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: -1px 2px 0.5rem #707070b6;
+      border-radius: 20px;
+      left: 8px;
+      background-color: #dbdbdb;
+
+      img {
+        width: 20px;
+        height: 25px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    p {
+      width: 80px;
+      height: 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16.09px;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Ubuntu;
+      color: #649fbf;
+    }
+    #span-status {
+      width: 80px;
+      height: 14px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16.09px;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Ubuntu;
+      color: #272f33;
+      display: none;
+    }
+  }
+  .cards_status .first-item {
+    background-color: #649fbf;
+  }
+
+  /* LINHA ENTRE OS ITENS */
+  .line {
+    width:100px;
+    height: 4px;
+    border-top: 4px dashed #649fbf;
+    position: absolute;
+ 
+    top: 28px;
+  }
 }

@@ -24,17 +24,27 @@ function FormGroup_2() {
 
   // FUNÇÃO PARA FECHAR OS CARDS ABAIXO DE EPIS
   function epiverification() {
-    const funcVerification = document.getElementById(`func_verification`);
-
+    const funcVerification = document.getElementById('func_verification');
+    const funcVerification2 = document.getElementById('func_verification_2');
+    const ContainerHeight = document.getElementById('form-container');
+  // FUÇÃO PARA ESCONDER O CARD DE EPI - GROUP 2
     if (funcVerification) {
-      // Alterna entre 'none' e 'block' usando operador ternário
-      funcVerification.style.display =
-        funcVerification.style.display === "none" ? "flex" : "none";
+
+      funcVerification.style.display = funcVerification.style.display === 'none' ? 'flex' : 'none';
     }
-    const funcVerification2 = document.getElementById(`func_verification_2`);
+  // FUNÇÃO PARA ESCONDER O CARD DE SELECINAR ALGUM AQUIVO - ULTIMO CARD DO FORMULARIO - GROUP - 3
     if (funcVerification2) {
-      funcVerification2.style.display =
-        funcVerification2.style.display === "none" ? "flex" : "none";
+      funcVerification2.style.display = funcVerification2.style.display === 'none' ? 'flex' : 'none';
+    }
+  
+  // FUNÇÃO PARA DIMINIUR O CONTAINER PRINCIPAL DO FORMULÁRIO
+    if (ContainerHeight) {
+      if (ContainerHeight.style.height === '630px') {
+        ContainerHeight.style.height = '1032px'; // altura padrão
+      } else {
+        ContainerHeight.style.height = '630px'; // altura reduzida
+        ContainerHeight.style.paddingTop = '100px'
+      }
     }
   }
   return (
