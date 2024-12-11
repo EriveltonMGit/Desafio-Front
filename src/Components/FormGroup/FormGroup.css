@@ -1,0 +1,133 @@
+/* form_group */
+.form_group{
+    width:714px ;
+    height: 261px;
+    border-radius: 10px;
+    border: 1px solid #649fbf;
+    padding: 12px;
+    display: flex;
+    gap: 24px;
+    
+    position: relative;
+  }
+  /* card_group_form */
+  .card_group_form{
+    width: 333px;
+    height: 100%;
+    display: flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction: column;
+    
+   
+    gap: 8px;
+    div{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+  
+      label{
+        width: 43px;
+        height: 19px;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18.75px;
+  
+      }
+      input{
+   width: 333px;
+   height: 36px;
+   border-radius: 10px;
+   border: 1px solid #649fbf;
+   padding-right: 12px;
+   padding-left: 12px;
+   outline: none;
+      }
+    }
+  }
+
+  /* radio-group */
+  .radio-group{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+    width: 216.43px;
+    height: 36px;
+    gap: 16px;
+   
+  }
+  
+
+  /* data_nasc */
+  .nascimento{
+    width: 333px;
+    height: 63px;
+    display: flex;
+    gap: 8px;
+  #data_nasc{
+        width: 333px;
+        height: 19px;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18.75px;
+
+  
+      }
+    input{
+        width: 333px;
+        height: 36px;
+        border-radius: 10px;
+        border: 1px solid #649fbf;
+        padding-right: 12px;
+        padding-left: 12px;
+        outline: none; 
+        
+    }
+  }
+
+  /*  cargo*/
+  #cargo{
+    width: 333px;
+    height: 63px;
+    display: flex;
+    gap: 8px;
+    outline: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .select{
+        width: 333px;
+        height: 36px;
+        border-radius: 10px;
+        border: 1px solid #649fbf;
+        padding-right: 12px;
+        padding-left: 12px;
+        outline: none; 
+        cursor: pointer;
+    }
+    
+    .opc{
+       color:  #649fbf; 
+       width: 333px;
+        height: 19px;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18.75px; 
+        outline: none;
+        cursor: pointer;
+    }
+    .opc:hover{
+        background-color: #649fbf;
+        color: #FFFFFF;
+    }
+  }
+
+
+
+  

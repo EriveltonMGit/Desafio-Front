@@ -1,0 +1,93 @@
+/* AQUI FICA O CSS DO HEADER STATUS */
+/* status_container */
+.status_container {
+
+  width: 1254px;
+  height: 156px;
+  gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 24px;
+  gap: 48px;
+  background-color: #FFFFFF;
+
+ 
+}
+
+/* AQUI FICA O CARDS DE STATUS */
+/* container_items */
+.container_items {
+
+  width: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.cards_status {
+  width: 80px;
+  height: 88px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 20;
+
+  div {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -1px 2px 0.5rem #707070b6;
+    border-radius: 20px;
+    left: 8px;
+   background-color: #DBDBDB;
+    
+   
+    img {
+      width: 27.2px;
+      height: 32px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+  }
+ 
+  p {
+    width: 80px;
+    height: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.09px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:Ubuntu;
+    color: #649fbf;
+  }
+
+  
+}
+.cards_status .first-item {
+  background-color: #649fbf;
+}
+
+/* LINHA ENTRE OS ITENS */
+.line {
+
+  min-width:900px;
+  height: 4px;
+  border-top: 4px dashed #649fbf;
+  position: absolute;
+  left: 35px;
+ top: 28px;
+
+}

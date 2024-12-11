@@ -1,0 +1,319 @@
+/* AQUI FICA O CSS DO HOME - PAGINA INICIAL DO PROJETO */
+
+/* HOME */
+.container_cadastro {
+  width: 1366px;
+  height: 1332px;
+  padding-right: 24px;
+  gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* CONTAINER SECTION FORM */
+.container_sections_cadastro {
+  width: 1254px;
+  height: 1332px;
+  position: absolute;
+  top: -24px;
+  left: 88px;
+  gap: 32px;
+  padding: 24px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+/* AQUI FICA A  SECTION FORM */
+.container_sections_cadastro .section_form {
+  width: 1254px;
+  height: 1254px;
+  gap: 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+ 
+}
+
+/* content_cadastro_container */
+.container_sections_cadastro .content_cadastro_container {
+  width: 1254px;
+  height: 1220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 32px;
+  
+}
+
+/* AQUI FICA A DIV DO PERFIL DO FUNCIONÁRIO */
+.container_sections_cadastro .perfil {
+  width: 460px;
+  height: 439px;
+  border-radius: 24px;
+  padding: 24px;
+  gap: 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #ffffff;
+
+  /* AQUI FICA O TEXTO DO PERFIL */
+  p {
+    width: 412px;
+    height: 200px;
+    font-size: 16px;
+    line-height: 19.55px;
+    font-weight: 400;
+    color: var(--color-font);
+  }
+  /* AQUI FICA A IMAGEM DO PERFIL */
+  img {
+    width: 142px;
+    height: 159px;
+    gap: 24;
+  }
+}
+
+/* AQUI FICA A DIV DO FORM  */
+.container_sections_cadastro .form_container {
+  width: 762px;
+  height: 1032px;
+  border-radius: 20px;
+  gap: 16px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+ overflow-y: auto;
+}
+
+/* AQUI FICA O FORM -INPUTS */
+.container_sections_cadastro .title_form {
+  width: 762px;
+  height: 56px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #649fbf;
+  position: relative;
+  
+  p {
+    font-family: Ubuntu;
+    width: 179px;
+    height: 32px;
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    font-size: 28px;
+    line-height: 32.17px;
+    font-weight: 400;
+    color: #ffffff;
+    display: flex;
+    gap: 25px;
+
+    img {
+      width: 18px;
+      top: 24px;
+      left: 45px;
+    }
+  }
+}
+
+/* AQUI FICA A SECTION PARA ADICIONAR FUNCIONÁRIOS */
+.container_sections_cadastro .container_funcionarios_add_form {
+  width: 762px;
+  height: 960px;
+  border-radius: 20px;
+  top: 16px;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 5px;
+}
+
+/* container_switch */
+.container_sections_cadastro .container_form_add {
+  width: 762px;
+  height: 52px;
+
+  border-radius: 20px;
+  padding: 16px 24px 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 16px;
+
+
+}
+
+
+
+/* FORM CADASTRO  NOME*/
+ .form_cadastro {
+ 
+  width: 714px;
+  height: 860px;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  flex-direction: column;
+  gap: 16px;
+  /* border: 1px solid red; */
+ 
+}
+/* form_switch_cadastro */
+.form_switch_cadastro{
+  width: 714px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #649fbf;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+ 
+  p{
+    width: 253px;
+    height: 19px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    color: #272F33;
+  }
+}
+
+
+
+
+/* salvarFomr */
+.salvarFomr{
+  width: 714px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid #649fbf;
+  background-color: #FFFFFF;
+  padding: 10px 40px 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  p{
+    width: 39px;
+    height: 16px;
+    font-family: Ubuntu;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.09px;
+    color: #649fbf;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
+.px_passos {
+  width: 1254px;
+  height: 32px;
+  top: 998px;
+
+  left: 88px;
+  gap: 854px;
+  display: flex;
+  align-items: center;
+}
+/* AQUI FICA O BUTTON VOLTAR */
+.bt_anterior {
+  width: 194px;
+  height: 32px;
+  border-radius: 10px;
+  left: 1060px;
+  background-color: var(--bk-button);
+ display: block;
+  transition: opacity 0.3s, visibility 0.3s;
+  a {
+    font-size: 16px;
+    top: 8px;
+    left: 51px;
+    font-weight: 700;
+    line-height: 16.41px;
+    color: var(--ligth);
+    font-family: Roboto;
+  }
+}
+
+
+/* AQUI FICA O BUTTON PRÓXIMO*/
+.container_cadastro .btn_proximo {
+  width: 194px;
+  height: 32px;
+  border-radius: 10px;
+  left: 1060px;
+  background-color: var(--bk-button);
+  background-color: #649fbf;
+  a {
+    font-size: 16px;
+    top: 8px;
+    left: 51px;
+    font-weight: 700;
+    line-height: 16.41px;
+    color: var(--ligth);
+    font-family: Roboto;
+  }
+}
+
+/* content_img */
+.container_cadastro .content_img_footer {
+  width: 557px;
+  height: 827px;
+  position: absolute;
+  top: 510px;
+  left: 897px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+
+  img {
+    width: 40vw;
+  }
+}
+
+

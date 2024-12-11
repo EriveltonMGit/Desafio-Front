@@ -1,0 +1,26 @@
+
+
+/* aviso */
+.aviso{
+    width: 1254px;
+    height: 55px;
+    top: 24px;
+    left: 88px;
+    border-radius: 20px;
+    background-color:#4FA1C1 ;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+
+     font-size: Ubuntu;
+     font-weight: 400;
+     font-size: 28px;
+     line-height: 32.17px;
+     width: 125px;
+     height: 32px;
+     left: 654.88px;  
+     color: #FFFFFF;
+    }
+}

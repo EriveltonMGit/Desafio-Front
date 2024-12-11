@@ -1,0 +1,99 @@
+/* AQUI FICA O CSS DO HOME - PAGINA INICIAL DO PROJETO */
+
+/* HOME */
+.container_home {
+    width: 1366px;
+    height: 1062px;
+    top: 100px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* CONTAINER SECTION FORM */
+  .container_sections {
+    width: 1254px;
+    height: 942px;
+    position: absolute;
+    top: 24px;
+    left: 88px;
+    gap: 32px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+ 
+  
+  /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
+  .px_passos {
+    width: 1254px;
+    height: 32px;
+    top: 998px;
+  
+    left: 88px;
+    gap: 854px;
+    display: flex;
+    align-items: center;
+  }
+  /* AQUI FICA O BUTTON VOLTAR */
+  .bt_anterior {
+    width: 194px;
+    height: 32px;
+    border-radius: 10px;
+    left: 1060px;
+    background-color: var(--bk-button);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    a {
+      font-size: 16px;
+      top: 8px;
+      left: 51px;
+      font-weight: 700;
+      line-height: 16.41px;
+      color: var(--ligth);
+      font-family: Roboto;
+    }
+  }
+  
+  .bt_anterior.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* AQUI FICA O BUTTON PRÓXIMO*/
+  .btn_proximo {
+    width: 194px;
+    height: 32px;
+    border-radius: 10px;
+    left: 1060px;
+    background-color: var(--bk-button);
+    a {
+      font-size: 16px;
+      top: 8px;
+      left: 51px;
+      font-weight: 700;
+      line-height: 16.41px;
+      color: var(--ligth);
+      font-family: Roboto;
+    }
+  }
+  
+  /* content_img */
+  .content_img_footer {
+    width: 457px;
+    height: 557px;
+    position: absolute;
+    top: 500px;
+    left: 897px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    img {
+      width: 40vw;
+    }
+  }
+  
