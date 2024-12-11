@@ -124,7 +124,7 @@
     z-index: 999;
     background-color: var(--bk-color-form);
     border-radius: 1px;
-    position: fixed;
+    position:absolute;
  
  
   }
