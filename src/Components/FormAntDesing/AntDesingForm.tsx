@@ -2,12 +2,27 @@
 "use client";
 import React from "react";
 import { Form, Input, Select, DatePicker, Upload } from "antd";
-import { UploadChangeParam } from "antd/es/upload";
+import { UploadChangeParam, RcFile } from "antd/es/upload";
+import { Moment } from "moment"; // Se estiver utilizando moment.js para datas
 import Switch from "../Switch/Swhitch";
 // IMPORT CSS
 import "./AntDesingForm.css";
 
 const { Option } = Select;
+
+interface FormData {
+  nome: string;
+  cpf: string;
+  rg: string;
+  sexo: string;
+  dataNascimento: Moment;
+  cargo: string;
+  epi: boolean;
+  atividade: string;
+  numeroEpi: string;
+  ca: string;
+  files: RcFile[]; // Tipo de arquivos, você pode ajustar conforme a necessidade
+}
 
 const InstallerForm = () => {
   // Função para tratar a entrada do CPF, aceitando apenas números
@@ -15,22 +30,59 @@ const InstallerForm = () => {
     // Substitui qualquer caractere que não seja número
     e.target.value = e.target.value.replace(/\D/g, "");
   };
+
   const handleFileChange = (info: UploadChangeParam) => {
     console.log("File selected: ", info.file);
+  };
+
+  const onFinish = async (values: FormData) => {
+    // Preparando os dados para envio
+    const formData = {
+      nome: values.nome,
+      cpf: values.cpf,
+      rg: values.rg,
+      sexo: values.sexo,
+      dataNascimento: values.dataNascimento.format("DD/MM/YYYY"),
+      cargo: values.cargo,
+      epi: values.epi,
+      atividade: values.atividade,
+      numeroEpi: values.numeroEpi,
+      ca: values.ca,
+      files: values.files, // Não inclua o campo 'id'
+    };
+
+    // Enviar os dados para o JSON Server via POST
+    try {
+      const response = await fetch("http://localhost:3001/funcionarios", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erro ao salvar dados");
+      }
+
+      alert("Funcionário cadastrado com sucesso!");
+    } catch (error) {
+      console.error("Erro ao enviar dados:", error);
+      alert("Erro ao salvar dados. Tente novamente.");
+    }
   };
 
   return (
     <div className="form-group">
       {/* Formulário com campos de entrada e rótulos */}
-      <Form layout="vertical">
+      <Form layout="vertical" onFinish={onFinish}>
         <div
           className="container-form"
           style={{ display: "flex", justifyContent: "space-between" }}
         >
-          {/* PRIMEITO CARD DO FORM ONDE FICA O SWITCH */}
+          {/* PRIMEIRO CARD DO FORM ONDE FICA O SWITCH */}
           <div className="swith-func">
             <label htmlFor="">O trabalhador está ativo ou inativo?</label>
-
             <Switch />
           </div>
 
@@ -111,9 +163,6 @@ const InstallerForm = () => {
                     Feminino
                   </label>
                 </div>
-                <span className="error-message">
-                  {/* Aqui você pode mostrar mensagens de erro manualmente */}
-                </span>
               </div>
               <Form.Item
                 label="Data de Nascimento"
@@ -154,26 +203,22 @@ const InstallerForm = () => {
           <main className="container_group_2">
             {/* { EPIs */}
             <div className="second-group">
-              {/* Novo Campo - EPIs */}
               <div className="checkbox-epi">
                 <label
                   htmlFor="checkbox-epi"
                   style={{ display: "block", marginBottom: "8px" }}
                 >
-               <p>   Quais EPIs o trabalhador usa na atividade?</p>
+                  <p>Quais EPIs o trabalhador usa na atividade?</p>
                 </label>
                 <div>
-                <input type="checkbox" id="checkbox-epi" />
-                <p>O trabalhador não usa EPI</p>
+                  <input type="checkbox" id="checkbox-epi" />
+                  <p>O trabalhador não usa EPI</p>
                 </div>
-  
-            
               </div>
             </div>
 
             {/* Segunda Div - Atividade e CA */}
             <div className="second-group-2">
-              {/* Novo Campo - Atividade e CA */}
               <div className="area-atividade-selected">
                 <div className="container-atividade-epi">
                   <div className="selected_atividade">
@@ -243,14 +288,13 @@ const InstallerForm = () => {
               </button>
             </div>
           </main>
+
           {/* AQUI FICA O FORM DE SELECIONAR ARQUIVO */}
           <main className="container_group_3">
             <Form.Item
               className="title_saude"
-              label="Adicione Atestato de saúde (opcional)"
-            >
-              {" "}
-            </Form.Item>
+              label="Adicione Atestado de saúde (opcional)"
+            ></Form.Item>
 
             <Form.Item
               className="up_arquivo-1"
@@ -288,7 +332,7 @@ const InstallerForm = () => {
             </Form.Item>
           </main>
         </div>
-        <button className="salvarFomr">Salvar</button>
+        <button className="salvarFomr" type="submit">Salvar</button>
       </Form>
     </div>
   );
