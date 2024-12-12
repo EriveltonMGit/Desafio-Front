@@ -779,6 +779,7 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
+    color: #3a3a3a;
   }
 
   /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */

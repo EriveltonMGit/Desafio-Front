@@ -265,7 +265,7 @@
     justify-content: center;
     flex-direction: column;
     border: 1px solid #649fbf;
-    border: 1px solid rgb(0, 255, 128);
+   
   }
   /* Personaliza a barra de rolagem */
   .group_container_epis::-webkit-scrollbar {
