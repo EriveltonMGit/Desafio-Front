@@ -321,6 +321,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    z-index: 1;
     img {
       width: 70vw;
     }
