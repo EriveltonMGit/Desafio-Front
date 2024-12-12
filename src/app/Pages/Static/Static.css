@@ -9,10 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
- .container_statics{
-
+.container_statics {
   width: 1254px;
   height: 744px;
   top: 24px;
@@ -25,7 +23,7 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  .div-menu{
+  .div-menu {
     margin-top: 24px;
   }
 }
@@ -46,9 +44,6 @@
   margin-top: 24px;
 }
 
-
-
-
 /* content_img */
 .container_home_static .content_img_footer {
   width: 457px;
@@ -64,7 +59,7 @@
   }
 }
 /* container-mensasem-static */
-.container-mensasem-static{
+.container-mensasem-static {
   width: 1254px;
   height: 556px;
   position: relative;
@@ -74,28 +69,27 @@
 }
 
 /* aviso */
-.aviso-static{
+.aviso-static {
   width: 1254px;
   height: 55px;
   top: 24px;
   left: 0px;
   border-radius: 20px;
-  background-color:#4FA1C1 ;
+  background-color: #4fa1c1;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  h1{
-
-   font-size: Ubuntu;
-   font-weight: 400;
-   font-size: 28px;
-   line-height: 32.17px;
-   width: 125px;
-   height: 32px;
-   left: 654.88px;  
-   color: #FFFFFF;
+  h1 {
+    font-size: Ubuntu;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32.17px;
+    width: 125px;
+    height: 32px;
+    left: 654.88px;
+    color: #ffffff;
   }
 }
 
@@ -104,7 +98,6 @@
 /* AQUI FICA O CSS DO HEADER STATUS */
 /* status_container */
 .status_container-static {
-
   width: 1254px;
   height: 156px;
   gap: 32px;
@@ -114,15 +107,12 @@
   border-radius: 20px;
   padding: 24px;
   gap: 48px;
-  background-color: #FFFFFF;
-
- 
+  background-color: #ffffff;
 }
 
 /* AQUI FICA O CARDS DE STATUS */
 /* container_items */
 .status_container-static .container_items {
-
   width: 960px;
   height: auto;
 
@@ -152,9 +142,8 @@
     border-radius: 20px;
     left: 8px;
 
-   background-color: #649fbf;
+    background-color: #649fbf;
 
-  
     img {
       width: 27.2px;
       height: 32px;
@@ -162,10 +151,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      
     }
   }
- 
+
   p {
     width: 80px;
     height: 16px;
@@ -176,24 +164,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family:Ubuntu;
+    font-family: Ubuntu;
     color: #649fbf;
   }
-  #span-status{
-    width: 80px;
-      height: 14px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 16.09px;
-      align-items: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family:Ubuntu;
-      color: #272F33;
-    
-  }
-  #span-status-prox{
+  #span-status {
     width: 80px;
     height: 14px;
     font-weight: 500;
@@ -203,31 +177,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family:Ubuntu;
-    color: #272F33;
-   
+    font-family: Ubuntu;
+    color: #272f33;
+  }
+  #span-status-prox {
+    width: 80px;
+    height: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.09px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Ubuntu;
+    color: #272f33;
   }
   .active-border {
-    border: 2px solid black; 
+    border: 2px solid black;
     border-radius: 20px;
   }
 }
 
-
 /* LINHA ENTRE OS ITENS */
 .status_container-static .line {
-
-  min-width:900px;
+  min-width: 900px;
   height: 4px;
   border-top: 4px dashed #649fbf;
   position: absolute;
   left: 35px;
- top: 28px;
-
+  top: 28px;
 }
 /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
 .px_passos {
-  width: 1254px;
+  width: 100%;
   height: 32px;
   top: 998px;
 
@@ -237,7 +220,7 @@
   align-items: center;
 }
 /* AQUI FICA O BUTTON VOLTAR */
-.bt_anterior-static{
+.bt_anterior-static {
   width: 194px;
   height: 32px;
   border-radius: 10px;
@@ -256,7 +239,6 @@
   }
 }
 
-
 /* AQUI FICA O BUTTON PRÓXIMO*/
 .btn_proximo {
   width: 194px;
@@ -273,4 +255,294 @@
     color: var(--ligth);
     font-family: Roboto;
   }
+}
+
+/* ==========MEDIA SCREN ======== */
+@media (max-width: 480px) {
+  /* AQUI FICA O CSS DO HOME - PAGINA INICIAL DO PROJETO */
+
+  /* HOME */
+  .container_home_static {
+    width: 100%;
+    height: 100vh;
+    top: 100px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* .container_statics */
+  .container_statics {
+    width: 90%;
+    height: 80vh;
+    top: 24px;
+    gap: 32px;
+    position: relative;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .div-menu {
+      margin-top: 24px;
+    }
+  }
+
+  /* CONTAINER SECTION FORM */
+  .container_home_static .container_sections {
+    width: 100%;
+    height: 942px;
+    position: absolute;
+    top: 24px;
+    gap: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  /* content_img */
+  .container_home_static .content_img_footer {
+    width: 100%;
+    height: 557px;
+    position: absolute;
+    top: 224px;
+    left: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    img {
+      width: 70vw;
+    }
+  }
+  /* container-mensasem-static */
+  .container-mensasem-static {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    margin-left: -15vw;
+    margin-top: 30vh;
+  }
+
+  /* aviso */
+  .aviso-static {
+    width: 100%;
+    height: 55px;
+    top: 24px;
+    left: 0px;
+    border-radius: 20px;
+    background-color: #4fa1c1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: Ubuntu;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 32.17px;
+      width: 125px;
+      height: 32px;
+      left: 654.88px;
+      color: #ffffff;
+    }
+  }
+
+  /* -----------aqrui fica o item status  */
+
+  /* AQUI FICA O CSS DO HEADER STATUS */
+  /* status_container */
+  .status_container-static {
+    margin-left: -15vw;
+    width: 100%;
+    height: 156px;
+    gap: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    position: relative;
+    padding: 24px;
+    gap: 48px;
+    margin-top: 10vh;
+    background-color: #ffffff;
+    overflow-x: auto;
+    position: absolute;
+    left: 0;
+  }
+
+  /* AQUI FICA O CARDS DE STATUS */
+  /* container_items */
+  .status_container-static .container_items {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    position: absolute;
+    left: 0;
+  }
+
+  .status_container-static .cards_status {
+    width: 80px;
+    height: 108px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    z-index: 20;
+
+    div {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: -1px 2px 0.5rem #707070b6;
+      border-radius: 20px;
+      left: 8px;
+
+      background-color: #649fbf;
+
+      img {
+        width: 27.2px;
+        height: 32px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    p {
+      width: 80px;
+      height: 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16.09px;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Ubuntu;
+      color: #649fbf;
+    }
+    #span-status {
+      width: 80px;
+      height: 14px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16.09px;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Ubuntu;
+      color: #272f33;
+    }
+    #span-status-prox {
+      width: 80px;
+      height: 14px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16.09px;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Ubuntu;
+      color: #272f33;
+    }
+    .active-border {
+      border: 2px solid black;
+      border-radius: 20px;
+    }
+  }
+
+  /* LINHA ENTRE OS ITENS */
+  .status_container-static .line {
+    width: 50%;
+    height: 4px;
+    border-top: 4px dashed #649fbf;
+    position: absolute;
+    display: none;
+    top: 28px;
+  }
+  /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
+  .px_passos_static {
+    width: 100%;
+    height: 14vh;
+    margin-left: -30vw;
+    left: 0;
+    bottom: 0;
+    margin-top: 40vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
+  }
+  /* AQUI FICA O BUTTON VOLTAR */
+  .bt_anterior-static {
+    width: 95%;
+    height: 42px;
+    border-radius: 10px;
+    
+    background-color: var(--bk-button);
+
+    transition: opacity 0.3s, visibility 0.3s;
+    p {
+      font-size: 16px;
+      top: 8px;
+      left: 51px;
+      font-weight: 700;
+      line-height: 16.41px;
+      color: var(--ligth);
+      font-family: Roboto;
+    }
+  }
+  /* div-menu */
+  .div-menu {
+    width: 100%;
+    border: 1px solid red;
+    position: absolute;
+    left: 0;
+  }
+
+  /* AQUI FICA O BUTTON PRÓXIMO*/
+  .px_passos_static .btn_proximo-static {
+    width: 95%;
+    height: 42px;
+    border-radius: 10px;
+    
+    left: 0;
+   bottom: 0vh;
+   margin-left: 2.5%;
+    position: absolute;
+    background-color: var(--bk-button);
+    p {
+      font-size: 16px;
+      top: 8px;
+      left: 51px;
+      font-weight: 700;
+      line-height: 16.41px;
+      color: var(--ligth);
+      font-family: Roboto;
+    }
+  }
+ 
 }

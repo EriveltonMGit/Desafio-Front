@@ -2,7 +2,7 @@
 
 
 import MensgemAviso from "@/Components/MensagemAviso/MensagemAviso";
-import Nav from "../../../Components/NavBar";
+import Nav from "../../../Components/NavBar/page";
 // IMPORT CSS 
 import './History.css'
 

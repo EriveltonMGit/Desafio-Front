@@ -3,7 +3,7 @@
 "use client";
 // IMPORT DOS COMPONENTS
 import ItemsStatus from "@/Components/ItemsStatus/ItemsStatus";
-import Nav from "../../../Components/NavBar";
+import Nav from "../../../Components/NavBar/page";
 import { useState } from "react";
 //AQUI FICA O CSS
 import "./Home.css";
@@ -157,7 +157,7 @@ function Home() {
           {/* AQUI FICA A SECTION ARROW - PROXIMO PASSO */}
           <section className="px_passos">
             <button className="bt_anterior">
-              <Link href="/" legacyBehavior>
+              <Link href="/Pages/Home" legacyBehavior>
                 <a>Anterior</a>
               </Link>
             </button>

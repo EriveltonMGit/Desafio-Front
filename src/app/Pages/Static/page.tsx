@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import Nav from "../../../Components/NavBar";
+import Nav from "../../../Components/NavBar/page";
 // IMPORT CSS
 import "./Static.css";
 
@@ -38,7 +38,7 @@ function StaticPage() {
         {/* NAV BAR */}
         <Nav />
         <div className="container_statics">
-          <div className="div-menu">
+          <div className="">
             <section className="status_container-static">
               {/* AQUI FICA O ARRAY DE CARD STATUS */}
               <div className="container_items">
@@ -70,11 +70,11 @@ function StaticPage() {
           </div>
 
           {/* AQUI FICA A SECTION ARROW - PROXIMO PASSO */}
-          <section className="px_passos">
+          <section className="px_passos_static">
             <button className="bt_anterior-static" onClick={exibirVoltar}>
               <p>Anterior</p>
             </button>
-            <button className="btn_proximo" onClick={exibirConcluido}>
+            <button className="btn_proximo-static" onClick={exibirConcluido}>
               <p>Próximo passo</p>
             </button>
           </section>

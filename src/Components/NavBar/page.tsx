@@ -7,7 +7,7 @@ function Nav() {
   // AQUI FICA O ARRAY DE BUTTONS DO NAV LATERAL
   const itemsButtons = [
     { id: 1, image: "/enterprise-icon.webp", rota: "/Pages/Enterprise",  },
-    { id: 2, image: "/edit-icon.webp",},
+    { id: 2, image: "/edit-icon.webp",rota: "/Pages/Home", },
     { id: 3, image: "/sitemap-icon.webp", rota: "/Pages/Sitemap", },
     { id: 4, image: "/bell-icon.webp",  rota: "/Pages/Notifications", },
     { id: 5, image: "/time-loop-icon.webp", rota: "/Pages/History",  },

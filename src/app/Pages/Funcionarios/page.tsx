@@ -2,7 +2,7 @@
 "use client";
 // IMPORT DOS COMPONENTS
 import ItemsStatus from "@/Components/ItemsStatus/ItemsStatus";
-import Nav from "../../../Components/NavBar/index";
+import Nav from "../../../Components/NavBar/page";
 
 //AQUI FICA O CSS
 import "./Funcionarios.css";
