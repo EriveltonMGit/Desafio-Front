@@ -4,7 +4,7 @@
 // IMPORT DOS COMPONENTS
 import ItemsStatus from "@/Components/ItemsStatus/ItemsStatus";
 import Nav from "../../../Components/NavBar/page";
-import { useState } from "react";
+import React, { useState } from "react";
 //AQUI FICA O CSS
 import "./Home.css";
 import Link from "next/link";
@@ -16,31 +16,31 @@ function Home() {
   const itemsFuncionarios = [
     {
       id: 1,
-      nome: "",
+      nome: "Daniel Alves da Silva",
       ativo: "Ativo",
       cargo: "Cargo 1",
-      codigoFuncionario: "",
+      codigoFuncionario: "000.000.000-99",
     },
     {
       id: 2,
-      nome: "",
+      nome: "Giselee Torres Lopes",
       ativo: "Ativo",
-      cargo: "Cargo 1",
-      codigoFuncionario: "",
+      cargo: "Cargo 2",
+      codigoFuncionario: "000.000.000-99",
     },
     {
       id: 3,
-      nome: "",
+      nome: "Ana Bispo dos Santos",
       ativo: "Ativo",
-      cargo: "Cargo 1",
-      codigoFuncionario: "",
+      cargo: "Cargo 3",
+      codigoFuncionario: "000.000.000-99",
     },
     {
       id: 4,
-      nome: "",
+      nome: "Regina Elisa Sousa",
       ativo: "Ativo",
-      cargo: "Cargo 1",
-      codigoFuncionario: "",
+      cargo: "Cargo 4",
+      codigoFuncionario: "000.000.000-99",
     },
   ];
 
@@ -51,6 +51,8 @@ function Home() {
     if (e) e.preventDefault();
     setCrudVisible(crudVisible === id ? null : id);
   };
+
+
 
   return (
     <>
@@ -95,7 +97,7 @@ function Home() {
               {/* AQUI FICA O BUTTON DE ADICIONAR FUNCIONÁRIOS */}
               <section className="container_funcionarios">
                 <button className="add_funcionario">
-                  <Link href="/Pages/Funcionarios">
+                  <Link href="/Pages/Funcionarios" >
                     + Adicionar Funcionário
                   </Link>
                 </button>
@@ -118,9 +120,9 @@ function Home() {
                 {itemsFuncionarios.map((item) => (
                   <div key={item.id} className="lista_item">
                     <div className="area_content_funcionarios">
-                      <h2>Daniel da Silva</h2>
+                      <h2>{item.nome}</h2>
                       <div>
-                        <button>00000</button>
+                        <button>{item.codigoFuncionario}</button>
                         <button>{item.ativo}</button>
                         <button>{item.cargo}</button>
                       </div>
@@ -148,7 +150,7 @@ function Home() {
 
               {/* AQUI FICA O SWITCH */}
               <section className="container_switch">
-                <p>A etapa está concluída?</p>
+                <h5>A etapa está concluída?</h5>
 
                 <Swhitch />
               </section>

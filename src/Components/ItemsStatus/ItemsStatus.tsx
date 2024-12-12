@@ -15,7 +15,7 @@ function ItemsStatus() {
           <div className="line"></div>
 
           <div className="cards_status">
-            <div className="div_bk_item  items_time_line first-item" >
+            <div className="div_bk_item  items_time_line first-item"  >
               <img src="/Vector.webp" alt="Image status" />
             </div>
             <p>Item 1</p>

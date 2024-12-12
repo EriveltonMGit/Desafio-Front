@@ -38,11 +38,12 @@ function StaticPage() {
         {/* NAV BAR */}
         <Nav />
         <div className="container_statics">
-          <div className="div-menu">
+          <div className="div-menu-static">
             <section className="status_container-static">
               {/* AQUI FICA O ARRAY DE CARD STATUS */}
               <div className="container_items">
                 <div className="line"></div>
+                <div className="line-static-device"></div>
 
                 {[...Array(9)].map((_, index) => (
                   <div key={index} className="cards_status">

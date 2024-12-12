@@ -12,7 +12,7 @@ function Switch() {
   return (
     <button className={`switch-button ${isSelected ? "active" : ""}`} onClick={toggleSwitch}>
       <div className={`switch-ball ${isSelected ? "active" : ""}`}></div>
-      <span className="switch-text">{isSelected ? "Sim" : "Não"}</span>
+      <span className="switch-text">{isSelected ? "Ativo" : "Inativo"}</span>
     </button>
   );
 }

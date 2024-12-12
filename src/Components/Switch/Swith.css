@@ -1,5 +1,5 @@
 .switch-button {
-    width: 73px;
+    width: 83px;
     height: 20px;
     border-radius: 15px;
     background-color: #DBDBDB;
@@ -16,7 +16,7 @@
   }
   
   .switch-button.active {
-    background-color: #649fbf; /* Cor de fundo quando ativado */
+    background-color: #649fbf; 
   }
   
   .switch-ball {
@@ -32,11 +32,11 @@
   }
   
   .switch-button.active .switch-ball {
-    transform: translateX(50px); /* Move a bolinha para a direita */
+    transform: translateX(60px); /* Move a bolinha para a direita */
   }
   
   .switch-text {
-    font-size: 16px;
+    font-size: 10px;
     color: #3A3A3A;
     position: absolute;
     align-items: center;

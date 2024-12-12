@@ -231,12 +231,16 @@
 
   h2 {
     color: #707070;
-    width: 221px;
+    
+    width: auto;
+    max-width: 271px;
+    
     height: 28px;
     font-family: Ubuntu;
     font-size: 24px;
     list-style: 27.58px;
     font-weight: 400px;
+    
   }
 
   div {
@@ -346,6 +350,19 @@
   align-items: center;
   justify-content: flex-end;
   gap: 16px;
+  h5{
+    width: 168px;
+    height: 16px;
+    top: 2px;
+
+     font-size: 16px;
+    top: 8px;
+    left: 51px;
+    font-weight: 400;
+    line-height: 16.1px;
+    color: #3a3a3a;
+    font-family: Ubuntu;
+  }
 }
 
 /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
@@ -418,6 +435,11 @@
     background-size: cover;
   }
 }
+.cards_status .first-item {
+  background-color: #649fbf;
+ 
+}
+
 
 /* =================== MEDIA SCREEN ==================== */
 @media (max-width: 480px) {
@@ -664,12 +686,13 @@
 
     h2 {
       color: #707070;
-      width: 221px;
+      width: 271px;
       height: 28px;
       font-family: Ubuntu;
       font-size: 24px;
       list-style: 27.58px;
       font-weight: 400px;
+     
     }
 
     div {

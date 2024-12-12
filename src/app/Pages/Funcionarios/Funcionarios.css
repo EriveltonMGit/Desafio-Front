@@ -36,6 +36,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  
  
 }
 
@@ -82,19 +83,20 @@
 }
 
 /* AQUI FICA A DIV DO FORM  */
-.container_sections_cadastro .form_container {
+.container_cadastro .form_container {
   width: 762px;
   height: 1032px;
   border-radius: 20px;
-  gap: 16px;
+  
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
   flex-direction: column;
- overflow-y: auto;
- /* border: 1px solid red; */
+ 
+
  position: relative;
+
 }
 
 /* AQUI FICA O FORM -INPUTS */
@@ -137,56 +139,13 @@
   }
 }
 
-/* AQUI FICA A SECTION PARA ADICIONAR FUNCIONÁRIOS */
-.container_sections_cadastro .container_funcionarios_add_form {
-  width: 762px;
-  height: 960px;
-  border-radius: 20px;
-  top: 16px;
-  right: 24px;
-  bottom: 24px;
-  left: 24px;
-  gap: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-bottom: 5px;
-}
-
-/* container_switch */
-.container_sections_cadastro .container_form_add {
-  width: 762px;
-  height: 52px;
-
-  border-radius: 20px;
-  padding: 16px 24px 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
-  gap: 16px;
-
-
-}
 
 
 
-/* FORM CADASTRO  NOME*/
- .form_cadastro {
- 
-  width: 714px;
-  height: 860px;
-  display: flex;
-  align-items: center;
-  justify-content:space-around;
-  flex-direction: column;
-  gap: 16px;
-  /* border: 1px solid red; */
- 
-}
+
+
+
+
 /* form_switch_cadastro */
 .form_switch_cadastro{
   width: 714px;
@@ -197,7 +156,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px;
- 
+
   p{
     width: 253px;
     height: 19px;
@@ -212,29 +171,7 @@
 
 
 
-/* salvarFomr */
-.salvarFomr{
-  width: 714px;
-  height: 36px;
-  border-radius: 10px;
-  border: 1px solid #649fbf;
-  background-color: #FFFFFF;
-  padding: 10px 40px 10px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
 
-  p{
-    width: 39px;
-    height: 16px;
-    font-family: Ubuntu;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16.09px;
-    color: #649fbf;
-  }
-}
 
 
 
@@ -306,7 +243,9 @@
     width: 40vw;
   }
 }
-
+.cards_status div {
+  background-color: #649fbf;
+}
 
 /* =================== MEDIA SCREEN ==================== */
 @media (max-width: 480px){
@@ -542,6 +481,7 @@ margin-top: 10vh;
   align-items: center;
   justify-content: center;
   gap: 10px;
+z-index: 300;
 
   p{
     width: 39px;

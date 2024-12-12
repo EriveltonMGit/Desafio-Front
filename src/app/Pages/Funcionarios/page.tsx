@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+
 // IMPORT DOS COMPONENTS
 import ItemsStatus from "@/Components/ItemsStatus/ItemsStatus";
 import Nav from "../../../Components/NavBar/page";
@@ -7,13 +8,10 @@ import Nav from "../../../Components/NavBar/page";
 //AQUI FICA O CSS
 import "./Funcionarios.css";
 import Link from "next/link";
-import FormGroup_1 from "@/Components/FormGroup/FormGroup";
-import FormGroup_2 from "@/Components/FormGroup_2/FormGroup_2";
-import FormGroup_3 from "@/Components/FormFroup_3/FormFroup_3";
+import InstallerForm from "@/Components/FormAntDesing/AntDesingForm";
+
 
 function Funcionarios() {
-  // FUNÇÃO PARA MUDAR A COR DE BK DOS ITEMS DE 1 A 9
-
   return (
     <>
       {/* AQUI FICA O CONTAINER PRINCIPAL */}
@@ -51,37 +49,23 @@ function Funcionarios() {
                 <img src="/perfil-user.webp" alt="Imagem de perfil" />
               </div>
               {/* AQUI FICA A DIV DO FORMULÁRIO DE CLÍENTES */}
-              <section className="form_container" id="form-container">
+              <section className="form_container">
                 {/* AQUI FICA O TITULO DO FORM */}
                 <div className="title_form">
-                  <Link href="/">
+                  <Link href="/Pages/Home">
                     <p>
-                      <img src="/Arrow.webp" alt="" />{" "}
-                      Funcionário(s)
+                      <img src="/Arrow.webp" alt="" /> Funcionário(s)
                     </p>
                   </Link>
                 </div>
-                {/* AQUI FICA O BUTTON DE ADICIONAR FUNCIONÁRIOS */}
-                <section className="container_funcionarios_add_form">
-                  <main className="container_form_add">
-                    {/* AQUI FICA O FORM DE NOME */}
-                    <form className="form_cadastro">
-                      <FormGroup_1 />
-                      <FormGroup_2 />
-                      <FormGroup_3 />
-                    </form>
-                    {/* AQUI FICA O BUTTON SALVAR  */}
-                    <button className="salvarFomr">
-                      <p>Salvar</p>
-                    </button>
-                  </main>
-                </section>
+                {/* AQUI FICA O FOMULÁRIO DE ADICIONAR FUNCIONÁRIOS */}
+                <InstallerForm />
               </section>
             </section>
             {/* AQUI FICA A SECTION ARROW - PROXIMO PASSO */}
             <section className="px_passos">
               <button className="bt_anterior">
-                <Link href="/" legacyBehavior>
+                <Link href="/Pages/Home" legacyBehavior>
                   <a>Anterior</a>
                 </Link>
               </button>
