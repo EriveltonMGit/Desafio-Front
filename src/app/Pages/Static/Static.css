@@ -23,8 +23,10 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+ 
   .div-menu {
     margin-top: 24px;
+    
   }
 }
 
@@ -209,7 +211,7 @@
   top: 28px;
 }
 /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
-.px_passos {
+.px_passos_static {
   width: 100%;
   height: 32px;
   top: 998px;
@@ -218,6 +220,9 @@
   gap: 854px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  
+  margin-bottom: 15vh;
 }
 /* AQUI FICA O BUTTON VOLTAR */
 .bt_anterior-static {
@@ -240,11 +245,12 @@
 }
 
 /* AQUI FICA O BUTTON PRÓXIMO*/
-.btn_proximo {
+.btn_proximo-static {
   width: 194px;
   height: 32px;
   border-radius: 10px;
   left: 1060px;
+  z-index: 3000;
   background-color: var(--bk-button);
   p {
     font-size: 16px;
@@ -484,13 +490,14 @@
   /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
   .px_passos_static {
     width: 100%;
-    height: 14vh;
+    height: 20vh;
     margin-left: -30vw;
     left: 0;
     bottom: 0;
-    margin-top: 40vh;
+    margin-top: -100vh;
     position: absolute;
     display: flex;
+    gap: 1vh;
     align-items: center;
     flex-direction: column;
     position: relative;
@@ -518,7 +525,7 @@
   /* div-menu */
   .div-menu {
     width: 100%;
-    border: 1px solid red;
+   
     position: absolute;
     left: 0;
   }
@@ -543,5 +550,9 @@
       color: var(--ligth);
       font-family: Roboto;
     }
+  }
+  .div-menu {
+    margin-top: 24px;
+    border: none;
   }
 }

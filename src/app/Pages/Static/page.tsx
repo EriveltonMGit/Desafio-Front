@@ -38,7 +38,7 @@ function StaticPage() {
         {/* NAV BAR */}
         <Nav />
         <div className="container_statics">
-          <div className="">
+          <div className="div-menu">
             <section className="status_container-static">
               {/* AQUI FICA O ARRAY DE CARD STATUS */}
               <div className="container_items">
