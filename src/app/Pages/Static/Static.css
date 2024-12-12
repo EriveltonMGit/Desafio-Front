@@ -494,14 +494,14 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    
+    z-index: 2000;
   }
   /* AQUI FICA O BUTTON VOLTAR */
   .bt_anterior-static {
     width: 95%;
     height: 42px;
     border-radius: 10px;
-    
+
     background-color: var(--bk-button);
 
     transition: opacity 0.3s, visibility 0.3s;
@@ -528,10 +528,10 @@
     width: 95%;
     height: 42px;
     border-radius: 10px;
-    
+
     left: 0;
-   bottom: 0vh;
-   margin-left: 2.5%;
+    bottom: 0vh;
+    margin-left: 2.5%;
     position: absolute;
     background-color: var(--bk-button);
     p {
@@ -544,5 +544,4 @@
       font-family: Roboto;
     }
   }
- 
 }
