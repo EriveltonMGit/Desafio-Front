@@ -110,7 +110,7 @@ const InstallerForm = () => {
         >
           {/* PRIMEIRO CARD DO FORM ONDE FICA O SWITCH */}
           <section className="swith-func">
-            <label htmlFor="swith">O trabalhador está ativo ou inativo?</label>
+            <label>O trabalhador está ativo ou inativo?</label>
             <Switch isSelected={isSelected} onToggle={toggleSwitch} />
           </section>
 
@@ -173,7 +173,7 @@ const InstallerForm = () => {
                   <label htmlFor="masculino">
                     <input
                       type="radio"
-                      id="masculino"
+                      id="masculino" // O id agora está correto
                       name="sexo"
                       value="masculino"
                       required
@@ -183,7 +183,7 @@ const InstallerForm = () => {
                   <label htmlFor="feminino">
                     <input
                       type="radio"
-                      id="feminino"
+                      id="feminino" // O id agora está correto
                       name="sexo"
                       value="feminino"
                       required
@@ -333,10 +333,9 @@ const InstallerForm = () => {
 
           {/* AQUI FICA O FORM DE SELECIONAR ARQUIVO */}
           <main className="container_group_3">
-            <Form.Item
-              className="title_saude"
-              label="Adicione Atestado de saúde (opcional)"
-            ></Form.Item>
+            <div className="title_saude">
+              <p>Adicione Atestado de saúde (opcional)</p>
+            </div>
 
             <Form.Item
               className="up_arquivo-1"
@@ -361,7 +360,6 @@ const InstallerForm = () => {
 
             <div className="selected-arquivo">
               <input type="file" id="fileInput" style={{ display: "none" }} />
-              {/* Botão personalizado para seleção de arquivo */}
               <label htmlFor="fileInput" className="custom-label">
                 Selecionar Arquivo
               </label>

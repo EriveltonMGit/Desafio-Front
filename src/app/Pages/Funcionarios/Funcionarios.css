@@ -339,14 +339,15 @@ margin-top: 10vh;
 /* AQUI FICA A DIV DO FORM  */
 .container_sections_cadastro .form_container {
   width: 100%;
-  height: 210vh;
+  height: 250vh;
   border-radius: 20px;
-  
+  box-shadow: 0px 5px 0.5rem #ddd;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
 
 }
 /* vertical-form */

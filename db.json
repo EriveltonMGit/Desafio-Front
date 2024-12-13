@@ -1,75 +1,30 @@
 {
   "funcionarios": [
     {
-      "id": "f628",
-      "estado": false,
+      "id": "27cd",
+      "estado": true,
       "nome": "desenvolveodr angular",
       "cpf": "03453454354545",
       "rg": "8766787687",
-      "dataNascimento": "24/12/2024",
+      "dataNascimento": "05/12/2024",
       "cargo": "developer"
     },
     {
-      "id": "8462",
+      "id": "bc45",
       "estado": false,
-      "nome": "desenvolveodr angular",
-      "cpf": "03453454354545",
-      "rg": "67657",
-      "dataNascimento": "02/12/2024",
-      "cargo": "designer"
-    },
-    {
-      "id": "74f9",
-      "estado": true,
-      "nome": "desenvolveodr angular",
-      "cpf": "03453454354545",
-      "rg": "8766787687",
-      "dataNascimento": "03/12/2024",
-      "cargo": "designer"
-    },
-    {
-      "id": "f006",
-      "estado": true,
-      "nome": "desenvolveodr angular",
-      "cpf": "03453454354545",
-      "rg": "8766787687",
-      "dataNascimento": "03/12/2024",
-      "cargo": "designer"
-    },
-    {
-      "id": "65c7",
-      "estado": true,
-      "nome": "desenvolveodr angular",
-      "cpf": "03453454354545",
-      "rg": "8766787687",
-      "dataNascimento": "03/12/2024",
-      "cargo": "designer"
-    },
-    {
-      "id": "d388",
-      "estado": false,
-      "nome": "desenvolveodr angular",
-      "cpf": "03453454354545",
-      "rg": "8766787687",
-      "dataNascimento": "02/12/2024",
-      "cargo": "developer"
-    },
-    {
-      "id": "ee05",
-      "estado": true,
-      "nome": "desenvolveodr angular",
+      "nome": "rretrter",
       "cpf": "65756756756765",
-      "rg": "8766787687",
-      "dataNascimento": "17/12/2024",
+      "rg": "76756756",
+      "dataNascimento": "04/12/2024",
       "cargo": "manager"
     },
     {
-      "id": "cf51",
+      "id": "219d",
       "estado": true,
       "nome": "desenvolveodr angular",
-      "cpf": "03453454354545",
-      "rg": "8766787687",
-      "dataNascimento": "09/12/2024",
+      "cpf": "7657765676",
+      "rg": "657657657",
+      "dataNascimento": "04/12/2024",
       "cargo": "designer"
     }
   ]
