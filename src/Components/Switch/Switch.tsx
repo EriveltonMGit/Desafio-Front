@@ -1,5 +1,5 @@
 import React from "react";
-import "./Switch.css";
+import "./Swith.css";
 
 interface SwitchProps {
   isSelected: boolean;
