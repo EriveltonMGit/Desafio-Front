@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import "./Home.css";
 import Link from "next/link";
 
-import Swhitch from "@/Components/Switch/Switch";
+import Switch from "../../../Components/Switch/Switch";
 
 function Home() {
   // AQUI FICA O ARRAY DE FUNCIONÁRIOS
@@ -51,7 +51,13 @@ function Home() {
     if (e) e.preventDefault();
     setCrudVisible(crudVisible === id ? null : id);
   };
+ // FUNÇAO PARA SALVAR O ESTADO DO SWITCH
+  const [isSelected, setIsSelected] = useState<boolean>(false);
 
+  const toggleSwitch = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsSelected((prevState) => !prevState); // Alterna o estado
+  };
 
 
   return (
@@ -152,7 +158,7 @@ function Home() {
               <section className="container_switch">
                 <h5>A etapa está concluída?</h5>
 
-                <Swhitch />
+                <Switch isSelected={isSelected} onToggle={toggleSwitch} />
               </section>
             </form>
           </section>
