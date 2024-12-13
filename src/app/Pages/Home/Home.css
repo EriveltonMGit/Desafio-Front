@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  background-color: #f2f2f2;
 }
 
 /* CONTAINER SECTION FORM */
@@ -137,7 +137,7 @@
 }
 
 /* filtos */
-.filtos {
+.filtros {
   width: 714px;
   height: 36px;
   display: flex;
@@ -218,6 +218,10 @@
   padding-left: 16px;
   display: flex;
   align-items: center;
+}
+/* Estilo para o segundo e terceiro item mudar a cor*/
+.lista_item.diferente {
+  background-color: #f0f0f0;  /* Cor de fundo diferenciada */
 }
 /* area_content_funcionarios */
 .area_content_funcionarios {
@@ -590,7 +594,7 @@
   }
 
   /* filtos */
-  .filtos {
+  .filtros {
     width: 90%;
     height: 36px;
     display: flex;

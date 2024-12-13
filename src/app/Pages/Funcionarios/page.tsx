@@ -20,7 +20,7 @@ function Funcionarios() {
         <div className="content_img_footer">
           <img
             src="/imagens/imagem_bk/Elementos de fundo.svg"
-            alt="Elemento de fundo"
+            alt="Elemento de fundo" loading="lazy" 
           />
         </div>
         {/* NAV BAR */}
@@ -46,7 +46,7 @@ function Funcionarios() {
                   Phasellus tempor tellus eu vulputate tempus
                 </p>
 
-                <img src="/perfil-user.webp" alt="Imagem de perfil" />
+                <img src="/perfil-user.webp" alt="Imagem de perfil" loading="lazy" />
               </div>
               {/* AQUI FICA A DIV DO FORMULÁRIO DE CLÍENTES */}
               <section className="form_container">
@@ -54,7 +54,7 @@ function Funcionarios() {
                 <div className="title_form">
                   <Link href="/Pages/Home">
                     <p>
-                      <img src="/Arrow.webp" alt="" /> Funcionário(s)
+                      <img src="/Arrow.webp" alt="" loading="lazy" /> Funcionário(s)
                     </p>
                   </Link>
                 </div>

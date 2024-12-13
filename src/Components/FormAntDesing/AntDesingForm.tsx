@@ -4,12 +4,23 @@ import React, { useState } from "react";
 import { Form, Input, Select, DatePicker, Upload } from "antd";
 import { UploadChangeParam, RcFile } from "antd/es/upload";
 import { Moment } from "moment"; // Se estiver utilizando moment.js para datas
-import Switch from "../Switch/Switch";
+import Switch from "../../Components/Switch/Switch";
 // IMPORT CSS
 import "./AntDesingForm.css";
 
 const { Option } = Select;
-
+// INTERFACE DE ATIVIDADE EPI
+interface Epi {
+  id: number;
+  numeroEpi: string;
+  codigoCa: string;
+}
+// INTERFACE DE ATIVIDADE EPI
+interface Atividade {
+  id: number;
+  epis: Epi[];
+}
+// INTEFACE DO FOMR
 interface FormData {
   estado: boolean;
   nome: string;
@@ -23,10 +34,10 @@ interface FormData {
   numeroEpi: string;
   ca: string;
   files: RcFile[];
+  [key: string]: string | boolean | Moment | RcFile[];
 }
-
 const InstallerForm = () => {
-  // FUNÇAO PARA SALVAR O ESTADO DO SWITCH
+  // FUNÇÃO PARA SALVAR O ESTADO DO SWITCH
   const [isSelected, setIsSelected] = useState<boolean>(false);
 
   const toggleSwitch = (e: React.MouseEvent) => {
@@ -43,7 +54,7 @@ const InstallerForm = () => {
   const handleFileChange = (info: UploadChangeParam) => {
     console.log("File selected: ", info.file);
   };
-
+  // INTERFACE DO FORMULARIO
   const onFinish = async (values: FormData) => {
     // Preparando os dados para envio
     const formData = {
@@ -56,12 +67,21 @@ const InstallerForm = () => {
       cargo: values.cargo,
       epi: values.epi,
       atividade: values.atividade,
-      numeroEpi: values.numeroEpi,
-      ca: values.ca,
+      // Coletando dados de EPIs
+      atividades: atividades.map((atividade) => {
+        const epis = atividade.epis.map((epi) => ({
+          numeroEpi: values[`numeroEpi_${atividade.id}_${epi.id}`], // Captura o numero do EPI
+          codigoCa: values[`codigoCa_${atividade.id}_${epi.id}`], // Captura o código do CA
+        }));
+        return {
+          atividadeId: atividade.id,
+          epis,
+        };
+      }),
       files: values.files, // Não inclui o campo 'id'
     };
 
-    //FUNÇÃO PARA ENVIAR OS DADOS PARA O JSCON SERVER VIA POST
+    // FUNÇÃO PARA ENVIAR OS DADOS PARA O JSON SERVER VIA POST
     try {
       const response = await fetch("http://localhost:3001/funcionarios", {
         method: "POST",
@@ -83,21 +103,67 @@ const InstallerForm = () => {
   };
 
   // Estado para armazenar os cards
-  const [atividades, setAtividades] = useState([{ id: 1 }]); // Inicializado com um ID fixo
+  // const [atividades, setAtividades] = useState<{ id: number }[]>([{ id: 1 }]); // Inicializado com um ID fixo
 
   // Função para adicionar um novo card
-  const adicionarAtividade = () => {
-    const novoId = atividades.length + 1; // Usa um contador fixo para IDs
-    setAtividades([...atividades, { id: novoId }]);
+  const [atividades, setAtividades] = useState<Atividade[]>([
+    { id: 1, epis: [{ id: 1, numeroEpi: "", codigoCa: "" }] },
+  ]);
+
+  // Função para adicionar um novo EPI
+  const addNewEpi = (atividadeId: number) => {
+    setAtividades((prevAtividades) =>
+      prevAtividades.map((atividade) => {
+        if (atividade.id === atividadeId) {
+          const novosEpis = atividade.epis || [];
+          return {
+            ...atividade,
+            epis: [
+              ...novosEpis,
+              { id: novosEpis.length + 1, numeroEpi: "", codigoCa: "" },
+            ],
+          };
+        }
+
+        return atividade;
+      })
+    );
+    // Chama a função para aumentar o container do EPI
+    heightAuto(atividadeId);
   };
-  // FUNÇÃO PARA ADIONCAR O CAMPO DE EPI
 
-  // Função para adicionar um novo card
-  const addNewEpi = () => {
-    const newEpi = document.getElementById(`novaEpi`);
-    if (newEpi) {
-      newEpi.style.display = "flex";
+  // FUNÇAO PARA AUMENTAR O CAONTAINER DO EPI
+  // Função para ajustar a altura do container do EPI
+  function heightAuto(atividadeId: number) {
+    const aumentContainer = document.getElementById(
+      `container-atividade-epi-${atividadeId}`
+    );
+    if (aumentContainer) {
+      aumentContainer.style.height = "auto";
     }
+  }
+
+  // Função para remover um EPI
+  // const removeEpi = (atividadeId: number, epiId: number) => {
+  //   setAtividades((prevAtividades) =>
+  //     prevAtividades.map((atividade) => {
+  //       if (atividade.id === atividadeId) {
+  //         return {
+  //           ...atividade,
+  //           epis: atividade.epis.filter((epi) => epi.id !== epiId),
+  //         };
+  //       }
+  //       return atividade;
+  //     })
+  //   );
+  // };
+  // Função para adicionar uma nova atividade
+  const adicionarAtividade = () => {
+    const novaAtividade = {
+      id: atividades.length + 1,
+      epis: [{ id: 1, numeroEpi: "", codigoCa: "" }],
+    };
+    setAtividades([...atividades, novaAtividade]);
   };
 
   return (
@@ -250,10 +316,14 @@ const InstallerForm = () => {
             <div className="second-group-2">
               <div className="area-atividade-selected">
                 {atividades.map((atividade) => (
-                  <div key={atividade.id} className="container-atividade-epi">
+                  <div
+                    key={atividade.id}
+                    className="container-atividade-epi"
+                    id={`container-atividade-epi-${atividade.id}`}
+                  >
                     <div className="selected_atividade">
                       <Form.Item
-                        label="Selecione Atividade"
+                        label={`Atividade ${atividade.id}`}
                         name={`atividade_${atividade.id}`}
                         rules={[
                           {
@@ -272,52 +342,60 @@ const InstallerForm = () => {
                         </Select>
                       </Form.Item>
                     </div>
-                    {/* div 2 */}
-                    <div className="area-numero-ca">
-                      <div className="card-epi">
-                        <Form.Item
-                          className="input-epi"
-                          label="Informe o número do EPI"
-                          name={`numeroEpi_${atividade.id}`}
-                          rules={[
-                            {
-                              // required: true,
-                              message: "Por favor, insira o número do EPI!",
-                            },
-                          ]}
-                        >
-                          <Input placeholder="Informe o número do EPI" />
-                        </Form.Item>
-                      </div>
-                      <div className="card-epi" id="novaEpi">
-                        <Form.Item
-                          className="input-epi"
-                          label="Informe o número do CA"
-                          name={`ca_${atividade.id}`}
-                          rules={[
-                            {
-                              // required: true,
-                              message: "Por favor, insira o número do CA!",
-                            },
-                          ]}
-                        >
-                          <Input placeholder="Informe o número do CA" />
-                        </Form.Item>
-                      </div>
-                      {/* epi oculta */}
 
-                      <div className="card-btn">
-                        <Form.Item className="card">
-                          <button
-                            type="button"
-                            className="ant-btn ant-btn-dashed"
-                            onClick={addNewEpi}
+                    {atividade.epis.map((epi) => (
+                      <div key={epi.id} className="area-numero-ca">
+                        <div className="card-epi">
+                          <Form.Item
+                            className="input-epi"
+                            label={`Número do EPI ${epi.id}`}
+                            name={`numeroEpi_${atividade.id}_${epi.id}`}
+                            rules={[
+                              {
+                                required: true,
+                                message: "Por favor, insira o número do EPI!",
+                              },
+                            ]}
                           >
-                            Adicionar EPI
-                          </button>
-                        </Form.Item>
+                            <Input placeholder="Informe o número do EPI" />
+                          </Form.Item>
+                        </div>
+                        <div className="card-epi">
+                          <Form.Item
+                            className="input-ca"
+                            label={`Código do CA ${epi.id}`}
+                            name={`codigoCa_${atividade.id}_${epi.id}`}
+                            rules={[
+                              {
+                                required: true,
+                                message: "Por favor, insira o código do CA!",
+                              },
+                            ]}
+                          >
+                            <Input placeholder="Informe o código do CA" />
+                          </Form.Item>
+                        </div>
+                        <div className="card-btn">
+                          <div className="card">
+                            <button
+                              className="ant-btn-dashed"
+                              type="button"
+                              onClick={() => addNewEpi(atividade.id)}
+                            >
+                              Adicionar EPI
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* <button
+                          className="card-btn"
+                          type="button"
+                          onClick={() => removeEpi(atividade.id, epi.id)}
+                        >
+                          Remover EPI
+                        </button> */}
                       </div>
-                    </div>
+                    ))}
                   </div>
                 ))}
               </div>

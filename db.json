@@ -1,31 +1,28 @@
 {
   "funcionarios": [
     {
-      "id": "27cd",
+      "id": "74fb",
       "estado": true,
-      "nome": "desenvolveodr angular",
-      "cpf": "03453454354545",
-      "rg": "8766787687",
-      "dataNascimento": "05/12/2024",
-      "cargo": "developer"
-    },
-    {
-      "id": "bc45",
-      "estado": false,
-      "nome": "rretrter",
-      "cpf": "65756756756765",
-      "rg": "76756756",
-      "dataNascimento": "04/12/2024",
-      "cargo": "manager"
-    },
-    {
-      "id": "219d",
-      "estado": true,
-      "nome": "desenvolveodr angular",
-      "cpf": "7657765676",
-      "rg": "657657657",
-      "dataNascimento": "04/12/2024",
-      "cargo": "designer"
+      "nome": "ERIVELTON MAGALHÃES DOS SANTOS ",
+      "cpf": "056.727.535-31",
+      "rg": "1416687416",
+      "dataNascimento": "17/12/2024",
+      "cargo": "designer",
+      "atividades": [
+        {
+          "atividadeId": 1,
+          "epis": [
+            {
+              "numeroEpi": "123456",
+              "codigoCa": "71908-720"
+            },
+            {
+              "numeroEpi": "1234",
+              "codigoCa": "41214565"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

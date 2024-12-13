@@ -17,30 +17,30 @@ function Home() {
     {
       id: 1,
       nome: "Daniel Alves da Silva",
-      ativo: "Ativo",
-      cargo: "Cargo 1",
       codigoFuncionario: "000.000.000-99",
+      estado: "ativo",
+      cargo: "Cargo 1",
     },
     {
       id: 2,
       nome: "Giselee Torres Lopes",
-      ativo: "Ativo",
-      cargo: "Cargo 2",
       codigoFuncionario: "000.000.000-99",
+      estado: "inativo",
+      cargo: "Cargo 2",
     },
     {
       id: 3,
       nome: "Ana Bispo dos Santos",
-      ativo: "Ativo",
-      cargo: "Cargo 3",
       codigoFuncionario: "000.000.000-99",
+      estado: "inativo",
+      cargo: "Cargo 3",
     },
     {
       id: 4,
       nome: "Regina Elisa Sousa",
-      ativo: "Ativo",
-      cargo: "Cargo 4",
       codigoFuncionario: "000.000.000-99",
+      estado: "ativo",
+      cargo: "Cargo 4",
     },
   ];
 
@@ -51,7 +51,7 @@ function Home() {
     if (e) e.preventDefault();
     setCrudVisible(crudVisible === id ? null : id);
   };
- // FUNÇAO PARA SALVAR O ESTADO DO SWITCH
+  // FUNÇAO PARA SALVAR O ESTADO DO SWITCH
   const [isSelected, setIsSelected] = useState<boolean>(false);
 
   const toggleSwitch = (e: React.MouseEvent) => {
@@ -59,15 +59,17 @@ function Home() {
     setIsSelected((prevState) => !prevState); // Alterna o estado
   };
 
-
   return (
     <>
       {/* AQUI FICA O CONTAINER PRINCIPAL */}
       <main className="container_home">
         {/* AQUI FICA A IMAGEM BK NO RODAPE */}
         <div className="content_img_footer">
-        <img  src="/imagens/imagem_bk/Elementos de fundo.svg"
-            alt="Elemento de fundo" />
+          <img
+            src="/imagens/imagem_bk/Elementos de fundo.svg"
+            alt="Elemento de fundo"
+            loading="lazy"
+          />
         </div>
         {/* NAV BAR */}
         <Nav />
@@ -91,8 +93,11 @@ function Home() {
                 eu vulputate tempus
               </p>
 
-              <img  src="/perfil-user.webp"
-                alt="Imagem de perfil" />
+              <img
+                src="/perfil-user.webp"
+                alt="Imagem de perfil"
+                loading="lazy"
+              />
             </div>
             {/* AQUI FICA A DIV DO FORMULÁRIO DE CLÍENTES */}
             <form className="form_container">
@@ -103,12 +108,12 @@ function Home() {
               {/* AQUI FICA O BUTTON DE ADICIONAR FUNCIONÁRIOS */}
               <section className="container_funcionarios">
                 <button className="add_funcionario">
-                  <Link href="/Pages/Funcionarios" >
+                  <Link href="/Pages/Funcionarios">
                     + Adicionar Funcionário
                   </Link>
                 </button>
                 {/* AQUI FICA OS FILTROS DE PESQUISA DE FUNCIONARIOS */}
-                <main className="filtos">
+                <main className="filtros">
                   <div>
                     <button>
                       <p>Ver apenas ativos</p>
@@ -124,12 +129,12 @@ function Home() {
 
               <main className="container_items_list">
                 {itemsFuncionarios.map((item) => (
-                  <div key={item.id} className="lista_item">
+                  <div key={item.id}  className={`lista_item ${item.id === 2 || item.id === 3 ? "diferente" : ""}`} >
                     <div className="area_content_funcionarios">
                       <h2>{item.nome}</h2>
                       <div>
                         <button>{item.codigoFuncionario}</button>
-                        <button>{item.ativo}</button>
+                        <button>{item.estado}</button>
                         <button>{item.cargo}</button>
                       </div>
                     </div>
@@ -141,7 +146,11 @@ function Home() {
                         mostrarDivCrud(item.id, e);
                       }}
                     >
-                      <img src="/butom_edit.webp" alt="Imagem buttom editar e excluir" />
+                      <img
+                        src="/butom_edit.webp"
+                        alt="Imagem buttom editar e excluir"
+                        loading="lazy"
+                      />
 
                       {crudVisible === item.id && (
                         <div className="btn_crud">

@@ -33,7 +33,7 @@ function StaticPage() {
       <main className="container_home_static">
         {/* AQUI FICA A IMAGEM BK NO RODAPE */}
         <div className="content_img_footer">
-          <img src="/imagens/imagem_bk/Elementos de fundo.svg" alt="" />
+          <img src="/imagens/imagem_bk/Elementos de fundo.svg" alt="" loading="lazy" />
         </div>
         {/* NAV BAR */}
         <Nav />

@@ -31,7 +31,7 @@ function Nav() {
                   <img
                     src={item.image}
                     alt={`Ícone ${item.id}`}
-                   
+                    loading="lazy" 
                   />
                   {/* Verifica se existe uma imagem de notificação e exibe */}
                   

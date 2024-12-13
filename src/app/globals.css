@@ -39,7 +39,7 @@ body {
 }
 @font-face {
   font-family: Ubuntu;
-  src: url('/Fonts/Ubuntu/Ubuntu-Light.ttf') format('truetype');
+  src: url('/Fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
 }
 
 @media (max-width:480px) {
