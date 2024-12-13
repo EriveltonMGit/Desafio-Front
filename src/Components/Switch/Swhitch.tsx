@@ -1,20 +1,22 @@
-import React, { useState } from "react";
-import "./Swith.css"; 
+// Switch.tsx
+import React from "react";
+import "./Swith.css";
 
-function Switch() {
-  const [isSelected, setIsSelected] = useState(false); // Estado para controlar o texto
+interface SwitchProps {
+  isSelected: boolean;
+  onToggle: (e: React.MouseEvent) => void;
+}
 
-  const toggleSwitch = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsSelected((prevState) => !prevState); // Alterna entre os estados
-  };
-
+const Switch: React.FC<SwitchProps> = ({ isSelected, onToggle }) => {
   return (
-    <button className={`switch-button ${isSelected ? "active" : ""}`} onClick={toggleSwitch}>
+    <button
+      className={`switch-button ${isSelected ? "active" : ""}`}
+      onClick={onToggle}
+    >
       <div className={`switch-ball ${isSelected ? "active" : ""}`}></div>
       <span className="switch-text">{isSelected ? "Ativo" : "Inativo"}</span>
     </button>
   );
-}
+};
 
 export default Switch;

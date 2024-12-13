@@ -45,3 +45,21 @@ body {
 @media (max-width:480px) {
  
 }
+
+/* Altera a largura da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* Para barras verticais */
+  height: 12px; /* Para barras horizontais */
+}
+
+/* Altera a cor da "trilha" (fundo) */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+/* Altera a cor do "polegar" (a parte que se move) */
+::-webkit-scrollbar-thumb {
+ background-color: #649FBF;
+  border-radius: 2px;
+}

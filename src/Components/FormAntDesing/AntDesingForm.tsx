@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Form, Input, Select, DatePicker, Upload } from "antd";
 import { UploadChangeParam, RcFile } from "antd/es/upload";
 import { Moment } from "moment"; // Se estiver utilizando moment.js para datas
@@ -11,6 +11,7 @@ import "./AntDesingForm.css";
 const { Option } = Select;
 
 interface FormData {
+  estado: boolean;
   nome: string;
   cpf: string;
   rg: string;
@@ -21,10 +22,18 @@ interface FormData {
   atividade: string;
   numeroEpi: string;
   ca: string;
-  files: RcFile[]; // Tipo de arquivos, você pode ajustar conforme a necessidade
+  files: RcFile[];
 }
 
 const InstallerForm = () => {
+  // FUNÇAO PARA SALVAR O ESTADO DO SWITCH
+  const [isSelected, setIsSelected] = useState<boolean>(false); // Estado para o Switch
+
+  const toggleSwitch = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsSelected((prevState) => !prevState); // Alterna o estado do Switch
+  };
+
   // Função para tratar a entrada do CPF, aceitando apenas números
   const handleCpfChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Substitui qualquer caractere que não seja número
@@ -38,6 +47,7 @@ const InstallerForm = () => {
   const onFinish = async (values: FormData) => {
     // Preparando os dados para envio
     const formData = {
+      estado: isSelected, // Passa o estado do Switch
       nome: values.nome,
       cpf: values.cpf,
       rg: values.rg,
@@ -48,10 +58,10 @@ const InstallerForm = () => {
       atividade: values.atividade,
       numeroEpi: values.numeroEpi,
       ca: values.ca,
-      files: values.files, // Não inclua o campo 'id'
+      files: values.files, // Não inclui o campo 'id'
     };
 
-    // Enviar os dados para o JSON Server via POST
+    //FUNÇÃO PARA ENVIAR OS DADOS PARA O JSCON SERVER VIA POST
     try {
       const response = await fetch("http://localhost:3001/funcionarios", {
         method: "POST",
@@ -72,18 +82,36 @@ const InstallerForm = () => {
     }
   };
 
+  // Estado para armazenar os cards
+  const [atividades, setAtividades] = useState([{ id: 1 }]); // Inicializado com um ID fixo
+
+  // Função para adicionar um novo card
+  const adicionarAtividade = () => {
+    const novoId = atividades.length + 1; // Usa um contador fixo para IDs
+    setAtividades([...atividades, { id: novoId }]);
+  };
+  // FUNÇÃO PARA ADIONCAR O CAMPO DE EPI
+
+  // Função para adicionar um novo card
+  const addNewEpi = () => {
+    const newEpi = document.getElementById(`novaEpi`);
+    if (newEpi) {
+      newEpi.style.display = "flex";
+    }
+  };
+
   return (
-    <div className="form-group">
+    <section className="form-group">
       {/* Formulário com campos de entrada e rótulos */}
-      <Form layout="vertical" onFinish={onFinish}>
+      <Form layout="vertical" className="vertical-form" onFinish={onFinish}>
         <div
           className="container-form"
           style={{ display: "flex", justifyContent: "space-between" }}
         >
           {/* PRIMEIRO CARD DO FORM ONDE FICA O SWITCH */}
           <div className="swith-func">
-            <label htmlFor="">O trabalhador está ativo ou inativo?</label>
-            <Switch />
+            <label htmlFor="swith">O trabalhador está ativo ou inativo?</label>
+            <Switch isSelected={isSelected} onToggle={toggleSwitch} />
           </div>
 
           {/* Primeira Div - Nome, CPF, RG */}
@@ -165,6 +193,7 @@ const InstallerForm = () => {
                 </div>
               </div>
               <Form.Item
+                className="datanasc"
                 label="Data de Nascimento"
                 name="dataNascimento"
                 rules={[
@@ -191,7 +220,7 @@ const InstallerForm = () => {
                   },
                 ]}
               >
-                <Select placeholder="Selecione seu cargo">
+                <Select placeholder="Selecione seu cargo" className="cargo">
                   <Option value="developer">Desenvolvedor</Option>
                   <Option value="designer">Designer</Option>
                   <Option value="manager">Gerente</Option>
@@ -220,70 +249,81 @@ const InstallerForm = () => {
             {/* Segunda Div - Atividade e CA */}
             <div className="second-group-2">
               <div className="area-atividade-selected">
-                <div className="container-atividade-epi">
-                  <div className="selected_atividade">
-                    <Form.Item
-                      label="Selecione Atividade"
-                      name="atividade"
-                      rules={[
-                        {
-                          required: true,
-                          message: "Por favor, selecione a atividade!",
-                        },
-                      ]}
-                    >
-                      <Select placeholder="Selecione a atividade">
-                        <Option value="seguranca">Calçados de Segurança</Option>
-                        <Option value="capacete">Capacete</Option>
-                        <Option value="luvas">Luvas</Option>
-                        <Option value="outros">Outros</Option>
-                      </Select>
-                    </Form.Item>
-                  </div>
-                  {/* div 2 */}
-                  <div className="area-numero-ca">
-                    <div className="card-epi">
+                {atividades.map((atividade) => (
+                  <div key={atividade.id} className="container-atividade-epi">
+                    <div className="selected_atividade">
                       <Form.Item
-                        label="Informe o número do EPI"
-                        name="numeroEpi"
+                        label="Selecione Atividade"
+                        name={`atividade_${atividade.id}`}
                         rules={[
                           {
                             required: true,
-                            message: "Por favor, insira o número do EPI!",
+                            message: "Por favor, selecione a atividade!",
                           },
                         ]}
                       >
-                        <Input placeholder="Informe o número do EPI" />
+                        <Select placeholder="Selecione a atividade">
+                          <Option value="seguranca">
+                            Calçados de Segurança
+                          </Option>
+                          <Option value="capacete">Capacete</Option>
+                          <Option value="luvas">Luvas</Option>
+                          <Option value="outros">Outros</Option>
+                        </Select>
                       </Form.Item>
                     </div>
-                    <div className="card-epi">
-                      <Form.Item
-                        label="Informe o número do CA"
-                        name="ca"
-                        rules={[
-                          {
-                            required: true,
-                            message: "Por favor, insira o número do CA!",
-                          },
-                        ]}
-                      >
-                        <Input placeholder="Informe o número do CA" />
-                      </Form.Item>
-                    </div>
-                    <div className="card-btn">
-                      <Form.Item className="card">
-                        <button
-                          type="button"
-                          className="ant-btn ant-btn-dashed"
+                    {/* div 2 */}
+                    <div className="area-numero-ca">
+                      <div className="card-epi">
+                        <Form.Item className="input-epi"
+                          label="Informe o número do EPI"
+                          name={`numeroEpi_${atividade.id}`}
+                          rules={[
+                            {
+                              // required: true,
+                              message: "Por favor, insira o número do EPI!",
+                            },
+                          ]}
                         >
-                          Adicionar EPI
-                        </button>
-                      </Form.Item>
+                          <Input placeholder="Informe o número do EPI" />
+                        </Form.Item>
+                      </div>
+                      <div className="card-epi" id="novaEpi">
+                        <Form.Item  className="input-epi"
+                          label="Informe o número do CA"
+                          name={`ca_${atividade.id}`}
+                          rules={[
+                            {
+                              // required: true,
+                              message: "Por favor, insira o número do CA!",
+                            },
+                          ]}
+                        >
+                          <Input placeholder="Informe o número do CA" />
+                        </Form.Item>
+                      </div>
+                      {/* epi oculta */}
+
+                      <div className="card-btn">
+                        <Form.Item className="card">
+                          <button
+                            type="button"
+                            className="ant-btn ant-btn-dashed"
+                            onClick={addNewEpi}
+                          >
+                            Adicionar EPI
+                          </button>
+                        </Form.Item>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
-              <button className="add-atividade-epi">
+              <button
+                className="add-atividade-epi"
+                type="button" 
+                onClick={adicionarAtividade}
+              >
                 <p>Adicionar nova atividade</p>
               </button>
             </div>
@@ -316,25 +356,21 @@ const InstallerForm = () => {
             </Form.Item>
 
             {/* Segundo Input com Texto */}
-            <Form.Item
-              name="file2"
-              className="selected-arquivo"
-              valuePropName="fileList"
-              getValueFromEvent={(e) => e.fileList}
-            >
-              <Upload
-                beforeUpload={() => false}
-                onChange={handleFileChange}
-                showUploadList={false}
-              >
-                <button>Selecione o arquivo</button>
-              </Upload>
-            </Form.Item>
+
+            <div className="selected-arquivo">
+              <input type="file" id="fileInput" style={{ display: "none" }} />
+              {/* Botão personalizado para seleção de arquivo */}
+              <label htmlFor="fileInput" className="custom-label">
+                Selecionar Arquivo
+              </label>
+            </div>
           </main>
         </div>
-        <button className="salvarFomr" type="submit">Salvar</button>
+        <button className="salvarFomr" type="submit">
+          Salvar
+        </button>
       </Form>
-    </div>
+    </section>
   );
 };
 
