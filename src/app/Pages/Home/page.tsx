@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import "./Home.css";
 import Link from "next/link";
 
-import Swhitch from "@/Components/Switch/Swhitch";
+import Swhitch from "@/Components/Switch/Switch";
 
 function Home() {
   // AQUI FICA O ARRAY DE FUNCIONÁRIOS

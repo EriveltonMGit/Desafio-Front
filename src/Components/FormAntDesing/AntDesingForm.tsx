@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Form, Input, Select, DatePicker, Upload } from "antd";
 import { UploadChangeParam, RcFile } from "antd/es/upload";
 import { Moment } from "moment"; // Se estiver utilizando moment.js para datas
-import Switch from "../Switch/Swhitch";
+import Switch from "../Switch/Switch";
 // IMPORT CSS
 import "./AntDesingForm.css";
 
@@ -27,11 +27,11 @@ interface FormData {
 
 const InstallerForm = () => {
   // FUNÇAO PARA SALVAR O ESTADO DO SWITCH
-  const [isSelected, setIsSelected] = useState<boolean>(false); // Estado para o Switch
+  const [isSelected, setIsSelected] = useState<boolean>(false);
 
   const toggleSwitch = (e: React.MouseEvent) => {
     e.preventDefault();
-    setIsSelected((prevState) => !prevState); // Alterna o estado do Switch
+    setIsSelected((prevState) => !prevState); // Alterna o estado
   };
 
   // Função para tratar a entrada do CPF, aceitando apenas números
