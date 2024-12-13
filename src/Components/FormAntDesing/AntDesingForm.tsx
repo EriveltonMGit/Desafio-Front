@@ -109,10 +109,10 @@ const InstallerForm = () => {
           style={{ display: "flex", justifyContent: "space-between" }}
         >
           {/* PRIMEIRO CARD DO FORM ONDE FICA O SWITCH */}
-          <div className="swith-func">
+          <section className="swith-func">
             <label htmlFor="swith">O trabalhador está ativo ou inativo?</label>
             <Switch isSelected={isSelected} onToggle={toggleSwitch} />
-          </div>
+          </section>
 
           {/* Primeira Div - Nome, CPF, RG */}
           <main className="container_group_1">
@@ -275,7 +275,8 @@ const InstallerForm = () => {
                     {/* div 2 */}
                     <div className="area-numero-ca">
                       <div className="card-epi">
-                        <Form.Item className="input-epi"
+                        <Form.Item
+                          className="input-epi"
                           label="Informe o número do EPI"
                           name={`numeroEpi_${atividade.id}`}
                           rules={[
@@ -289,7 +290,8 @@ const InstallerForm = () => {
                         </Form.Item>
                       </div>
                       <div className="card-epi" id="novaEpi">
-                        <Form.Item  className="input-epi"
+                        <Form.Item
+                          className="input-epi"
                           label="Informe o número do CA"
                           name={`ca_${atividade.id}`}
                           rules={[
@@ -321,7 +323,7 @@ const InstallerForm = () => {
               </div>
               <button
                 className="add-atividade-epi"
-                type="button" 
+                type="button"
                 onClick={adicionarAtividade}
               >
                 <p>Adicionar nova atividade</p>
