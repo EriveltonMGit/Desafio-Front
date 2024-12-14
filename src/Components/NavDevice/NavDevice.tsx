@@ -29,7 +29,7 @@ const NavMenu: React.FC = () => {
       <nav className="container_menu_device">
         <img src="/favicon.png" alt="logo" loading="lazy" />
         <button className="btn-cart" onClick={toggleMenu}>
-          <FiMenu />
+          <FiMenu className="icon-elipsi"/>
         </button>
       </nav>
 

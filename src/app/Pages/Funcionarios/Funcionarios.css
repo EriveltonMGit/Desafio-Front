@@ -6,7 +6,7 @@
   height: 1062px;
   padding-right: 24px;
   top: 100px;
- left: 1548px;
+  left: 1548px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +26,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }
 
 /* AQUI FICA A  SECTION FORM */
@@ -37,8 +36,6 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  
- 
 }
 
 /* content_cadastro_container */
@@ -50,7 +47,6 @@
   align-items: center;
   justify-content: space-around;
   gap: 32px;
-  
 }
 
 /* AQUI FICA A DIV DO PERFIL DO FUNCIONÁRIO */
@@ -88,16 +84,14 @@
   width: 762px;
   height: 1032px;
   border-radius: 20px;
-  
+
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
- 
 
- position: relative;
-
+  position: relative;
 }
 
 /* AQUI FICA O FORM -INPUTS */
@@ -123,32 +117,24 @@
     color: #ffffff;
     display: flex;
     gap: 25px;
-    
+
     display: flex;
     align-items: center;
-    
+
     img {
       width: 24px;
       height: 16px;
       top: 24px;
       left: 45px;
-      
+
       object-fit: cover;
       background-size: cover;
-     
     }
   }
 }
 
-
-
-
-
-
-
-
 /* form_switch_cadastro */
-.form_switch_cadastro{
+.form_switch_cadastro {
   width: 714px;
   height: 44px;
   border-radius: 10px;
@@ -158,24 +144,16 @@
   justify-content: space-between;
   padding: 12px;
 
-  p{
+  p {
     width: 253px;
     height: 19px;
     font-family: Roboto;
     font-weight: 500;
     font-size: 16px;
     line-height: 18.75px;
-    color: #272F33;
+    color: #272f33;
   }
 }
-
-
-
-
-
-
-
-
 
 /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
 .px_passos {
@@ -195,7 +173,7 @@
   border-radius: 10px;
   left: 1060px;
   background-color: var(--bk-button);
- display: block;
+  display: block;
   transition: opacity 0.3s, visibility 0.3s;
   a {
     font-size: 16px;
@@ -207,7 +185,6 @@
     font-family: Roboto;
   }
 }
-
 
 /* AQUI FICA O BUTTON PRÓXIMO*/
 .container_cadastro .btn_proximo {
@@ -239,7 +216,6 @@
   justify-content: flex-end;
   align-items: flex-end;
 
-
   img {
     width: 40vw;
   }
@@ -249,291 +225,269 @@
 }
 
 /* =================== MEDIA SCREEN ==================== */
-@media (max-width: 480px){
- /* AQUI FICA O CSS DO HOME - PAGINA INICIAL DO PROJETO */
+@media (max-width: 480px) {
+  /* AQUI FICA O CSS DO HOME - PAGINA INICIAL DO PROJETO */
 
-/* HOME */
-.container_cadastro {
-  width: 100%;
-  height: auto;
-
-  gap: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: 10vh;
-}
-
-/* CONTAINER SECTION FORM */
-.container_sections_cadastro {
-  width: 100%;
-  height:100vh;
-  position: absolute;
-  left: 0;
-  gap: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-}
-
-/* AQUI FICA A  SECTION FORM */
-.container_sections_cadastro .section_form {
-  width: 105%;
-  height: auto;
-  gap: 32px;
-  margin-top: 35vh;
-  display: flex;
-  align-items:center;
-  justify-content: space-around;
-  flex-direction: column;
- 
-  
-}
-
-/* content_cadastro_container */
-.container_sections_cadastro .content_cadastro_container {
-  width: 100%;
-  height: 1520px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  gap: 32px;
-
-}
-
-/* AQUI FICA A DIV DO PERFIL DO FUNCIONÁRIO */
-.container_sections_cadastro .perfil {
-  width:100%;
-  height: 25%;
-  border-radius: 24px;
-  padding: 24px;
-  gap: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  position: relative;
-  background-color: #ffffff;
-margin-top: 10vh;
-
-  /* AQUI FICA O TEXTO DO PERFIL */
-  p {
+  /* HOME */
+  .container_cadastro {
     width: 100%;
-    height: 200px;
-    font-size: 16px;
-    line-height: 19.55px;
-    font-weight: 400;
-    color: var(--color-font);
-  }
-  /* AQUI FICA A IMAGEM DO PERFIL */
-  img {
-    width: 142px;
-    height: 159px;
-    gap: 24;
-  }
-}
+    height: 350vh;
 
-/* AQUI FICA A DIV DO FORM  */
-.container_sections_cadastro .form_container {
-  width: 100%;
-  height: 250vh;
-  border-radius: 20px;
-  box-shadow: 0px 5px 0.5rem #ddd;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-}
-/* vertical-form */
-.vertical-form{
-  width: 100%;
-}
-
-/* AQUI FICA O FORM -INPUTS */
-.container_sections_cadastro .title_form {
-  width:100%;
-  height: 56px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background-color: #649fbf;
-  position: relative;
-  position: absolute;
-  top: 0;
-  p {
-    font-family: Ubuntu;
-    width: 179px;
-    height: 32px;
-    position: absolute;
-    top: 12px;
-    left: 24px;
-    font-size: 28px;
-    line-height: 32.17px;
-    font-weight: 400;
-    color: #ffffff;
-    display: flex;
-    gap: 25px;
-    
+    gap: 32px;
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+
+    margin-top: 10vh;
+    /* border: 1px solid red; */
+  }
+
+  /* CONTAINER SECTION FORM */
+  .container_sections_cadastro {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    gap: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  /* AQUI FICA A  SECTION FORM */
+  .container_sections_cadastro .section_form {
+    width: 105%;
+    height: auto;
+    gap: 32px;
+    margin-top: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  /* content_cadastro_container */
+  .container_sections_cadastro .content_cadastro_container {
+    width: 100%;
+    height: 1520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 32px;
+  }
+
+  /* AQUI FICA A DIV DO PERFIL DO FUNCIONÁRIO */
+  .container_sections_cadastro .perfil {
+    width: 100%;
+    height: 25%;
+    border-radius: 24px;
+    padding: 24px;
+    gap: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    background-color: #ffffff;
+    margin-top: 40vh;
+
+    /* AQUI FICA O TEXTO DO PERFIL */
+    p {
+      width: 100%;
+      height: 200px;
+      font-size: 16px;
+      line-height: 19.55px;
+      font-weight: 400;
+      color: var(--color-font);
+    }
+    /* AQUI FICA A IMAGEM DO PERFIL */
     img {
-      width: 24px;
-      height: 16px;
-      top: 24px;
-      left: 45px;
-      
-      object-fit: cover;
-      background-size: cover;
-     
+      width: 142px;
+      height: 159px;
+      gap: 24;
     }
   }
-}
 
-/* AQUI FICA A SECTION PARA ADICIONAR FUNCIONÁRIOS */
-.container_sections_cadastro .container_funcionarios_add_form {
-  width:100%;
-  height: 150vh;
-  border-radius: 20px;
-  right: 24px;
-  bottom: 24px;
-  left: 24px;
-  gap: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-bottom: 5px;
-
-}
-
-/* container_switch */
-.container_sections_cadastro .container_form_add {
-  width: 100%;
-  height: 52px;
-
-  border-radius: 20px;
-  padding: 16px 24px 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
-  gap: 16px;
-
-
-}
-
-
-
-/* FORM CADASTRO  NOME*/
- .form_cadastro {
-
-  width: 100%;
-  height: 270vh;
-  display: flex;
-  align-items: center;
-  justify-content:flex-end;
-  flex-direction: column;
-  position: relative;
-  gap: 16px;
- 
-  /* border: 1px solid red; */
- 
-}
-/* form_switch_cadastro */
-.form_switch_cadastro{
-  width: 100%;
-  height: 44px;
-  border-radius: 10px;
-  border: 1px solid #649fbf;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px;
- 
-  p{
-    width: 253px;
-    height: 19px;
-    font-family: Roboto;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18.75px;
-    color: #272F33;
+  /* AQUI FICA A DIV DO FORM  */
+  .container_sections_cadastro .form_container {
+    width: 100%;
+    height: 250vh;
+    border-radius: 20px;
+    box-shadow: 0px 5px 0.5rem #ddd;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
-}
-
-
-
-
-/* salvarFomr */
-.salvarFomr{
-  width:100%;
-  height: 36px;
-  border-radius: 10px;
-  border: 1px solid #649fbf;
-  background-color: #FFFFFF;
-  padding: 10px 40px 10px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-z-index: 300;
-
-  p{
-    width: 39px;
-    height: 16px;
-    font-family: Ubuntu;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16.09px;
-    color: #649fbf;
+  /* vertical-form */
+  .vertical-form {
+    width: 100%;
   }
-}
 
+  /* AQUI FICA O FORM -INPUTS */
+  .container_sections_cadastro .title_form {
+    width: 100%;
+    height: 56px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #649fbf;
+    position: relative;
+    position: absolute;
+    top: 0;
+    p {
+      font-family: Ubuntu;
+      width: 179px;
+      height: 32px;
+      position: absolute;
+      top: 12px;
+      left: 24px;
+      font-size: 28px;
+      line-height: 32.17px;
+      font-weight: 400;
+      color: #ffffff;
+      display: flex;
+      gap: 25px;
 
+      display: flex;
+      align-items: center;
 
+      img {
+        width: 24px;
+        height: 16px;
+        top: 24px;
+        left: 45px;
 
-/* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
-.px_passos {
-  width: 90%;
-  height: 32px;
-  top: 998px;
-  display: flex;
-  align-items: center;
-  
-}
-/* AQUI FICA O BUTTON VOLTAR */
-.bt_anterior {
-  width:100%;
-  height: 32px;
-  border-radius: 10px;
-  
-  left: 0;
-  background-color: var(--bk-button);
- display: block;
-  transition: opacity 0.3s, visibility 0.3s;
-  a {
-    font-size: 18px;
-    top: 8px;
-    left: 51px;
-    font-weight: 700;
-    line-height: 16.41px;
-    color: var(--ligth);
-    font-family: Roboto;
+        object-fit: cover;
+        background-size: cover;
+      }
+    }
   }
-}
 
+  /* AQUI FICA A SECTION PARA ADICIONAR FUNCIONÁRIOS */
+  .container_sections_cadastro .container_funcionarios_add_form {
+    width: 100%;
+    height: 150vh;
+    border-radius: 20px;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 5px;
+  }
 
-/* AQUI FICA O BUTTON PRÓXIMO*/
-.container_cadastro .btn_proximo {
-  width: 95%;
+  /* container_switch */
+  .container_sections_cadastro .container_form_add {
+    width: 100%;
+    height: 52px;
+
+    border-radius: 20px;
+    padding: 16px 24px 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* FORM CADASTRO  NOME*/
+  .form_cadastro {
+    width: 100%;
+    height: 300vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    gap: 16px;
+  }
+  /* form_switch_cadastro */
+  .form_switch_cadastro {
+    width: 100%;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid #649fbf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+
+    p {
+      width: 253px;
+      height: 19px;
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18.75px;
+      color: #272f33;
+    }
+  }
+
+  /* salvarFomr */
+  .salvarFomr {
+    width: 100%;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid #649fbf;
+    background-color: #ffffff;
+    padding: 10px 40px 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 300;
+
+    p {
+      width: 39px;
+      height: 16px;
+      font-family: Ubuntu;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16.09px;
+      color: #649fbf;
+    }
+  }
+
+  /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
+  .px_passos {
+    width: 90%;
+    height: 32px;
+    top: 998px;
+    display: flex;
+    align-items: center;
+  }
+  /* AQUI FICA O BUTTON VOLTAR */
+  .bt_anterior {
+    width: 100%;
+    height: 32px;
+    border-radius: 10px;
+
+    left: 0;
+    background-color: var(--bk-button);
+    display: block;
+    transition: opacity 0.3s, visibility 0.3s;
+    a {
+      font-size: 18px;
+      top: 8px;
+      left: 51px;
+      font-weight: 700;
+      line-height: 16.41px;
+      color: var(--ligth);
+      font-family: Roboto;
+    }
+  }
+
+  /* AQUI FICA O BUTTON PRÓXIMO*/
+  .container_cadastro .btn_proximo {
+    width: 95%;
     height: 52px;
     margin-top: 2vh;
     border-radius: 10px;
@@ -544,33 +498,33 @@ z-index: 300;
     justify-content: center;
     left: 0;
     margin-left: 2.5%;
-  background-color: var(--bk-button);
-  background-color: #649fbf;
-  a {
-    font-size: 18px;
-    top: 8px;
-    left: 51px;
-    font-weight: 700;
-    line-height: 16.41px;
-    color: var(--ligth);
-    font-family: Roboto;
+    background-color: var(--bk-button);
+    background-color: #649fbf;
+    a {
+      font-size: 18px;
+      top: 8px;
+      left: 51px;
+      font-weight: 700;
+      line-height: 16.41px;
+      color: var(--ligth);
+      font-family: Roboto;
+    }
   }
-}
 
-/* content_img */
-.container_cadastro .content_img_footer {
-  width: 557px;
-  height: 827px;
-  position: absolute;
-  top: 510px;
- 
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-display: none;
+  /* content_img */
+  .container_cadastro .content_img_footer {
+    width: 557px;
+    height: 827px;
+    position: absolute;
+    top: 510px;
 
-  img {
-    width: 40vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: none;
+
+    img {
+      width: 40vw;
+    }
   }
-}
 }
