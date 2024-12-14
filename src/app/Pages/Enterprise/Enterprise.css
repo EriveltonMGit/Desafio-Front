@@ -145,7 +145,66 @@ left: 0;
     width: 40vw;
   }
 }
+ /* container_menu_device */
+ .container_menu_device {
+  position: fixed;
+  top: 0;
+  width: 95%;
+  max-width: 450px;
+  margin-left: 2.5%;
+  height: 8vh;
+  margin-top: 1vh;
+  backdrop-filter: blur(10px);
+  z-index: 9000;
+  border-radius: 10px;
+  border: 1px solid #3a3a3a94;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+  img {
+    width: 13vw;
+    margin-left: 3vw;
+  }
+}
+.btn-cart {
+  width: 15vw;
+  height: 85%;
+  border: 1px solid #3a3a3a94;
+  margin-right: 3vw;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Container do menu */
+#menu_device {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  margin-top: 9vh; /* Ajuste conforme o tamanho da navbar */
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0px 4px 1rem #ddd;
+  border-radius: 5px 0 0 5px;
+  top: 0;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+  overflow-y: auto;
+  flex-direction: column;
+  gap: 1vh;
+  padding: 0.5rem;
+  transform: translateX(100%); /* Esconde o menu fora da tela */
+  transition: transform 0.3s ease-in-out;
+}
 
+/* Exibe o menu quando ativo */
+#menu_device.show {
+  transform: translateX(0); /* Move o menu para dentro da tela */
+}
 
 }
 
