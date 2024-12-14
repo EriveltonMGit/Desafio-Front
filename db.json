@@ -23,6 +23,46 @@
           ]
         }
       ]
+    },
+    {
+      "id": "b522",
+      "estado": false,
+      "nome": "LUCIMARA CONCEICAO DOS SANTOS",
+      "cpf": "038.371.585-78",
+      "rg": "1416687416",
+      "dataNascimento": "01/12/2024",
+      "cargo": "designer",
+      "atividades": [
+        {
+          "atividadeId": 1,
+          "epis": [
+            {
+              "numeroEpi": "123456",
+              "codigoCa": "71908-720"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "379f",
+      "estado": true,
+      "nome": "ERIVELTON MAGALHÃES DOS SANTOS ",
+      "cpf": "038.371.585-78",
+      "rg": "1416687416",
+      "dataNascimento": "09/12/2024",
+      "cargo": "designer",
+      "atividades": [
+        {
+          "atividadeId": 1,
+          "epis": [
+            {
+              "numeroEpi": "123456",
+              "codigoCa": "71908-720"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

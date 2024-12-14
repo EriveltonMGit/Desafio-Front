@@ -116,16 +116,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-  
     left: 0;
-    bottom: 0;
-    margin-top: 1vh;
     z-index: 999;
     background-color: var(--bk-color-form);
     border-radius: 1px;
-    position:absolute;
- 
+  position: absolute;
+  top: 0;
+  margin-top: 12vh;
+
  
   }
 
@@ -156,6 +154,7 @@ top: 0;
   align-items: center;
   justify-content: space-around;
   flex-direction: row-reverse;
+
 }
     button {
       background-color: #f2f2f2;

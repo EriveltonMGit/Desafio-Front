@@ -23,6 +23,8 @@ function Funcionarios() {
             alt="Elemento de fundo" loading="lazy" 
           />
         </div>
+         {/* aqui fica o menu dvice */}
+        
         {/* NAV BAR */}
         <Nav />
         {/* AQUI FICA O 1 CONTAINER COM 3 SECTIONS DO FORM */}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "antd/dist/reset.css";
 import "./globals.css";
+import NavDevice from "@/Components/NavDevice/NavDevice"; 
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,6 +34,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Adicionando o NavDevice globalmente */}
+        <NavDevice />
         {children}
       </body>
     </html>

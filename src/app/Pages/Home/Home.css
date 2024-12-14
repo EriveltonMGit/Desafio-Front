@@ -452,7 +452,7 @@
   /* HOME */
   .container_home {
     width: 100%;
-    height: 190vh;
+    height: 200vh;
 
     left: 0px;
     display: flex;
@@ -461,15 +461,16 @@
 
 
   }
+ 
 
   /* CONTAINER SECTION FORM */
   .container_sections {
     width: 100%;
-    height: 180vh;
+    height: 200vh;
     position: absolute;
     top: 24px;
     gap: 32px;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -495,7 +496,7 @@
   /* AQUI FICA A DIV DO PERFIL DO FUNCIONÁRIO */
   .perfil {
     width: 100%;
-    height: 439px;
+    height: 400px;
     border-radius: 24px;
     padding: 24px;
     gap: 32px;
@@ -504,7 +505,7 @@
     justify-content: space-around;
     flex-direction: column;
     background-color: #ffffff;
-    margin-top: 20vh;
+    margin-top: 30vh;
 
     /* AQUI FICA O TEXTO DO PERFIL */
     p {
