@@ -42,9 +42,9 @@ body {
   src: url('/Fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
 }
 
-@media (max-width:480px) {
+/* @media (max-width:480px) {
  
-}
+} */
 
 /* Altera a largura da barra de rolagem */
 ::-webkit-scrollbar {
