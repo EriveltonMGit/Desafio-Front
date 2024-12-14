@@ -54,11 +54,13 @@ function Funcionarios() {
               <section className="form_container">
                 {/* AQUI FICA O TITULO DO FORM */}
                 <div className="title_form">
-                  <Link href="/Pages/Home">
-                    <p>
-                      <img src="/Arrow.webp" alt="" loading="lazy" /> Funcionário(s)
-                    </p>
+                  <Link href="/Pages/Home" className="btn_voltar">
+                  <img src="/Arrow.webp" alt="" loading="lazy" />
+                    
                   </Link>
+                  <p>
+                      Adicionar Funcionário(s)
+                    </p>
                 </div>
                 {/* AQUI FICA O FOMULÁRIO DE ADICIONAR FUNCIONÁRIOS */}
                 <InstallerForm />

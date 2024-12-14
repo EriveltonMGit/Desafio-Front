@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import './NavDevice.css';
+import Link from "next/link";
 
 const NavMenu: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -54,7 +55,7 @@ const NavMenu: React.FC = () => {
           ))}
         </ul>
         <div className="rodape_menu_device">
-          <p>Sobre</p>
+          <Link href="https://www.seatecnologia.com.br/">Sobre</Link>
           <img src="/favicon.png" alt="logo" loading="lazy" />
         </div>
       </nav>

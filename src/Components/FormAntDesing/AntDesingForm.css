@@ -44,6 +44,7 @@
   border-radius: 10px;
   padding: 12px;
   box-shadow: 0px 4px 5px #ddd;
+  
   label {
     width: 253px;
     height: 19px;
@@ -53,6 +54,23 @@
     font-family: Roboto;
   }
 }
+/* switch */
+.custom-switch {
+  background-color: #DBDBDB !important; /* Fundo quando ativo */
+}
+
+.custom-switch.ant-switch-checked {
+  background-color: #649fbf !important; /* Fundo quando ativo */
+
+}
+
+.custom-switch .ant-switch-inner {
+  color: white; 
+  font-family: Ubuntu;
+  font-size: 12px;
+ 
+}
+
 /* container_group_1 */
 .container_group_1 {
   width: 714px;

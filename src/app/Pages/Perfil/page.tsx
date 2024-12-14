@@ -11,9 +11,9 @@ function Perfil() {
         <>
         
         {/* AQUI FICA O CONTAINER PRINCIPAL */}
-        <main className="container_home">
+        <main className="container_perfil">
         {/* AQUI FICA A IMAGEM BK NO RODAPE */}
-        <div className="content_img_footer">
+        <div className="content_img_footer_perfil">
           <img src="/imagens/imagem_bk/Elementos de fundo.svg" alt="" loading="lazy" />
         </div>
         {/* NAV BAR */}

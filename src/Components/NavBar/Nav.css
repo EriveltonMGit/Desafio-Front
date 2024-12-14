@@ -12,6 +12,7 @@
   top: 0;
   background-color: var(--bk-color-form);
   border-radius: 0px 20px 20px 0px;
+ 
 }
 
 .rectangle_ {
@@ -20,6 +21,7 @@
   height: 41px;
   top: 50px;
   position: absolute;
+
 }
 
 /* NAV BAR LATERAL */
@@ -32,7 +34,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  
  .div_bar{
     width: 44px;
     height: 312px;
@@ -42,6 +44,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
   }
 
   button {
@@ -56,6 +59,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    border: none;
   }
 
   /* nav-item */
@@ -107,6 +111,17 @@
 }
 
 /* =================== MEDIA SCREEN ==================== */
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  .header_ {
+    display: none;
+  }
+  
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) and (orientation: portrait){
+  .header_ {
+    display: none;
+  }
+}
 @media (max-width: 480px) {
   /* AQUI FICA O CSS DO NAV BAR LATERAL  */
   /* HEADER CONTAINER */
@@ -148,7 +163,7 @@
 .div_bar{
   width:95%;
   height: 100%;
- 
+
 top: 0;
   display: flex;
   align-items: center;
@@ -168,6 +183,7 @@ top: 0;
       align-items: center;
       justify-content: center;
       position: relative;
+      border: none;
     }
 
     /* nav-item */

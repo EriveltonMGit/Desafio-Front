@@ -1,64 +1,28 @@
 {
   "funcionarios": [
     {
-      "id": "74fb",
-      "estado": true,
+      "id": "3487",
       "nome": "ERIVELTON MAGALHÃES DOS SANTOS ",
-      "cpf": "056.727.535-31",
-      "rg": "1416687416",
-      "dataNascimento": "17/12/2024",
+      "cpf": "t554654",
+      "rg": "6546546",
+      "dataNascimento": "26/12/2024",
       "cargo": "designer",
       "atividades": [
         {
           "atividadeId": 1,
           "epis": [
             {
-              "numeroEpi": "123456",
-              "codigoCa": "71908-720"
-            },
-            {
-              "numeroEpi": "1234",
-              "codigoCa": "41214565"
+              "numeroEpi": "546546",
+              "codigoCa": "546546"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "b522",
-      "estado": false,
-      "nome": "LUCIMARA CONCEICAO DOS SANTOS",
-      "cpf": "038.371.585-78",
-      "rg": "1416687416",
-      "dataNascimento": "01/12/2024",
-      "cargo": "designer",
-      "atividades": [
+        },
         {
-          "atividadeId": 1,
+          "atividadeId": 2,
           "epis": [
             {
-              "numeroEpi": "123456",
-              "codigoCa": "71908-720"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "379f",
-      "estado": true,
-      "nome": "ERIVELTON MAGALHÃES DOS SANTOS ",
-      "cpf": "038.371.585-78",
-      "rg": "1416687416",
-      "dataNascimento": "09/12/2024",
-      "cargo": "designer",
-      "atividades": [
-        {
-          "atividadeId": 1,
-          "epis": [
-            {
-              "numeroEpi": "123456",
-              "codigoCa": "71908-720"
+              "numeroEpi": "564654",
+              "codigoCa": "5654"
             }
           ]
         }

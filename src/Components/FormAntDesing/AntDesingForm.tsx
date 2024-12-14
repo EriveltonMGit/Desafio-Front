@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
-import { Form, Input, Select, DatePicker, Upload } from "antd";
+import { Form, Input, Select, DatePicker, Upload, Switch } from "antd";
 import { UploadChangeParam, RcFile } from "antd/es/upload";
 import { Moment } from "moment"; // Se estiver utilizando moment.js para datas
-import Switch from "../../Components/Switch/Switch";
+// import Switch from "../../Components/Switch/Switch";
 // IMPORT CSS
 import "./AntDesingForm.css";
 
@@ -38,12 +38,12 @@ interface FormData {
 }
 const InstallerForm = () => {
   // FUNÇÃO PARA SALVAR O ESTADO DO SWITCH
-  const [isSelected, setIsSelected] = useState<boolean>(false);
+  // const [isSelected, setIsSelected] = useState<boolean>(false);
 
-  const toggleSwitch = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsSelected((prevState) => !prevState); // Alterna o estado
-  };
+  // const toggleSwitch = (e: React.MouseEvent) => {
+  //   e.preventDefault();
+  //   setIsSelected((prevState) => !prevState); // Alterna o estado
+  // };
 
   // Função para tratar a entrada do CPF, aceitando apenas números
   const handleCpfChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -58,7 +58,7 @@ const InstallerForm = () => {
   const onFinish = async (values: FormData) => {
     // Preparando os dados para envio
     const formData = {
-      estado: isSelected, // Passa o estado do Switch
+     // Passa o estado do Switch
       nome: values.nome,
       cpf: values.cpf,
       rg: values.rg,
@@ -103,7 +103,7 @@ const InstallerForm = () => {
   };
 
   // Estado para armazenar os cards
-  // const [atividades, setAtividades] = useState<{ id: number }[]>([{ id: 1 }]); // Inicializado com um ID fixo
+
 
   // Função para adicionar um novo card
   const [atividades, setAtividades] = useState<Atividade[]>([
@@ -177,7 +177,11 @@ const InstallerForm = () => {
           {/* PRIMEIRO CARD DO FORM ONDE FICA O SWITCH */}
           <section className="swith-func">
             <label>O trabalhador está ativo ou inativo?</label>
-            <Switch isSelected={isSelected} onToggle={toggleSwitch} />
+            {/* <Switch isSelected={isSelected} onToggle={toggleSwitch} /> */}
+            <Switch className="custom-switch"
+              checkedChildren="Ativo"
+              unCheckedChildren="Inativo"
+              defaultChecked />
           </section>
 
           {/* Primeira Div - Nome, CPF, RG */}
