@@ -1971,7 +1971,7 @@ display: none;
 
 
 /* =============MIDIA SCREM ================= */
-@media (min-width: 1367px) and (max-width: 1920px) and (min-height: 768px) and (max-height: 1080px) and (orientation: landscape){
+@media (min-width: 1042px) and (max-width: 1980px) and (min-height: 768px) and (max-height: 1080px) and (orientation: landscape){
 /* AQUI FICA O CSS DO HOME - PAGINA INICIAL DO PROJETO */
 
 /* HOME */
@@ -1984,12 +1984,12 @@ display: none;
   align-items: center;
   justify-content: center;
   background-color: #f2f2f2;
- 
+
 }
 
 /* CONTAINER SECTION FORM */
 .container_sections {
-  width: 90%;
+  width: 95%;
   height: 942px;
   position: absolute;
   top: 24px;
@@ -2000,6 +2000,7 @@ display: none;
   justify-content: center;
   flex-direction: column;
   margin-top: 24px;
+
 }
 
 /* AQUI FICA A  SECTION FORM */
@@ -2009,12 +2010,13 @@ display: none;
   gap: 32px;
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
+
 }
 /* AQUI FICA A DIV DO PERFIL DO FUNCIONÁRIO */
 .perfil {
-  width: 460px;
-  height: 439px;
+  width: 750px;
+  height: 569px;
   border-radius: 24px;
   padding: 24px;
   gap: 32px;
@@ -2023,26 +2025,27 @@ display: none;
   justify-content: space-around;
   flex-direction: column;
   background-color: #ffffff;
+ 
   /* AQUI FICA O TEXTO DO PERFIL */
   p {
-    width: 412px;
+    width: auto;
     height: 200px;
-    font-size: 16px;
-    line-height: 19.55px;
+    font-size: 23px;
+    line-height: 30px;
     font-weight: 400;
     color: var(--color-font);
   }
   /* AQUI FICA A IMAGEM DO PERFIL */
   img {
-    width: 142px;
-    height: 159px;
+    width: 222px;
+    height: 259px;
     gap: 24;
   }
 }
 
 /* AQUI FICA A DIV DO FORM  */
 .form_container {
-  width: 762px;
+  width: 1062px;
   height: 754px;
   border-radius: 20px;
   gap: 16px;
@@ -2051,11 +2054,12 @@ display: none;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+ 
 }
 
 /* AQUI FICA O FORM -INPUTS */
 .title_form {
-  width: 762px;
+  width: 1062px;
   height: 56px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -2079,7 +2083,7 @@ display: none;
 
 /* AQUI FICA A SECTION PARA ADICIONAR FUNCIONÁRIOS */
 .container_funcionarios {
-  width: 762px;
+  width: 1062px;
   height: 150px;
   border-radius: 20px;
   top: 16px;
@@ -2091,11 +2095,12 @@ display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+ 
 }
 
 /* add_funcionario */
 .add_funcionario {
-  width: 714px;
+  width:962px;
   height: 66px;
   border-radius: 10px;
   border: 1px solid #649fbf;
@@ -2111,7 +2116,7 @@ display: none;
     height: 18px;
     top: 40px;
     left: 296px;
-    font-size: 16px;
+    font-size: 25px;
     font-family: Ubuntu;
     line-height: 18.38px;
     border: none;
@@ -2122,6 +2127,7 @@ display: none;
     align-items: center;
     justify-content: center;
     margin-bottom: 0px;
+   
   }
 }
 
@@ -2146,7 +2152,8 @@ display: none;
 
 /* filtos */
 .filtros {
-  width: 714px;
+ 
+    width:962px;
   height: 36px;
   display: flex;
   align-items: center;
@@ -2156,12 +2163,13 @@ display: none;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 649px;
-    height: 36px;
+    
+    width:762px;
+    height: 45px;
     gap: 24px;
     button {
       width: 192px;
-      height: 36px;
+      height: 100%;
       border-radius: 10px;
       border: 1px solid #959595;
       top: 10px;
@@ -2179,7 +2187,7 @@ display: none;
         height: 16px;
         margin-bottom: 0;
         font-family: Ubuntu;
-        font-size: 14px;
+        font-size: 18px;
         line-height: 16.09px;
         font-weight: 400;
         color: #959595;
@@ -2194,10 +2202,10 @@ display: none;
   }
   /* ativos */
   .ativos {
-    width: 75px;
+    width: 92px;
     height: 16px;
     font-family: Ubuntu;
-    font-size: 14px;
+    font-size: 17px;
     line-height: 16.09px;
     font-weight: 400;
     color: #3a3a3a;
@@ -2206,7 +2214,8 @@ display: none;
 
 /* AQUI FICA A LISTA DE FUNCINÁRIOS  */
 .container_items_list {
-  width: 762px;
+
+    width:962px;
   height: 448px;
   border-radius: 20px;
   top: 16px;
@@ -2223,7 +2232,8 @@ display: none;
 }
 .lista_item {
   background-color: #649fbf33;
-  width: 714px;
+ 
+  width:962px;
   height: 92px;
   border-radius: 10px;
   justify-content: space-between;
@@ -2253,7 +2263,7 @@ display: none;
     
     height: 28px;
     font-family: Ubuntu;
-    font-size: 24px;
+    font-size: 27px;
     list-style: 27.58px;
     font-weight: 400px;
     
@@ -2268,6 +2278,7 @@ display: none;
   }
   button:nth-child(1) {
     width: 130px;
+    
     height: 24px;
     border-radius: 36px;
     padding-top: 4px 16px 4px 16px;
@@ -2276,7 +2287,7 @@ display: none;
     color: #ffffff;
     font-family: Ubuntu;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16.09px;
     text-decoration: none;
     border: none;
@@ -2292,7 +2303,7 @@ display: none;
     color: #ffffff;
     font-family: Ubuntu;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16.09px;
     text-decoration: none;
     border: none;
@@ -2307,7 +2318,7 @@ display: none;
     color: #ffffff;
     font-family: Ubuntu;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16.09px;
     text-decoration: none;
     border: none;
@@ -2317,7 +2328,7 @@ display: none;
 /* btn_edit */
 .btn_edit {
   background-color: #649fbf;
-  width: 48px;
+  width: 60px;
   height: 92px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -2355,7 +2366,7 @@ display: none;
     gap: 10px;
     font-family: Ubuntu;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 16.09px;
     color: #959595;
   }
@@ -2368,7 +2379,7 @@ display: none;
 }
 /* container_switch */
 .container_switch {
-  width: 762px;
+  width: 1062px;
   height: 52px;
   border-radius: 20px;
   padding: 16px 24px 16px 24px;
@@ -2378,11 +2389,11 @@ display: none;
   gap: 16px;
 
   h5{
-    width: 168px;
+    width:auto;
     height: 16px;
     top: 2px;
    
-     font-size: 14px;
+     font-size: 18px;
     top: 8px;
     left: 51px;
     font-weight: 400;
@@ -2394,7 +2405,7 @@ display: none;
 
 /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
 .px_passos {
-  width: 1254px;
+  width: 100%;
   height: 32px;
   top: 998px;
 
@@ -2402,6 +2413,7 @@ display: none;
   gap: 854px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 
 
 }
@@ -2457,11 +2469,12 @@ display: none;
   width: 457px;
   height: 557px;
   position: absolute;
-  top: 500px;
-  left: 897px;
+  top: 520px;
+  left: 1500px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+
   img {
     width: 40vw;
     object-fit: cover;
