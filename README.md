@@ -46,11 +46,11 @@ npm run dev
 # 5 - Dependências  
 O projeto depende de várias bibliotecas para funcionar corretamente. As principais dependências são:
 
-#### Next.js: Framework React para construção de páginas dinâmicas.
-#### react e react-dom: Bibliotecas principais para a construção de interfaces no React.
-#### json-server: Simula um servidor RESTful para APIs utilizando um arquivo db.json.
-#### axios: Biblioteca para fazer requisições HTTP.
-#### antd: Biblioteca de componentes UI para construção de interfaces interativas.
+Next.js: Framework React para construção de páginas dinâmicas.  
+react e react-dom: Bibliotecas principais para a construção de interfaces no React.  
+json-server: Simula um servidor RESTful para APIs utilizando um arquivo db.json.  
+axios: Biblioteca para fazer requisições HTTP.  
+antd: Biblioteca de componentes UI para construção de interfaces interativas.  
 
 ## Essa documentação detalha os passos necessários para rodar, desenvolver e preparar o seu projeto SEA Tecnologia para produção. Caso tenha dúvidas adicionais, não hesite em pedir mais informações!
 
