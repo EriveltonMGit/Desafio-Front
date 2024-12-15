@@ -18,7 +18,6 @@ function Enterprise() {
         </div>
         {/* NAV BAR */}
 
-       {/* aqui fica o menu dvice */}
         
         {/* aqui fica o nav lateral */}
         <Nav />

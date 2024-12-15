@@ -1,32 +1,5 @@
 {
   "funcionarios": [
-    {
-      "id": "3487",
-      "nome": "ERIVELTON MAGALHÃES DOS SANTOS ",
-      "cpf": "t554654",
-      "rg": "6546546",
-      "dataNascimento": "26/12/2024",
-      "cargo": "designer",
-      "atividades": [
-        {
-          "atividadeId": 1,
-          "epis": [
-            {
-              "numeroEpi": "546546",
-              "codigoCa": "546546"
-            }
-          ]
-        },
-        {
-          "atividadeId": 2,
-          "epis": [
-            {
-              "numeroEpi": "564654",
-              "codigoCa": "5654"
-            }
-          ]
-        }
-      ]
-    }
+  
   ]
 }

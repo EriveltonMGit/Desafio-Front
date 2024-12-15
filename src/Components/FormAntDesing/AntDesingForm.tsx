@@ -37,13 +37,7 @@ interface FormData {
   [key: string]: string | boolean | Moment | RcFile[];
 }
 const InstallerForm = () => {
-  // FUNÇÃO PARA SALVAR O ESTADO DO SWITCH
-  // const [isSelected, setIsSelected] = useState<boolean>(false);
-
-  // const toggleSwitch = (e: React.MouseEvent) => {
-  //   e.preventDefault();
-  //   setIsSelected((prevState) => !prevState); // Alterna o estado
-  // };
+ 
 
   // Função para tratar a entrada do CPF, aceitando apenas números
   const handleCpfChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -58,7 +52,6 @@ const InstallerForm = () => {
   const onFinish = async (values: FormData) => {
     // Preparando os dados para envio
     const formData = {
-     // Passa o estado do Switch
       nome: values.nome,
       cpf: values.cpf,
       rg: values.rg,
@@ -132,7 +125,6 @@ const InstallerForm = () => {
     heightAuto(atividadeId);
   };
 
-  // FUNÇAO PARA AUMENTAR O CAONTAINER DO EPI
   // Função para ajustar a altura do container do EPI
   function heightAuto(atividadeId: number) {
     const aumentContainer = document.getElementById(
@@ -280,7 +272,7 @@ const InstallerForm = () => {
                   placeholder="Selecione a data de nascimento do funcionário"
                 />
               </Form.Item>
-              <Form.Item
+              <Form.Item 
                 label="Cargo"
                 name="cargo"
                 rules={[
