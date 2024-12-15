@@ -207,7 +207,7 @@ const InstallerForm = () => {
                   onChange={handleCpfChange} // Chama a função para validar a entrada
                 />
               </Form.Item>
-              <Form.Item
+              <Form.Item 
                 label="RG"
                 name="rg"
                 rules={[
@@ -232,7 +232,7 @@ const InstallerForm = () => {
                   Sexo <span style={{ color: "red" }}>*</span>
                 </label>
                 <div className="form-radio-group">
-                  <label htmlFor="masculino">
+                  <label htmlFor="masculino" className="check_label">
                     <input
                       type="radio"
                       id="masculino" // O id agora está correto
@@ -242,7 +242,7 @@ const InstallerForm = () => {
                     />
                     Masculino
                   </label>
-                  <label htmlFor="feminino">
+                  <label htmlFor="feminino" className="check_label">
                     <input
                       type="radio"
                       id="feminino" // O id agora está correto

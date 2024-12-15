@@ -441,11 +441,11 @@
 }
 
 /* =============MIDIA SCREM ================= */
-@media (min-width: 1042px) and (max-width: 1980px) and (min-height: 768px) and (max-height: 1080px) and (orientation: landscape){
+@media (max-width: 1980px) and (min-height: 768px) and (max-height: 1080px) and (orientation: landscape){
 /* AQUI FICA O CSS DO HEADER STATUS */
 /* status_container */
 .status_container {
-  width: 100%;
+  width: 96%;
   height: 156px;
   gap: 32px;
   display: flex;
@@ -534,7 +534,7 @@
 
 /* LINHA ENTRE OS ITENS */
 .line {
-  min-width: 1200px;
+  width: 96%;
   height: 4px;
   border-top: 4px dashed #649fbf;
   position: absolute;

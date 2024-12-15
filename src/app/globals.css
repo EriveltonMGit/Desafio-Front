@@ -6,7 +6,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,7 +23,9 @@ body {
   overflow-x: hidden;
   /* outline: 1px solid red !important; */
   text-decoration: none;
+  
 }
+
 a{
   text-decoration: none;
   
@@ -71,3 +73,4 @@ p{
  background-color: #649FBF;
   border-radius: 2px;
 }
+

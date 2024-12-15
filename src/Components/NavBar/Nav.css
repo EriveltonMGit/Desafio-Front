@@ -239,8 +239,8 @@ top: 0;
   /* AQUI FICA O CSS DO NAV BAR LATERAL  */
 /* HEADER CONTAINER */
 .header_ {
-  width: 66px;
-  height: 868px;
+  width: 56px;
+  height: 668px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,7 +250,7 @@ top: 0;
   top: 0;
   background-color: var(--bk-color-form);
   border-radius: 0px 20px 20px 0px;
- 
+
 }
 
 .rectangle_ {
@@ -265,7 +265,7 @@ top: 0;
 /* NAV BAR LATERAL */
 .nav_bar_lateral {
   width: 44px;
-  height: 412px;
+  height: 312px;
   gap: 24px;
   top: 225px;
   display: flex;
@@ -276,7 +276,7 @@ top: 0;
   
  .div_bar{
     width: 44px;
-    height: 412px;
+    height: 312px;
     gap: 24px;
     top: 225px;
     display: flex;
@@ -290,7 +290,7 @@ top: 0;
     background-color: #f2f2f2;
     border-radius: 10px;
     width: 35px;
-    height: 40px;
+    height: 35px;
     padding: 3px;
     border-radius: 10px;
     color: #649fbf;

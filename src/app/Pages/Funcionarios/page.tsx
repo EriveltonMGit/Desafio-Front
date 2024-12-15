@@ -74,7 +74,7 @@ function Funcionarios() {
                 </Link>
               </button>
               <button className="btn_proximo">
-                <Link href="/Pages/Static" legacyBehavior>
+                <Link href="/Pages/StaticPage" legacyBehavior>
                   <a>Próximo passo</a>
                 </Link>
               </button>

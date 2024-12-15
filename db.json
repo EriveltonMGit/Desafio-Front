@@ -1,5 +1,42 @@
 {
   "funcionarios": [
-  
+    {
+      "id": "d1a1",
+      "nome": "ERIVELTON MAGALHÃES DOS SANTOS ",
+      "cpf": "56756756765",
+      "rg": "765765",
+      "dataNascimento": "23/12/2024",
+      "cargo": "developer",
+      "atividades": [
+        {
+          "atividadeId": 1,
+          "epis": [
+            {
+              "numeroEpi": "6756765",
+              "codigoCa": "67657"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ce7c",
+      "nome": "Erivelton Magalhães dos Santos",
+      "cpf": "6456546546",
+      "rg": "6546546",
+      "dataNascimento": "03/12/2024",
+      "cargo": "developer",
+      "atividades": [
+        {
+          "atividadeId": 1,
+          "epis": [
+            {
+              "numeroEpi": "546456",
+              "codigoCa": "546546"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

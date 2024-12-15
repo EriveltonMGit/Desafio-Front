@@ -185,7 +185,7 @@ function Home() {
               }}
               disabled={!isCompleted} // Desabilita o botão caso o switch não esteja ativado
             >
-              <Link href={isCompleted ? "/Pages/Static" : "#"} passHref> 
+              <Link href={isCompleted ? "/Pages/StaticPage" : "#"} passHref> 
                 Próximo passo
               </Link>
             </button> 
