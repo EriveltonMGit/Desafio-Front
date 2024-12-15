@@ -20,7 +20,7 @@ Antes de começar, você precisará instalar as seguintes ferramentas:
 
 # 3 - Instalação
 #### Passo 1: Clonando o Repositório, clone o repositório do projeto no seu ambiente local:
-git clone https://github.com/EriveltonMGit/Desafio-Front.git
+git clone https://github.com/EriveltonMGit/Desafio-Front.git .
 
 #### Passo 2: Instalando as Dependências  
 ```bash
