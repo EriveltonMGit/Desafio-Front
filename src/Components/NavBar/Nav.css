@@ -126,7 +126,7 @@
   /* AQUI FICA O CSS DO NAV BAR LATERAL  */
   /* HEADER CONTAINER */
   .header_ {
-    width: 100%;
+    width: 98%;
     height: 8vh;
     display: flex;
     align-items: center;
@@ -138,7 +138,7 @@
   position: absolute;
   top: 0;
   margin-top: 12vh;
-
+  
  
   }
 
