@@ -73,7 +73,14 @@ const InstallerForm = () => {
       }),
       files: values.files, // Não inclui o campo 'id'
     };
-
+ // Salvando os dados no Local Storage
+//  try {
+//   localStorage.setItem("formData", JSON.stringify(formData)); 
+//   alert("Dados salvos no Local Storage com sucesso!");
+// } catch (error) {
+//   console.error("Erro ao salvar no Local Storage:", error);
+//   alert("Erro ao salvar os dados localmente.");
+// }
     // FUNÇÃO PARA ENVIAR OS DADOS PARA O JSON SERVER VIA POST
     try {
       const response = await fetch("http://localhost:3001/funcionarios", {
