@@ -46,17 +46,26 @@ npm run dev
 # 5 - Dependências  
 O projeto depende de várias bibliotecas para funcionar corretamente. As principais dependências são:
 
-#### Next.js: Framework React para construção de páginas dinâmicas.
-#### react e react-dom: Bibliotecas principais para a construção de interfaces no React.
-#### json-server: Simula um servidor RESTful para APIs utilizando um arquivo db.json.
-#### axios: Biblioteca para fazer requisições HTTP.
-#### antd: Biblioteca de componentes UI para construção de interfaces interativas.
+Next.js: Framework React para construção de páginas dinâmicas.  
+react e react-dom: Bibliotecas principais para a construção de interfaces no React.  
+json-server: Simula um servidor RESTful para APIs utilizando um arquivo db.json.  
+axios: Biblioteca para fazer requisições HTTP.  
+antd: Biblioteca de componentes UI para construção de interfaces interativas.  
 
 ## Essa documentação detalha os passos necessários para rodar, desenvolver e preparar o seu projeto SEA Tecnologia para produção. Caso tenha dúvidas adicionais, não hesite em pedir mais informações!
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 # Page 1 - Home
-![Descrição da Imagem](https://github.com/EriveltonMGit/Codigo_certo/raw/main/src/assets/capa.png)
+![Descrição da Imagem](https://github.com/EriveltonMGit/Desafio-Front/raw/main/public/documentacao/tela_home.webp) 
+
+# Page 2 - Formulário
+![Descrição da Imagem](https://github.com/EriveltonMGit/Desafio-Front/raw/main/public/documentacao/tela_funcionario.webp) 
+
+# Page 3 - Home
+![Descrição da Imagem](https://github.com/EriveltonMGit/Desafio-Front/raw/main/public/documentacao/smartphone_home.webp) 
+# Page 3 - Menu
+![Descrição da Imagem](https://github.com/EriveltonMGit/Desafio-Front/raw/main/public/documentacao/samrtphone_fun.webp) 
+
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
