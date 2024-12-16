@@ -64,35 +64,36 @@ function Home() {
     );
     setFilteredFuncionarios(ativos);
   
+   
+    const container_sections = document.getElementById(`container_sections`)
+    if(container_sections){
+     if(container_sections.style.height === "726px"){
+ container_sections.style.height = "726px"
+     }
+    }
+  };
+ // LIMPA OS FILTROS E EXIBE TODOS OS FUNCIONÁRIOS
+const limparFiltros = (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.preventDefault();
 
-    
-  };
-  // LIMPA OS FILTROS E EXIBE TODOS OS FUNCIONÁRIOS
-  const limparFiltros = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    setFilteredFuncionarios(itemsFuncionarios);
-    const contaienr_list = document.getElementById(`contaienr_list`);
-      const secttion_form = document.getElementById(`form_container`);
-    
-    if (secttion_form?.style.height) {
-      if (secttion_form.style.height === "538px") {
-        secttion_form.style.height = "auto";
-      } else {
-        secttion_form.style.height = "354px";
+  // Exibir todos os funcionários
+  setFilteredFuncionarios(itemsFuncionarios);
+
+  // Adicionar classe especial aos itens com id 2 e 3
+  setTimeout(() => {
+    const idsDiferentes = [2, 3];
+    idsDiferentes.forEach((id) => {
+      const item = document.querySelector(`.lista_item[data-id='${id}']`);
+      if (item) {
+        item.classList.add("diferente");
       }
-    }
-    if (contaienr_list?.style.height) {
-      if (contaienr_list.style.height === "232px") {
-        contaienr_list.style.height = "448px";
-      } else {
-        contaienr_list.style.height = "232px";
-      }
-    }
-  };
+    });
+  }, 0);
+};
 
   return (
     <>
-      <main className="container_home" id="form_container">
+      <main className="container_home" id="container_home">
         <div className="content_img_footer_home">
           <img
             src="/imagens/imagem_bk/Elementos de fundo.svg"
@@ -103,7 +104,7 @@ function Home() {
 
         <Nav />
 
-        <section className="container_sections">
+        <section className="container_sections" id="container_sections">
           <ItemsStatus />
           <section className="section_form" >
             <div className="perfil">
@@ -153,42 +154,43 @@ function Home() {
                 </main>
               </section>
               <main className="container_items_list" id="contaienr_list">
-                {filteredFuncionarios.map((item) => (
-                  <div
-                    key={item.id}
-                    className={`lista_item ${
-                      item.estado === "inativo" ? "inativo" : ""
-                    }`}
-                  >
-                    <div className="area_content_funcionarios">
-                      <h2 className="nome-fun">{item.nome}</h2>
-                      <div>
-                        <button>{item.codigoFuncionario}</button>
-                        <button>{item.estado}</button>
-                        <button>{item.cargo}</button>
-                      </div>
-                    </div>
-                    <button
-                      className="btn_edit"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        mostrarDivCrud(item.id, e);
-                      }}
-                    >
-                      <img
-                        src="/butom_edit.webp"
-                        alt="Editar/Excluir"
-                        loading="lazy"
-                      />
-                      {crudVisible === item.id && (
-                        <div className="btn_crud">
-                          <a>Editar</a>
-                          <a>Excluir</a>
-                        </div>
-                      )}
-                    </button>
-                  </div>
-                ))}
+              {filteredFuncionarios.map((item) => (
+  <div
+    key={item.id}
+    data-id={item.id} // Adicionado para identificar o item pelo ID
+    className={`lista_item ${
+      item.estado === "inativo" ? "inativo" : ""
+    }`}
+  >
+    <div className="area_content_funcionarios">
+      <h2 className="nome-fun">{item.nome}</h2>
+      <div>
+        <button>{item.codigoFuncionario}</button>
+        <button>{item.estado}</button>
+        <button>{item.cargo}</button>
+      </div>
+    </div>
+    <button
+      className="btn_edit"
+      onClick={(e) => {
+        e.preventDefault();
+        mostrarDivCrud(item.id, e);
+      }}
+    >
+      <img
+        src="/butom_edit.webp"
+        alt="Editar/Excluir"
+        loading="lazy"
+      />
+      {crudVisible === item.id && (
+        <div className="btn_crud">
+          <a>Editar</a>
+          <a>Excluir</a>
+        </div>
+      )}
+    </button>
+  </div>
+))}
               </main>
 
               <section className="container_switch">

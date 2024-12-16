@@ -104,7 +104,7 @@
 /* AQUI FICA O CSS DO HEADER STATUS */
 /* status_container */
 .status_container-static {
-  width: 98%;
+  width: 99%;
   height: 156px;
   gap: 32px;
   display: flex;
@@ -114,6 +114,7 @@
   padding: 24px;
   gap: 48px;
   background-color: #ffffff;
+  
 }
 
 /* AQUI FICA O CARDS DE STATUS */

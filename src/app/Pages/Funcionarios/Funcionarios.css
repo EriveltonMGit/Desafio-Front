@@ -175,14 +175,15 @@
 
 /* AQUI FICA O CSS DA SECTION PROX PASSOS - um button */
 .px_passos {
-  width: 100%;
+  width:99%;
   height: 32px;
   top: 998px;
   left: 88px;
   gap: 854px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content:space-between;
+  
 }
 /* AQUI FICA O BUTTON VOLTAR */
 .bt_anterior {
@@ -522,6 +523,7 @@
     top: 998px;
     display: flex;
     align-items: center;
+
   }
   /* AQUI FICA O BUTTON VOLTAR */
   .bt_anterior {
@@ -1571,6 +1573,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f2f2f2;
+  
 }
 
 /* CONTAINER SECTION FORM */

@@ -1952,9 +1952,10 @@
     top: 100px;
     left: 100px;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: center;
     background-color: #f2f2f2;
+   
   }
 
   /* CONTAINER SECTION FORM */
@@ -1967,10 +1968,11 @@
     gap: 32px;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
     margin-top: 24px;
+
   }
 
   /* AQUI FICA A  SECTION FORM */
@@ -1981,6 +1983,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
+  
+
   }
   /* AQUI FICA A DIV DO PERFIL DO FUNCIONÁRIO */
   .perfil {
@@ -2024,6 +2028,7 @@
     flex-direction: column;
     transition: height 0.3s ease-in-out;
     z-index: 2;
+  
   }
 
   /* AQUI FICA O FORM -INPUTS */
@@ -2201,7 +2206,7 @@
     align-items: center;
   }
   /* Estilo para o segundo e terceiro item mudar a cor*/
-  .lista_item.diferente {
+  .lista_item .diferente {
     background-color: #f0f0f0; /* Cor de fundo diferenciada */
   }
   /* area_content_funcionarios */
