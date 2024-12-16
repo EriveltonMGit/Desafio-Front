@@ -8,7 +8,7 @@ Sobre a Empresa
 Adicionar Funcionário
 Notificações
 E outros recursos voltados para o gerenciamento de informações.  
-&nbsp;<a href="https://desafio-front-sea-tecnologia.netlify.app/Pages/Funcionarios">
+&nbsp;<a href="https://desafio-front-sea-tecnologia.netlify.app/">
 Projeto hospedado no netfly 
 </a>&nbsp;
 
