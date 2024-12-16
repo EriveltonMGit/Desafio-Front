@@ -37,8 +37,6 @@ interface FormData {
   [key: string]: string | boolean | Moment | RcFile[];
 }
 const InstallerForm = () => {
- 
-
   // Função para tratar a entrada do CPF, aceitando apenas números
   const handleCpfChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Substitui qualquer caractere que não seja número
@@ -73,14 +71,14 @@ const InstallerForm = () => {
       }),
       files: values.files, // Não inclui o campo 'id'
     };
- // Salvando os dados no Local Storage
-//  try {
-//   localStorage.setItem("formData", JSON.stringify(formData)); 
-//   alert("Dados salvos no Local Storage com sucesso!");
-// } catch (error) {
-//   console.error("Erro ao salvar no Local Storage:", error);
-//   alert("Erro ao salvar os dados localmente.");
-// }
+    // Salvando os dados no Local Storage
+    //  try {
+    //   localStorage.setItem("formData", JSON.stringify(formData));
+    //   alert("Dados salvos no Local Storage com sucesso!");
+    // } catch (error) {
+    //   console.error("Erro ao salvar no Local Storage:", error);
+    //   alert("Erro ao salvar os dados localmente.");
+    // }
     // FUNÇÃO PARA ENVIAR OS DADOS PARA O JSON SERVER VIA POST
     try {
       const response = await fetch("http://localhost:3001/funcionarios", {
@@ -103,7 +101,6 @@ const InstallerForm = () => {
   };
 
   // Estado para armazenar os cards
-
 
   // Função para adicionar um novo card
   const [atividades, setAtividades] = useState<Atividade[]>([
@@ -142,6 +139,30 @@ const InstallerForm = () => {
     }
   }
 
+  // FUNÇAO PARA FECAHR O CARD DE EPI   
+  function fecharCardEpi() {
+    const container_group_2 = document.getElementById("container_group_2");
+    const second_group = document.getElementById("second-group-2");
+  
+    if (container_group_2) {
+     
+      if ( container_group_2.style.height === "344px") {
+        container_group_2.style.height = "20%";
+      } else {
+        container_group_2.style.height = "auto";
+      }
+    }
+  
+    if (second_group) {
+      // Verifica se o display está como 'none' e altera para 'flex', caso contrário, define como 'none'
+      if (second_group.style.display === "none") {
+        second_group.style.display = "flex";
+      } else {
+        second_group.style.display = "none";
+      }
+    }
+  }
+
   // Função para remover um EPI
   // const removeEpi = (atividadeId: number, epiId: number) => {
   //   setAtividades((prevAtividades) =>
@@ -177,10 +198,12 @@ const InstallerForm = () => {
           <section className="swith-func">
             <label>O trabalhador está ativo ou inativo?</label>
             {/* <Switch isSelected={isSelected} onToggle={toggleSwitch} /> */}
-            <Switch className="custom-switch"
+            <Switch
+              className="custom-switch"
               checkedChildren="Ativo"
               unCheckedChildren="Inativo"
-              defaultChecked />
+              defaultChecked
+            />
           </section>
 
           {/* Primeira Div - Nome, CPF, RG */}
@@ -214,7 +237,7 @@ const InstallerForm = () => {
                   onChange={handleCpfChange} // Chama a função para validar a entrada
                 />
               </Form.Item>
-              <Form.Item 
+              <Form.Item
                 label="RG"
                 name="rg"
                 rules={[
@@ -279,7 +302,7 @@ const InstallerForm = () => {
                   placeholder="Selecione a data de nascimento do funcionário"
                 />
               </Form.Item>
-              <Form.Item 
+              <Form.Item
                 label="Cargo"
                 name="cargo"
                 rules={[
@@ -289,19 +312,19 @@ const InstallerForm = () => {
                   },
                 ]}
               >
-                <Select placeholder="Selecione seu cargo" className="cargo">
-                  <Option value="developer">Desenvolvedor</Option>
-                  <Option value="designer">Designer</Option>
-                  <Option value="manager">Gerente</Option>
+                <Select placeholder="Cargo" className="cargo">
+                  <Option value="developer">Cargo 1</Option>
+                  <Option value="designer">Cargo 2</Option>
+                  <Option value="manager">Cargo 3</Option>
                 </Select>
               </Form.Item>
             </div>
           </main>
           {/* AQUI FICA O SEGUNDO GROUP CARD */}
-          <main className="container_group_2">
+          <main className="container_group_2" id="container_group_2">
             {/* { EPIs */}
-            <div className="second-group">
-              <div className="checkbox-epi">
+            <div className="second-group" >
+              <div className="checkbox-epi" >
                 <label
                   htmlFor="checkbox-epi"
                   style={{ display: "block", marginBottom: "8px" }}
@@ -309,14 +332,14 @@ const InstallerForm = () => {
                   <p>Quais EPIs o trabalhador usa na atividade?</p>
                 </label>
                 <div>
-                  <input type="checkbox" id="checkbox-epi" />
+                  <input type="checkbox" id="checkbox-epi" onClick={fecharCardEpi} />
                   <p>O trabalhador não usa EPI</p>
                 </div>
               </div>
             </div>
 
             {/* Segunda Div - Atividade e CA */}
-            <div className="second-group-2">
+            <div className="second-group-2" id="second-group-2">
               <div className="area-atividade-selected">
                 {atividades.map((atividade) => (
                   <div
@@ -326,7 +349,7 @@ const InstallerForm = () => {
                   >
                     <div className="selected_atividade">
                       <Form.Item
-                        label={`Atividade ${atividade.id}`}
+                        label={`Selecione a Atividade ${atividade.id}:`}
                         name={`atividade_${atividade.id}`}
                         rules={[
                           {
@@ -335,13 +358,13 @@ const InstallerForm = () => {
                           },
                         ]}
                       >
-                        <Select placeholder="Selecione a atividade">
+                        <Select placeholder="Atividade 1">
                           <Option value="seguranca">
-                            Calçados de Segurança
+                          Atividade 1
                           </Option>
-                          <Option value="capacete">Capacete</Option>
-                          <Option value="luvas">Luvas</Option>
-                          <Option value="outros">Outros</Option>
+                          <Option value="capacete">Atividade 2</Option>
+                          <Option value="luvas">Atividade 3</Option>
+                          <Option value="outros">Atividade 4</Option>
                         </Select>
                       </Form.Item>
                     </div>
@@ -349,24 +372,32 @@ const InstallerForm = () => {
                     {atividade.epis.map((epi) => (
                       <div key={epi.id} className="area-numero-ca">
                         <div className="card-epi">
-                          <Form.Item
-                            className="input-epi"
-                            label={`Número do EPI ${epi.id}`}
-                            name={`numeroEpi_${atividade.id}_${epi.id}`}
+                          <Form.Item className="input-epi"
+                          label="Selecione o EPI:"
+                            name="selectInput"
                             rules={[
                               {
                                 required: true,
-                                message: "Por favor, insira o número do EPI!",
+                                message: "Por favor, selecione uma opção!",
                               },
                             ]}
                           >
-                            <Input placeholder="Informe o número do EPI" />
+                            <Select 
+                              placeholder="Selecione uma opção"
+                              className="custom-select"
+                              style={{ width: "230px", height: "35px" }}
+                              options={[
+                                { value: "option1", label: "Calçado deSegurança" },
+                                { value: "option2", label: "Capacete" },
+                                { value: "option3", label: "Bota" },
+                              ]}
+                            />
                           </Form.Item>
                         </div>
                         <div className="card-epi">
                           <Form.Item
                             className="input-ca"
-                            label={`Código do CA ${epi.id}`}
+                            label={`Informe o número do CA ${epi.id}:`}
                             name={`codigoCa_${atividade.id}_${epi.id}`}
                             rules={[
                               {
@@ -375,7 +406,7 @@ const InstallerForm = () => {
                               },
                             ]}
                           >
-                            <Input placeholder="Informe o código do CA" />
+                            <Input placeholder="9356" />
                           </Form.Item>
                         </div>
                         <div className="card-btn">
@@ -407,7 +438,7 @@ const InstallerForm = () => {
                 type="button"
                 onClick={adicionarAtividade}
               >
-                <p>Adicionar nova atividade</p>
+                <p>Adicionar outra atividade</p>
               </button>
             </div>
           </main>
@@ -415,7 +446,7 @@ const InstallerForm = () => {
           {/* AQUI FICA O FORM DE SELECIONAR ARQUIVO */}
           <main className="container_group_3">
             <div className="title_saude">
-              <p>Adicione Atestado de saúde (opcional)</p>
+              <p>Adicione Atestado de Saúde (opcional):</p>
             </div>
 
             <Form.Item

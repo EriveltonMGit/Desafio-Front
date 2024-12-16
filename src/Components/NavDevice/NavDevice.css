@@ -6,6 +6,15 @@
     display: none;
   }
 }
+@media (min-width: 2000px) and (max-width: 3000px){
+  #menu_device {
+    display: none;
+  }
+  .container_menu_device {
+    display: none;
+   
+  }
+}
 @media (max-width: 320px) {
   /* container_menu_device */
   .container_menu_device {

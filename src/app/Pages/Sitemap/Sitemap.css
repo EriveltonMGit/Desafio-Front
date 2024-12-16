@@ -2,8 +2,8 @@
 
 /* HOME */
 .container_sitemap {
-  width: 1366px;
-  height: 768px;
+  width: 100%;
+  height: 100%;
   top: 100px;
   left: 100px;
   display: flex;
@@ -14,13 +14,13 @@
 
 /* CONTAINER SECTION FORM */
 .container_sitemap .container_sections {
-  width: 1254px;
-  height: 942px;
+  width: 100%;
+
+  height: 100%;
   position: absolute;
   top: 24px;
   left: 88px;
   gap: 32px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,16 +32,15 @@
 
 /* content_img */
 .container_sitemap .content_img_footer_sitemap {
-  width: 457px;
-  height: 557px;
-  
-  top:863px;
+  width: 100%;
+  height: 100%;
+  top:1200px;
   left: 897px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   img {
-    width: 40vw;
+    width: 25vw;
   }
 }
 
@@ -162,13 +161,13 @@ transform: translateX(0); /* Move o menu para dentro da tela */
 }
 
 /* =============MIDIA SCREM ================= */
-@media (min-width: 1042px) and (max-width: 1980px) and (min-height: 768px) and (max-height: 1080px) and (orientation: landscape){
-  /* AQUI FICA O CSS DO HOME - PAGINA INICIAL DO PROJETO */
+@media (max-width: 1366px) and (max-height: 1062px) and (orientation: landscape){
+/* AQUI FICA O CSS DO HOME - PAGINA INICIAL DO PROJETO */
 
 /* HOME */
 .container_sitemap {
-  width: 100%;
-  height: 1366px;
+  width: 1366px;
+  height: 768px;
   top: 100px;
   left: 100px;
   display: flex;

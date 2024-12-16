@@ -1,6 +1,6 @@
 /* form-group */
 .form-group {
-  width: 762px;
+  width: 100%;
   height: 960px;
   border-radius: 20px;
   display: flex;
@@ -9,10 +9,21 @@
   padding: 16px 24px 24px 24px;
   top: 16px;
   box-shadow: 0px 5px 0.5rem #ddd;
-
+  
   input {
     border: 1px solid #649fbf;
     cursor: pointer;
+    
+  }
+
+
+  input::placeholder {
+    color: #272F33; 
+    width: 309;
+    height: 19px;
+    font-size: 16px;
+    line-height: 18.75px;
+    font-family: Roboto;
   }
   opction {
     cursor: pointer;
@@ -23,10 +34,89 @@
     border-radius: 10px;
   }
 }
+/* Estilizando o rótulo (label) */
+.ant-form-item-label > label[for="nome"] {
+  color: #272F33; 
+    width: 43;
+    font-weight: 500;
+    height: 19px;
+    font-size: 14px;
+    line-height: 18.75px;
+    font-family: Roboto; 
+}
+
+.ant-form-item-label > label[for="cpf"] {
+  color: #272F33; 
+  width: 43;
+  font-weight: 500;
+    height: 19px;
+    font-size: 14px;
+    line-height: 18.75px;
+    font-family: Roboto;
+}
+
+.ant-form-item-label > label[for="rg"] {
+  color: #272F33; 
+  width: 43;
+  font-weight: 500;
+  height: 19px;
+  font-size: 14px;
+  line-height: 18.75px;
+  font-family: Roboto;
+}
+
+.ant-form-item-label > label[for="dataNascimento"] {
+  color: #272F33; 
+  width: 43;
+  font-weight: 500;
+  height: 19px;
+  font-size: 14px;
+  line-height: 18.75px;
+  font-family: Roboto;
+}
+
+/* Estilizando o rótulo (label) do Cargo */
+.ant-form-item-label > label[for="cargo"] {
+  color: #272F33; 
+  width: 43;
+  font-weight: 500;
+  height: 19px;
+  font-size: 14px;
+  line-height: 18.75px;
+  font-family: Roboto;
+}
+
+/* Estilizando os inputs do Data de Nascimento */
+.ant-input[name="dataNascimento"] {
+  color: #272F33; 
+  width: 43;
+  font-weight: 500;
+  height: 19px;
+  font-size: 16px;
+  line-height: 18.75px;
+  font-family: Roboto;
+}
+
+
+
+
+
+
+
+
+
+
+/* vertical-form */
+.vertical-form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 /* container-form */
 .container-form {
-  width: 714px;
-  height: 860px;
+  width: 100%;
+  height: 100%;
 
   display: flex;
   align-items: center;
@@ -36,7 +126,7 @@
 /* swith-func */
 .swith-func {
   border: 1px solid #649fbf;
-  width: 714px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,7 +134,6 @@
   border-radius: 10px;
   padding: 12px;
   box-shadow: 0px 4px 5px #ddd;
-  
   label {
     width: 253px;
     height: 19px;
@@ -73,7 +162,8 @@
 
 /* container_group_1 */
 .container_group_1 {
-  width: 714px;
+  width: 100%;
+  
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -83,6 +173,7 @@
   padding: 12px;
   gap: 24px;
   box-shadow: 0px 4px 5px #ddd;
+ 
 }
 
 /* primary-group */
@@ -112,14 +203,14 @@
 
 /* container_group_1 */
 .container_group_2 {
-  width: 714px;
+  width: 100%;
   height: 344px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   border-radius: 10px;
-  border: 1px solid #649fbf;
+
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 12px;
@@ -127,10 +218,19 @@
   box-shadow: 0px 4px 5px #ddd;
   /* gap: 24px; */
 }
-
+/* area-atividade-selected */
+.area-atividade-selected{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 24px;
+}
 /* second-group */
 .second-group {
-  width: 690px;
+  width: 100%;
+  
   height: 62px;
   gap: 16px;
   display: flex;
@@ -139,7 +239,8 @@
 
 /* .checkbox-epi */
 .checkbox-epi {
-  width: 690px;
+  width: 100%;
+
   height: 62px;
   gap: 16px;
   display: flex;
@@ -149,33 +250,52 @@
   align-items: flex-start;
   
   p {
-    width: 280px;
-    height: 16px;
+    width: 315px;
+    height: 19px;
     font-family: Roboto;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16.09px;
+    font-size: 16px;
+    line-height: 18.75px;
+
   }
   div {
     display: flex;
-    width: 305px;
+    width: 215px;
     gap: 16px;
     p {
-      width: 260px;
-      height: 16px;
-      font-family: Ubuntu;
+      width: 189px;
+      height: 19px;
+      font-family: Roboto;
       font-weight: 400;
       font-size: 14px;
-      line-height: 16.09px;
+      line-height: 18.75px;
+      
+
     }
   }
+}
+/* input-epi */
+.input-epi{
+  width: 666px;
+  height: 63px;
+  gap: 24px;
+  display: flex;
+  align-items:flex-end;
+  justify-content: flex-start;
+  .custom-select{
+     border: 1px solid #649fbf;
+     border-radius: 10px;
+     width: 100%;
+  }
+
+   
+  
 }
 
 /* second-group-2 */
 .second-group-2 {
-  width: 690px;
-  height: 232px;
-
+  width: 100%;
+  height: 252px;
   border-radius: 10px;
   padding: 12px;
   gap: 24px;
@@ -185,7 +305,7 @@
   flex-direction: column;
 
   .container-atividade-epi {
-    width: 690px;
+    width: 100%;
     height: 174px;
     display: flex;
     align-items: center;
@@ -196,25 +316,31 @@
     padding: 12px;
     gap: 24px;
     box-shadow: 0px 4px 5px #ddd;
-
+    width: 100%;
+  
     margin-top: 3px;
     position: relative;
   }
+  /* area-atividade-selected */
 
+/* container_group_2 */
+.checkbox-epi{
+  width: 100%;
+}
   .selected_atividade {
-    width: 666px;
+    width: 100%;
     height: 63px;
     gap: 8px;
+    
   }
 
   .area-numero-ca {
-    width: 666px;
+    width: 100%;
     height: 63px;
     gap: 24px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-  
     .card-epi {
       width: 227px;
       height: 63px;
@@ -253,7 +379,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    cursor: pointer;
     color: #649fbf;
   }
 }
@@ -264,7 +390,7 @@
 
 /* salvarFomr */
 .add-atividade-epi {
-  width: 690px;
+  width: 100%;
   height: 36px;
   border-radius: 10px;
   border: 1px solid #649fbf;
@@ -274,7 +400,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-
+  cursor: pointer;
   p {
     width: 260px;
     height: 16px;
@@ -288,7 +414,7 @@
 
 /* container_group_3 */
 .container_group_3 {
-  width: 714px;
+  width: 100%;
   height: 163px;
   border-radius: 10px;
   padding: 12px;
@@ -299,7 +425,7 @@
   box-shadow: 0px 4px 5px #ddd;
   .title_saude {
     border-radius: 10px;
-    width: 690px;
+    width: 100%;
     height: 19px;
     display: flex;
 
@@ -315,7 +441,7 @@
   .up_arquivo-1 {
     border: 1px solid #649fbf;
     border-radius: 10px;
-    width: 690px;
+    width:100%;
     height: 36px;
     display: flex;
     align-items: center;
@@ -324,7 +450,7 @@
     position: relative;
     cursor: pointer;
     div {
-      width: 690px;
+      width:100%;
       height: 36px;
       display: flex;
       align-items: center;
@@ -342,7 +468,7 @@
   .selected-arquivo {
     border: 1px solid #649fbf;
     border-radius: 10px;
-    width: 690px;
+    width: 100%;
     height: 36px;
     cursor: pointer;
     display: flex;
@@ -353,7 +479,7 @@
 }
 /* salvarFomr */
 .salvarFomr {
-  width: 714px;
+  width: 100%;
   height: 36px;
   margin-top: 10px;
 cursor: pointer;
@@ -2036,19 +2162,21 @@ input{
   }
 }
 }
-@media (max-width: 1980px) and (min-height: 768px) and (max-height: 1080px) and (orientation: landscape){
+
+
+@media (max-width: 1366px) and (max-height: 1062px) and (orientation: landscape){
   /* form-group */
 .form-group {
-  width: 100%;
+  width: 762px;
   height: 960px;
   border-radius: 20px;
   display: flex;
   gap: 24px;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
   padding: 16px 24px 24px 24px;
   top: 16px;
   box-shadow: 0px 5px 0.5rem #ddd;
+
   input {
     border: 1px solid #649fbf;
     cursor: pointer;
@@ -2062,19 +2190,11 @@ input{
     border-radius: 10px;
   }
 }
-
- /* vertical-form */
- .vertical-form {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 /* container-form */
-.container-form{
-  width:100%;
+.container-form {
+  width: 714px;
   height: 860px;
+
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -2083,7 +2203,7 @@ input{
 /* swith-func */
 .swith-func {
   border: 1px solid #649fbf;
-  width:100%;
+  width: 714px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2120,8 +2240,7 @@ input{
 
 /* container_group_1 */
 .container_group_1 {
-  width:100%;
-  border: 1px solid black;
+  width: 714px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -2131,7 +2250,6 @@ input{
   padding: 12px;
   gap: 24px;
   box-shadow: 0px 4px 5px #ddd;
-
 }
 
 /* primary-group */
@@ -2161,8 +2279,7 @@ input{
 
 /* container_group_1 */
 .container_group_2 {
-  width:100%;
-  border: 1px solid black;
+  width: 714px;
   height: 344px;
   display: flex;
   align-items: center;
@@ -2180,16 +2297,32 @@ input{
 
 /* second-group */
 .second-group {
-  width:100%;
+  width: 690px;
   height: 62px;
   gap: 16px;
   display: flex;
   flex-direction: column;
 }
+/* input-epi */
+.input-epi{
+  width: 666px;
+  height: 63px;
+  gap: 24px;
+  display: flex;
+  align-items:flex-end;
+  justify-content: flex-start;
+  .custom-select{
+     border: 1px solid #649fbf;
+     border-radius: 10px;
+     width: 100%;
+  }
 
+   
+  
+}
 /* .checkbox-epi */
 .checkbox-epi {
-  width:100%;
+  width: 690px;
   height: 62px;
   gap: 16px;
   display: flex;
@@ -2220,16 +2353,13 @@ input{
     }
   }
 }
-/* ;area-atividade-selected */
-.area-atividade-selected{
-  width:100%;
-}
+
 /* second-group-2 */
 .second-group-2 {
-  height: 332px;
-  width:100%;
+  width: 690px;
+  height: 232px;
+
   border-radius: 10px;
-  
   padding: 12px;
   gap: 24px;
   display: flex;
@@ -2238,7 +2368,7 @@ input{
   flex-direction: column;
 
   .container-atividade-epi {
-    width:100%;
+    width: 690px;
     height: 174px;
     display: flex;
     align-items: center;
@@ -2249,23 +2379,24 @@ input{
     padding: 12px;
     gap: 24px;
     box-shadow: 0px 4px 5px #ddd;
+
     margin-top: 3px;
     position: relative;
   }
 
   .selected_atividade {
-    width:100%;
+    width: 666px;
     height: 63px;
     gap: 8px;
   }
 
   .area-numero-ca {
-    width:100%;
+    width: 666px;
     height: 63px;
     gap: 24px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
   
     .card-epi {
       width: 227px;
@@ -2316,7 +2447,7 @@ input{
 
 /* salvarFomr */
 .add-atividade-epi {
-  width:100%;
+  width: 690px;
   height: 36px;
   border-radius: 10px;
   border: 1px solid #649fbf;
@@ -2340,8 +2471,7 @@ input{
 
 /* container_group_3 */
 .container_group_3 {
-  width:100%;
-  border: 1px solid black;
+  width: 714px;
   height: 163px;
   border-radius: 10px;
   padding: 12px;
@@ -2352,8 +2482,7 @@ input{
   box-shadow: 0px 4px 5px #ddd;
   .title_saude {
     border-radius: 10px;
-    width:100%;
-   
+    width: 690px;
     height: 19px;
     display: flex;
 
@@ -2369,7 +2498,7 @@ input{
   .up_arquivo-1 {
     border: 1px solid #649fbf;
     border-radius: 10px;
-    width:100%;
+    width: 690px;
     height: 36px;
     display: flex;
     align-items: center;
@@ -2378,8 +2507,7 @@ input{
     position: relative;
     cursor: pointer;
     div {
-      width:100%;
-    
+      width: 690px;
       height: 36px;
       display: flex;
       align-items: center;
@@ -2397,8 +2525,7 @@ input{
   .selected-arquivo {
     border: 1px solid #649fbf;
     border-radius: 10px;
-    width:100%;
-   
+    width: 690px;
     height: 36px;
     cursor: pointer;
     display: flex;
@@ -2409,7 +2536,7 @@ input{
 }
 /* salvarFomr */
 .salvarFomr {
-  width:100%;
+  width: 714px;
   height: 36px;
   margin-top: 10px;
 cursor: pointer;
@@ -2432,8 +2559,5 @@ cursor: pointer;
     color: #649fbf;
   }
 }
-
 }
-
-
 

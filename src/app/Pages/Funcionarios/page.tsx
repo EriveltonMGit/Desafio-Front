@@ -59,7 +59,7 @@ function Funcionarios() {
                     
                   </Link>
                   <p>
-                      Adicionar Funcionário(s)
+                      Adicionar Funcionário
                     </p>
                 </div>
                 {/* AQUI FICA O FOMULÁRIO DE ADICIONAR FUNCIONÁRIOS */}

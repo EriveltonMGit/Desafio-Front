@@ -2,7 +2,7 @@
 
 /* aviso */
 .aviso{
-    width: 1254px;
+    width: 94%;
     height: 55px;
     top: 24px;
     left: 88px;
@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
     h1{
 margin-bottom: 0;
      font-size: Ubuntu;
@@ -88,12 +89,14 @@ margin-bottom: 0;
 }
  }
  /* =============MIDIA SCREM ================= */
-@media (min-width: 1042px) and (max-width: 1980px) and (min-height: 768px) and (max-height: 1080px) and (orientation: landscape){
+ @media (max-width: 1366px) and (max-height: 1062px) and (orientation: landscape){
     
+
+
 
 /* aviso */
 .aviso{
-    width: 95%;
+    width: 1254px;
     height: 55px;
     top: 24px;
     left: 88px;

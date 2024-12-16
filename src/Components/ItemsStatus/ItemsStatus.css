@@ -1,7 +1,7 @@
 /* AQUI FICA O CSS DO HEADER STATUS */
 /* status_container */
 .status_container {
-  width: 1254px;
+  width:99%;
   height: 156px;
   gap: 32px;
   display: flex;
@@ -11,29 +11,31 @@
   padding: 24px;
   gap: 48px;
   background-color: #ffffff;
- 
+
 }
 
 /* AQUI FICA O CARDS DE STATUS */
 /* container_items */
 .container_items {
-  width: 960px;
+  width: 90%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  
 }
 
 .cards_status {
   width: 80px;
-  height: 108px;
+  height: 88px;
   gap: 8px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   z-index: 20;
-
+  position: relative;
   div {
     width: 64px;
     height: 64px;
@@ -44,7 +46,7 @@
     border-radius: 20px;
     left: 8px;
     background-color: #dbdbdb;
-
+    position: relative;
     img {
       width: 27.2px;
       height: 32px;
@@ -90,7 +92,7 @@
 
 /* LINHA ENTRE OS ITENS */
 .line {
-  min-width: 900px;
+ width: 95%;
   height: 4px;
   border-top: 4px dashed #649fbf;
   position: absolute;
@@ -362,6 +364,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+   
   }
 
   .cards_status {
@@ -440,12 +443,13 @@
   }
 }
 
-/* =============MIDIA SCREM ================= */
-@media (max-width: 1980px) and (min-height: 768px) and (max-height: 1080px) and (orientation: landscape){
-/* AQUI FICA O CSS DO HEADER STATUS */
+
+
+@media (max-width: 1366px) and (max-height: 1062px) and (orientation: landscape){
+  /* AQUI FICA O CSS DO HEADER STATUS */
 /* status_container */
 .status_container {
-  width: 96%;
+  width: 1254px;
   height: 156px;
   gap: 32px;
   display: flex;
@@ -461,11 +465,13 @@
 /* AQUI FICA O CARDS DE STATUS */
 /* container_items */
 .container_items {
-  width: 1260px;
+  width: 1254px;
+  max-width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+
 }
 
 .cards_status {
@@ -479,8 +485,8 @@
   z-index: 20;
 
   div {
-    width: 74px;
-    height: 74px;
+    width: 64px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -516,7 +522,7 @@
     width: 80px;
     height: 14px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 16.09px;
     align-items: center;
     display: flex;
@@ -534,15 +540,15 @@
 
 /* LINHA ENTRE OS ITENS */
 .line {
-  width: 96%;
+  min-width: 900px;
   height: 4px;
   border-top: 4px dashed #649fbf;
   position: absolute;
   left: 35px;
   top: 28px;
 }
-}
 
+}
 
 
 
