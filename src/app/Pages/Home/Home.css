@@ -1955,7 +1955,7 @@
     align-items:flex-start;
     justify-content: flex-start;
     background-color: #f2f2f2;
-    border: 1px solid red;
+
   }
 
   /* CONTAINER SECTION FORM */
@@ -1971,7 +1971,7 @@
     align-items: flex-end;
     justify-content: flex-start;
     flex-direction: column;
-   border: 1px solid red;
+
 
   }
 
