@@ -104,7 +104,7 @@
 /* AQUI FICA O CSS DO HEADER STATUS */
 /* status_container */
 .status_container-static {
-  width: 100%;
+  width: 98%;
   height: 156px;
   gap: 32px;
   display: flex;
@@ -137,7 +137,6 @@
   justify-content: space-around;
   flex-direction: column;
   z-index: 20;
-
   div {
     width: 64px;
     height: 64px;
@@ -1174,6 +1173,7 @@ width: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .container_statics {
   width: 1254px;
@@ -1184,9 +1184,10 @@ width: 95%;
   position: relative;
   position: absolute;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
+ 
   .div-menu {
     margin-top: 24px;
   }
