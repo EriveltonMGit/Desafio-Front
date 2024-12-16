@@ -18,12 +18,12 @@
 
 
   input::placeholder {
-    color: #272F33; 
+    color: #9a9d9e; 
     width: 309;
     height: 19px;
     font-size: 16px;
     line-height: 18.75px;
-    font-family: Roboto;
+    /* font-family: Roboto; */
   }
   opction {
     cursor: pointer;
@@ -2250,6 +2250,68 @@ input{
   padding: 12px;
   gap: 24px;
   box-shadow: 0px 4px 5px #ddd;
+}
+/* Estilizando o rótulo (label) */
+.ant-form-item-label > label[for="nome"] {
+  color: #272F33; 
+    width: 43;
+    font-weight: 500;
+    height: 19px;
+    font-size: 14px;
+    line-height: 18.75px;
+    font-family: Roboto; 
+}
+
+.ant-form-item-label > label[for="cpf"] {
+  color: #272F33; 
+  width: 43;
+  font-weight: 500;
+    height: 19px;
+    font-size: 14px;
+    line-height: 18.75px;
+    font-family: Roboto;
+}
+
+.ant-form-item-label > label[for="rg"] {
+  color: #272F33; 
+  width: 43;
+  font-weight: 500;
+  height: 19px;
+  font-size: 14px;
+  line-height: 18.75px;
+  font-family: Roboto;
+}
+
+.ant-form-item-label > label[for="dataNascimento"] {
+  color: #272F33; 
+  width: 43;
+  font-weight: 500;
+  height: 19px;
+  font-size: 14px;
+  line-height: 18.75px;
+  font-family: Roboto;
+}
+
+/* Estilizando o rótulo (label) do Cargo */
+.ant-form-item-label > label[for="cargo"] {
+  color: #272F33; 
+  width: 43;
+  font-weight: 500;
+  height: 19px;
+  font-size: 14px;
+  line-height: 18.75px;
+  font-family: Roboto;
+}
+
+/* Estilizando os inputs do Data de Nascimento */
+.ant-input[name="dataNascimento"] {
+  color: #272F33; 
+  width: 43;
+  font-weight: 500;
+  height: 19px;
+  font-size: 16px;
+  line-height: 18.75px;
+  font-family: Roboto;
 }
 
 /* primary-group */

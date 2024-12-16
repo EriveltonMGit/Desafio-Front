@@ -217,7 +217,7 @@
         color: #959595;
       }
     }
-    button:nth-child(1) {
+    button:nth-child(2) {
       border: 1px solid #649fbf;
       p {
         color: #649fbf;
@@ -233,6 +233,22 @@
     line-height: 16.09px;
     font-weight: 400;
     color: #3a3a3a;
+  }
+  .btn_ativos{
+    width: 192px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid #959595;
+    top: 10px;
+    right: 40px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    gap: 10px;
+    cursor: pointer;
+   
   }
 }
 
@@ -685,7 +701,7 @@
           color: #959595;
         }
       }
-      button:nth-child(1) {
+      button:nth-child(2) {
         border: 1px solid #649fbf;
         p {
           color: #649fbf;
@@ -1125,7 +1141,7 @@
           padding: 0.5rem;
         }
       }
-      button:nth-child(1) {
+      button:nth-child(2) {
         border: 1px solid #649fbf;
         p {
           color: #649fbf;
@@ -1623,7 +1639,7 @@
           padding: 0.5rem;
         }
       }
-      button:nth-child(1) {
+      button:nth-child(2) {
         border: 1px solid #649fbf;
         p {
           color: #649fbf;
@@ -2148,7 +2164,7 @@
         color: #959595;
       }
     }
-    button:nth-child(1) {
+    button:nth-child(2) {
       border: 1px solid #649fbf;
       p {
         color: #649fbf;

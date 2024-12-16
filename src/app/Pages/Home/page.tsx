@@ -9,26 +9,9 @@ import ItemsStatus from "@/Components/ItemsStatus/ItemsStatus";
 import Switch from "antd/es/switch";
 
 function Home() {
-  // Estado para controlar se o CRUD está visível
   const [crudVisible, setCrudVisible] = useState<number | null>(null);
-
-  // Estado para controlar se o Switch está ativado (etapa concluída)
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
-  // Estado para controlar o efeito de piscar do Switch
-  
 
-  // Função para exibir ou esconder o formulário de CRUD
-  const mostrarDivCrud = (id: number, e?: { preventDefault: () => void }) => {
-    if (e) e.preventDefault(); // Evita o comportamento padrão do evento (evita o refresh da página)
-    setCrudVisible(crudVisible === id ? null : id); // Alterna entre mostrar ou esconder o CRUD baseado no id
-  };
-
-  // Função para manipular a mudança do Switch
-  const handleSwitchChange = (checked: boolean) => {
-    setIsCompleted(checked); // Atualiza o estado isCompleted para refletir se o Switch está ativo ou não
-  };
-
-  // Array de Funcionários, usado para renderizar os itens na lista
   const itemsFuncionarios = [
     {
       id: 1,
@@ -60,6 +43,31 @@ function Home() {
     },
   ];
 
+    // DEFINE OS FUNCIONÁRIOS INICIAIS FILTRADOS APENAS COMO ATIVOS
+  const [filteredFuncionarios, setFilteredFuncionarios] = useState(
+    itemsFuncionarios.filter((funcionario) => funcionario.estado === "ativo")
+  );
+  // EXIBE OU ESCONDE A DIV DE CRUD PARA UM FUNCIONÁRIO ESPECÍFICO
+  const mostrarDivCrud = (id: number, e?: { preventDefault: () => void }) => {
+    if (e) e.preventDefault();
+    setCrudVisible(crudVisible === id ? null : id);
+  };
+// ALTERA O ESTADO DA CHAVE "ISCOMPLETED" QUANDO O SWITCH É MODIFICADO
+  const handleSwitchChange = (checked: boolean) => {
+    setIsCompleted(checked);
+  };
+  // FILTRA E EXIBE APENAS OS FUNCIONÁRIOS ATIVOS
+  const verAtivos = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const ativos = itemsFuncionarios.filter((funcionario) => funcionario.estado === "ativo");
+    setFilteredFuncionarios(ativos);
+  };
+// LIMPA OS FILTROS E EXIBE TODOS OS FUNCIONÁRIOS
+  const limparFiltros = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setFilteredFuncionarios(itemsFuncionarios);
+  };
+
   return (
     <>
       <main className="container_home">
@@ -73,21 +81,14 @@ function Home() {
 
         <Nav />
 
-        {/* Conteúdo Principal */}
         <section className="container_sections">
           <ItemsStatus />
           <section className="section_form">
             <div className="perfil">
               <p>
-                {" "}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec
-                ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec
-                mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut
-                at tristique libero, nec efficitur dui. Aliquam erat volutpat.
-                Fusce quam sem, tempus nec justo eget, luctus scelerisque velit.
-                Nam sollicitudin purus urna, vitae ornare neque tincidunt vel.
-                Proin ac lacinia erat, et commodo felis. Phasellus tempor tellus
+                ante eu, venenatis aliquam turpis.
               </p>
               <img
                 src="/perfil-user.webp"
@@ -102,29 +103,28 @@ function Home() {
               </div>
               <section className="container_funcionarios">
                 <Link className="add_funcionario" href="/Pages/Funcionarios">
-                  <p className="rota-add-func" >
-                    + Adicionar Funcionário
-                  </p>
+                  <p className="rota-add-func">+ Adicionar Funcionário</p>
                 </Link>
                 <main className="filtros">
                   <div>
-                    <button>
+                    <button className="btn_ativos" onClick={verAtivos}>
                       <p>Ver apenas ativos</p>
                     </button>
-                    <button>
+                    <button onClick={limparFiltros}>
                       <p>Limpar filtros</p>
                     </button>
                   </div>
-                  <p className="ativos">Ativos 2/4</p>
+                  <p className="ativos">
+                    Ativos {filteredFuncionarios.filter((f) => f.estado === "ativo").length}/
+                    {itemsFuncionarios.length}
+                  </p>
                 </main>
               </section>
               <main className="container_items_list">
-                {itemsFuncionarios.map((item) => (
+                {filteredFuncionarios.map((item) => (
                   <div
                     key={item.id}
-                    className={`lista_item ${
-                      item.id === 2 || item.id === 3 ? "diferente" : ""
-                    }`}
+                    className={`lista_item ${item.estado === "inativo" ? "inativo" : ""}`}
                   >
                     <div className="area_content_funcionarios">
                       <h2 className="nome-fun">{item.nome}</h2>
@@ -137,8 +137,8 @@ function Home() {
                     <button
                       className="btn_edit"
                       onClick={(e) => {
-                        e.preventDefault(); // Evita o comportamento padrão do evento (evita o refresh da página)
-                        mostrarDivCrud(item.id, e); // Exibe ou esconde o CRUD baseado no id
+                        e.preventDefault();
+                        mostrarDivCrud(item.id, e);
                       }}
                     >
                       <img
@@ -159,36 +159,32 @@ function Home() {
 
               <section className="container_switch">
                 <h5>A etapa está concluída?</h5>
-                {/* Switch para marcar a etapa como concluída ou não */}
                 <Switch
                   className="custom-switch"
                   checkedChildren="Sim"
                   unCheckedChildren="Não"
-                  defaultChecked={isCompleted} // Define o estado inicial baseado em isCompleted
-                  onChange={handleSwitchChange} // Atualiza o estado quando o switch é alterado
+                  defaultChecked={isCompleted}
+                  onChange={handleSwitchChange}
                 />
               </section>
             </form>
           </section>
 
           <section className="px_passos">
-            {/* Botão Anterior */}
             <button className="bt_anterior">
               <Link href="/Pages/Home">Anterior</Link>
             </button>
-
-            {/* Botão Próximo */}
             <button
               className="btn_proximo"
               style={{
-                backgroundColor: isCompleted ? "#649fbf" : "", // Altera a cor de fundo do botão quando o switch está ativado
+                backgroundColor: isCompleted ? "#649fbf" : "",
               }}
-              disabled={!isCompleted} // Desabilita o botão caso o switch não esteja ativado
+              disabled={!isCompleted}
             >
-              <Link href={isCompleted ? "/Pages/StaticPage" : "#"} passHref> 
+              <Link href={isCompleted ? "/Pages/StaticPage" : "#"} passHref>
                 Próximo passo
               </Link>
-            </button> 
+            </button>
           </section>
         </section>
       </main>

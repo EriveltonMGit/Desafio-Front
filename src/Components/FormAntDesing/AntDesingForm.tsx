@@ -147,7 +147,7 @@ const InstallerForm = () => {
     if (container_group_2) {
      
       if ( container_group_2.style.height === "344px") {
-        container_group_2.style.height = "20%";
+        container_group_2.style.height = "auto";
       } else {
         container_group_2.style.height = "auto";
       }
