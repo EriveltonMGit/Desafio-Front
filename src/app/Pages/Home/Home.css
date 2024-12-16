@@ -73,7 +73,7 @@
 /* AQUI FICA A DIV DO FORM  */
 .form_container {
   width:50%;
-  height: 100%;
+  height: 754px;
   border-radius: 20px;
   gap: 16px;
   background-color: #ffffff;
@@ -499,12 +499,10 @@
 }
 
 /* content_img */
-.content_img_footer {
+.content_img_footer_home {
   width: 457px;
-  height: 557px;
-  position: absolute;
-  top: 600px;
-  left: 1460px;
+  height: 941px; 
+ margin-left: 1450px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -1957,7 +1955,7 @@
 /* HOME */
 .container_home {
   width: 1366px;
-  height: 1062px;
+  height: 846px;
   top: 100px;
   left: 100px;
   display: flex;
@@ -1970,12 +1968,12 @@
 /* CONTAINER SECTION FORM */
 .container_sections {
   width: 1254px;
-  height: 942px;
+  height: 726px;
   position: absolute;
   top: 24px;
   left: 88px;
   gap: 32px;
-
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1991,6 +1989,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+
 }
 /* AQUI FICA A DIV DO PERFIL DO FUNCIONÁRIO */
 .perfil {
@@ -2024,14 +2023,16 @@
 /* AQUI FICA A DIV DO FORM  */
 .form_container {
   width: 762px;
-  height: 754px;
+  height: 538px;
   border-radius: 20px;
   gap: 16px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
+  transition: height 0.3s ease-in-out;
+ 
 }
 
 /* AQUI FICA O FORM -INPUTS */
@@ -2071,6 +2072,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
 }
 
 /* add_funcionario */
@@ -2186,7 +2188,7 @@
 /* AQUI FICA A LISTA DE FUNCINÁRIOS  */
 .container_items_list {
   width: 762px;
-  height: 448px;
+  height: 232px;
   border-radius: 20px;
   top: 16px;
   right: 24px;
@@ -2197,8 +2199,8 @@
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-
   overflow: auto;
+
 }
 .lista_item {
   background-color: #649fbf33;
@@ -2428,12 +2430,12 @@
 }
 
 /* content_img */
-.content_img_footer {
+.content_img_footer_home{
   width: 457px;
-  height: 557px;
-  position: absolute;
+  height: 941px;
+ 
   top: 500px;
-  left: 897px;
+ margin-left: 897px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;

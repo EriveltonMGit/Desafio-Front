@@ -43,7 +43,7 @@ function Home() {
     },
   ];
 
-    // DEFINE OS FUNCIONÁRIOS INICIAIS FILTRADOS APENAS COMO ATIVOS
+  // DEFINE OS FUNCIONÁRIOS INICIAIS FILTRADOS APENAS COMO ATIVOS
   const [filteredFuncionarios, setFilteredFuncionarios] = useState(
     itemsFuncionarios.filter((funcionario) => funcionario.estado === "ativo")
   );
@@ -52,26 +52,48 @@ function Home() {
     if (e) e.preventDefault();
     setCrudVisible(crudVisible === id ? null : id);
   };
-// ALTERA O ESTADO DA CHAVE "ISCOMPLETED" QUANDO O SWITCH É MODIFICADO
+  // ALTERA O ESTADO DA CHAVE "ISCOMPLETED" QUANDO O SWITCH É MODIFICADO
   const handleSwitchChange = (checked: boolean) => {
     setIsCompleted(checked);
   };
   // FILTRA E EXIBE APENAS OS FUNCIONÁRIOS ATIVOS
   const verAtivos = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const ativos = itemsFuncionarios.filter((funcionario) => funcionario.estado === "ativo");
+    const ativos = itemsFuncionarios.filter(
+      (funcionario) => funcionario.estado === "ativo"
+    );
     setFilteredFuncionarios(ativos);
+  
+
+    
   };
-// LIMPA OS FILTROS E EXIBE TODOS OS FUNCIONÁRIOS
+  // LIMPA OS FILTROS E EXIBE TODOS OS FUNCIONÁRIOS
   const limparFiltros = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setFilteredFuncionarios(itemsFuncionarios);
+    const contaienr_list = document.getElementById(`contaienr_list`);
+      const secttion_form = document.getElementById(`form_container`);
+    
+    if (secttion_form?.style.height) {
+      if (secttion_form.style.height === "538px") {
+        secttion_form.style.height = "auto";
+      } else {
+        secttion_form.style.height = "354px";
+      }
+    }
+    if (contaienr_list?.style.height) {
+      if (contaienr_list.style.height === "232px") {
+        contaienr_list.style.height = "448px";
+      } else {
+        contaienr_list.style.height = "232px";
+      }
+    }
   };
 
   return (
     <>
-      <main className="container_home">
-        <div className="content_img_footer">
+      <main className="container_home" id="form_container">
+        <div className="content_img_footer_home">
           <img
             src="/imagens/imagem_bk/Elementos de fundo.svg"
             alt="Elemento de fundo"
@@ -83,12 +105,18 @@ function Home() {
 
         <section className="container_sections">
           <ItemsStatus />
-          <section className="section_form">
+          <section className="section_form" >
             <div className="perfil">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 suscipit suscipit porttitor. Suspendisse ex lorem, rhoncus nec
-                ante eu, venenatis aliquam turpis.
+                ante eu, venenatis aliquam turpis. Nulla facilisi. Curabitur nec
+                mattis dolor. Nulla finibus bibendum ligula tempus vehicula. Ut
+                at tristique libero, nec efficitur dui. Aliquam erat volutpat.
+                Fusce quam sem, tempus nec justo eget, luctus scelerisque velit.
+                Nam sollicitudin purus urna, vitae ornare neque tincidunt vel.
+                Proin ac lacinia erat, et commodo felis. Phasellus tempor
+                tellus.
               </p>
               <img
                 src="/perfil-user.webp"
@@ -115,16 +143,22 @@ function Home() {
                     </button>
                   </div>
                   <p className="ativos">
-                    Ativos {filteredFuncionarios.filter((f) => f.estado === "ativo").length}/
-                    {itemsFuncionarios.length}
+                    Ativos{" "}
+                    {
+                      filteredFuncionarios.filter((f) => f.estado === "ativo")
+                        .length
+                    }
+                    /{itemsFuncionarios.length}
                   </p>
                 </main>
               </section>
-              <main className="container_items_list">
+              <main className="container_items_list" id="contaienr_list">
                 {filteredFuncionarios.map((item) => (
                   <div
                     key={item.id}
-                    className={`lista_item ${item.estado === "inativo" ? "inativo" : ""}`}
+                    className={`lista_item ${
+                      item.estado === "inativo" ? "inativo" : ""
+                    }`}
                   >
                     <div className="area_content_funcionarios">
                       <h2 className="nome-fun">{item.nome}</h2>
