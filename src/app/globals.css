@@ -64,7 +64,7 @@ p{
 
 /* Altera a cor da "trilha" (fundo) */
 ::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #e6dfdf;
   border-radius: 10px;
 }
 

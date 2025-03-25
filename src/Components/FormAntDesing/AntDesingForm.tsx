@@ -420,7 +420,6 @@ const InstallerForm = () => {
                             </button>
                           </div>
                         </div>
-
                         {/* <button
                           className="card-btn"
                           type="button"
@@ -442,13 +441,11 @@ const InstallerForm = () => {
               </button>
             </div>
           </main>
-
           {/* AQUI FICA O FORM DE SELECIONAR ARQUIVO */}
           <main className="container_group_3">
             <div className="title_saude">
               <p>Adicione Atestado de Saúde (opcional):</p>
             </div>
-
             <Form.Item
               className="up_arquivo-1"
               name="file1"
@@ -467,9 +464,7 @@ const InstallerForm = () => {
                 </div>
               </Upload>
             </Form.Item>
-
             {/* Segundo Input com Texto */}
-
             <div className="selected-arquivo">
               <input type="file" id="fileInput" style={{ display: "none" }} />
               <label htmlFor="fileInput" className="custom-label">
@@ -485,5 +480,4 @@ const InstallerForm = () => {
     </section>
   );
 };
-
 export default InstallerForm;
